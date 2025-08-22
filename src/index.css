@@ -2,41 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Dx1 Solutions Design System - Professional Agency Branding */
 
 @layer base {
   :root {
+    /* Brand Colors - Dx1 Solutions Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 218 49% 22%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 218 49% 22%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 218 49% 22%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Dx1 Brand Colors */
+    --primary: 259 84% 30%; /* #2E0D8B - Deep Purple */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 218 49% 22%; /* #1A2653 - Dark Blue */
+    --secondary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 262 57% 66%; /* #9173DA - Light Purple */
+    --accent-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 220 20% 96%;
+    --muted-foreground: 218 25% 45%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 259 84% 30%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Dx1 Custom Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(259 84% 30%), hsl(262 57% 66%));
+    --gradient-secondary: linear-gradient(135deg, hsl(218 49% 22%), hsl(259 84% 30%));
+    --gradient-hero: linear-gradient(135deg, hsl(259 84% 30%) 0%, hsl(218 49% 22%) 50%, hsl(262 57% 66%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(262 57% 98%) 100%);
+    
+    --shadow-brand: 0 10px 40px -10px hsl(259 84% 30% / 0.3);
+    --shadow-glow: 0 0 30px hsl(262 57% 66% / 0.4);
+    --shadow-card: 0 4px 25px -2px hsl(259 84% 30% / 0.1);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -91,6 +104,12 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Dark mode custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(259 84% 40%), hsl(262 57% 76%));
+    --gradient-secondary: linear-gradient(135deg, hsl(218 49% 32%), hsl(259 84% 40%));
+    --gradient-hero: linear-gradient(135deg, hsl(259 84% 40%) 0%, hsl(218 49% 32%) 50%, hsl(262 57% 76%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(222.2 84% 4.9%) 0%, hsl(259 84% 8%) 100%);
   }
 }
 
@@ -100,6 +119,21 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+  }
+  
+  .hero-pattern {
+    background-image: radial-gradient(hsl(262 57% 66% / 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20;
   }
 }

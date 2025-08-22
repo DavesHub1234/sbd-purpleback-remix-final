@@ -1,0 +1,140 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Globe, Palette, Bot, Search, Target, Users } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const services = [
+  {
+    icon: Globe,
+    title: "Web Design & Development",
+    description: "Custom, responsive websites that convert visitors into customers. Optimized for local contractors and service businesses.",
+    features: ["Mobile-First Design", "Lightning Fast Loading", "Lead Generation Forms", "Local SEO Built-In"],
+    link: "/web-design",
+    gradient: "from-primary to-accent"
+  },
+  {
+    icon: Palette,
+    title: "Logo Design & Branding",
+    description: "Professional branding packages that make your business stand out from competitors and build trust with customers.",
+    features: ["Custom Logo Design", "Brand Identity Package", "Business Card Design", "Social Media Assets"],
+    link: "/branding",
+    gradient: "from-accent to-secondary"
+  },
+  {
+    icon: Bot,
+    title: "AI Automations",
+    description: "Cutting-edge AI solutions that streamline operations, improve customer service, and boost efficiency.",
+    features: ["Automated Lead Follow-up", "Customer Service Chatbots", "Appointment Scheduling", "Review Management"],
+    link: "/ai-automations",
+    gradient: "from-secondary to-primary"
+  },
+  {
+    icon: Search,
+    title: "Google Optimization",
+    description: "Complete Google ecosystem optimization to dominate local search results and attract more customers.",
+    features: ["Local SEO", "Google My Business", "Review Optimization", "Google Ads Management"],
+    link: "/google-optimization",
+    gradient: "from-primary to-accent"
+  }
+];
+
+const ServicesSection = () => {
+  return (
+    <section className="py-24 bg-gradient-subtle">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            Complete Digital Solutions for{" "}
+            <span className="gradient-text">Local Contractors</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            We specialize in roofing contractors, landscaping companies, and solar panel installers. 
+            Our tailored approach ensures maximum ROI for your industry.
+          </p>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {services.map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <Card key={index} className="group hover:shadow-card transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
+                <CardHeader className="pb-4">
+                  <div className={`w-14 h-14 rounded-lg bg-gradient-to-r ${service.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                    <IconComponent size={28} className="text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    {service.title}
+                  </CardTitle>
+                  <CardDescription className="text-base text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-foreground/80">
+                        <Target size={16} className="text-accent mr-3 flex-shrink-0" />
+                        <span className="font-medium">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link to={service.link}>
+                    <Button variant="outline" className="group/btn w-full">
+                      Learn More
+                      <ArrowRight size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/* Industry Focus */}
+        <div className="bg-white rounded-2xl p-8 md:p-12 shadow-card">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-foreground mb-4">
+              Specialized for Your Industry
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              We understand the unique challenges and opportunities in contractor businesses. 
+              Our solutions are built specifically for your success.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: "🏠",
+                title: "Roofing Contractors",
+                description: "Lead generation systems, emergency service pages, and showcase galleries that convert homeowners."
+              },
+              {
+                icon: "🌱",
+                title: "Landscaping Companies",
+                description: "Seasonal service promotions, project portfolios, and maintenance scheduling systems."
+              },
+              {
+                icon: "☀️",
+                title: "Solar Panel Installers",
+                description: "ROI calculators, financing options, and educational content that drives solar adoption."
+              }
+            ].map((industry, index) => (
+              <div key={index} className="text-center group">
+                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+                  {industry.icon}
+                </div>
+                <h4 className="text-xl font-bold text-foreground mb-3">{industry.title}</h4>
+                <p className="text-muted-foreground">{industry.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSection;
