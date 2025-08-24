@@ -32,48 +32,60 @@ const WebDesign = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section with Image */}
       <section className="py-24 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-foreground mb-16">
             Everything Your Business Website Needs
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Smartphone,
-                title: "Mobile-First Design",
-                description: "Responsive designs that work perfectly on all devices"
-              },
-              {
-                icon: Zap,
-                title: "Lightning Fast",
-                description: "Optimized for speed to keep visitors engaged"
-              },
-              {
-                icon: Search,
-                title: "SEO Optimized",
-                description: "Built-in SEO to help you rank higher in search results"
-              },
-              {
-                icon: Globe,
-                title: "Lead Generation",
-                description: "Contact forms and CTAs designed to convert visitors"
-              }
-            ].map((feature, index) => (
-              <Card key={index} className="text-center border-0 shadow-card">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon size={32} className="text-white" />
-                  </div>
-                  <CardTitle className="text-xl font-bold">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">{feature.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+            <div className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                {[
+                  {
+                    icon: Smartphone,
+                    title: "Mobile-First Design",
+                    description: "Responsive designs that work perfectly on all devices"
+                  },
+                  {
+                    icon: Zap,
+                    title: "Lightning Fast",
+                    description: "Optimized for speed to keep visitors engaged"
+                  },
+                  {
+                    icon: Search,
+                    title: "SEO Optimized",
+                    description: "Built-in SEO to help you rank higher in search results"
+                  },
+                  {
+                    icon: Globe,
+                    title: "Lead Generation",
+                    description: "Contact forms and CTAs designed to convert visitors"
+                  }
+                ].map((feature, index) => (
+                  <Card key={index} className="text-center border-0 shadow-card">
+                    <CardHeader>
+                      <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <feature.icon size={32} className="text-white" />
+                      </div>
+                      <CardTitle className="text-xl font-bold">{feature.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-base">{feature.description}</CardDescription>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+            
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/412b1916-97ff-4fe3-978b-8ba7e3cbe3ac.png" 
+                alt="Multiple professional websites displayed like art pieces in a digital landscape" 
+                className="w-full h-auto rounded-2xl shadow-elegant"
+              />
+            </div>
           </div>
         </div>
       </section>

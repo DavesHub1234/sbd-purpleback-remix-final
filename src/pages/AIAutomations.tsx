@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, Bot, MessageSquare, Calendar, Phone } from "lucide-react";
+import { CheckCircle, ArrowRight, Bot, MessageSquare, Calendar, Phone, Target, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const AIAutomations = () => {
@@ -32,48 +32,59 @@ const AIAutomations = () => {
         </div>
       </section>
 
-      {/* AI Solutions Section */}
+      {/* AI Solutions with Visual */}
       <section className="py-24 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-16">
-            AI-Powered Business Solutions
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: MessageSquare,
-                title: "AI Chatbots",
-                description: "24/7 customer support that captures leads and answers questions"
-              },
-              {
-                icon: Calendar,
-                title: "Smart Scheduling",
-                description: "Automated appointment booking and calendar management"
-              },
-              {
-                icon: Phone,
-                title: "Lead Qualification",
-                description: "AI-powered lead scoring and automatic follow-up systems"
-              },
-              {
-                icon: Bot,
-                title: "Process Automation",
-                description: "Streamline workflows and eliminate repetitive tasks"
-              }
-            ].map((solution, index) => (
-              <Card key={index} className="text-center border-0 shadow-card">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <solution.icon size={32} className="text-white" />
-                  </div>
-                  <CardTitle className="text-xl font-bold">{solution.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">{solution.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-foreground mb-8">
+                AI-Powered Business Solutions
+              </h2>
+              <div className="grid gap-6">
+                {[
+                  {
+                    icon: Bot,
+                    title: "AI Chatbots",
+                    description: "24/7 customer support and lead qualification through intelligent chatbots"
+                  },
+                  {
+                    icon: Calendar,
+                    title: "Smart Scheduling",
+                    description: "Automated appointment booking and calendar management"
+                  },
+                  {
+                    icon: Target,
+                    title: "Lead Qualification",
+                    description: "AI-powered lead scoring and qualification to focus on your best prospects"
+                  },
+                  {
+                    icon: Zap,
+                    title: "Process Automation",
+                    description: "Streamline repetitive tasks and workflows for maximum efficiency"
+                  }
+                ].map((solution, index) => (
+                  <Card key={index} className="border-0 shadow-card">
+                    <CardContent className="flex items-start space-x-4 p-6">
+                      <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                        <solution.icon size={24} className="text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">{solution.title}</h3>
+                        <p className="text-muted-foreground">{solution.description}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+            
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/c29af7c3-5a1b-4163-ace4-9e4709c6453b.png" 
+                alt="AI automation workflow showing phone calls, email automation, and chatbot integration" 
+                className="w-full h-auto rounded-2xl shadow-elegant"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -82,17 +93,22 @@ const AIAutomations = () => {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="bg-gradient-primary rounded-2xl p-8 text-center order-2 lg:order-1">
-              <h3 className="text-2xl font-bold text-white mb-4">Ready to Automate?</h3>
-              <p className="text-white/90 mb-6">
-                Discover how AI can transform your business operations and boost your bottom line.
-              </p>
-              <Link to="/contact">
-                <Button variant="secondary" size="lg">
-                  Get AI Solutions
-                </Button>
-              </Link>
-            </div>
+          <div className="bg-gradient-primary rounded-2xl p-8 text-center order-2 lg:order-1">
+            <img 
+              src="/lovable-uploads/994de390-9bc5-4484-b50b-23d538286dc8.png" 
+              alt="Brain lightbulb representing innovative AI solutions" 
+              className="w-32 h-32 mx-auto mb-6"
+            />
+            <h3 className="text-2xl font-bold text-white mb-4">Ready to Automate?</h3>
+            <p className="text-white/90 mb-6">
+              Discover how AI can transform your business operations and boost your bottom line.
+            </p>
+            <Link to="/contact">
+              <Button variant="secondary" size="lg">
+                Get AI Solutions
+              </Button>
+            </Link>
+          </div>
             <div className="order-1 lg:order-2">
               <h2 className="text-4xl font-bold text-foreground mb-8">
                 Why Choose AI Automation?

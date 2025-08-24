@@ -24,10 +24,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">D</span>
-              </div>
+            <Link to="/" className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/b422b1bf-95f4-4c21-98d6-52e439296099.png" 
+                alt="Dx1 Solutions Logo" 
+                className="w-12 h-12"
+              />
               <span className="text-xl font-bold text-primary">Dx1 Solutions</span>
             </Link>
           </div>

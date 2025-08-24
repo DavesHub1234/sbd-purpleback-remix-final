@@ -101,17 +101,13 @@ const Branding = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-primary rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Ready to Build Your Brand?</h3>
-              <p className="text-white/90 mb-6">
-                Let's create a professional brand identity that attracts customers and grows your business.
-              </p>
-              <Link to="/contact">
-                <Button variant="secondary" size="lg">
-                  Get Started Today
-                </Button>
-              </Link>
-            </div>
+          <div className="relative">
+            <img 
+              src="/lovable-uploads/1b899310-7b14-4da3-bf28-f2459baa928d.png" 
+              alt="Celebrating contractors saying 'Yay Dx!' representing successful business partnerships" 
+              className="w-full h-auto rounded-2xl shadow-elegant"
+            />
+          </div>
           </div>
         </div>
       </section>

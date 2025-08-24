@@ -90,8 +90,8 @@ const HeroSection = () => {
               {/* Hero Image */}
               <div className="aspect-square rounded-2xl overflow-hidden shadow-glow border border-white/20">
                 <img 
-                  src={heroImage} 
-                  alt="Professional web development workspace showing contractor websites and digital tools" 
+                  src="/lovable-uploads/e5faee3e-4696-4b05-bc40-c55d4950a6f2.png" 
+                  alt="Professional contractors team - roofing, landscaping, and solar panel installers ready to serve" 
                   className="w-full h-full object-cover"
                 />
                 {/* Overlay */}

@@ -32,48 +32,59 @@ const GoogleOptimization = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Google Optimization Features with Visual */}
       <section className="py-24 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-16">
-            Complete Google Optimization Suite
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Search,
-                title: "SEO Optimization",
-                description: "Rank higher in Google search results for your target keywords"
-              },
-              {
-                icon: MapPin,
-                title: "Google My Business",
-                description: "Optimize your business profile for maximum local visibility"
-              },
-              {
-                icon: Star,
-                title: "Review Management",
-                description: "Get more 5-star reviews and manage your online reputation"
-              },
-              {
-                icon: TrendingUp,
-                title: "Local SEO",
-                description: "Dominate local search results in your service area"
-              }
-            ].map((service, index) => (
-              <Card key={index} className="text-center border-0 shadow-card">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <service.icon size={32} className="text-white" />
-                  </div>
-                  <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">{service.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/fcb1bb7e-61b9-4c5a-aea3-3eab98e83ebf.png" 
+                alt="Futuristic Google search interface showing SEO optimization results" 
+                className="w-full h-auto rounded-2xl shadow-elegant"
+              />
+            </div>
+            
+            <div>
+              <h2 className="text-4xl font-bold text-foreground mb-8">
+                Complete Google Optimization Suite
+              </h2>
+              <div className="grid gap-6">
+                {[
+                  {
+                    icon: Search,
+                    title: "SEO Optimization",
+                    description: "Rank higher in Google search results for your target keywords"
+                  },
+                  {
+                    icon: MapPin,
+                    title: "Google My Business",
+                    description: "Optimize your business profile for maximum local visibility"
+                  },
+                  {
+                    icon: Star,
+                    title: "Review Management",
+                    description: "Get more 5-star reviews and manage your online reputation"
+                  },
+                  {
+                    icon: TrendingUp,
+                    title: "Local SEO",
+                    description: "Dominate local search results in your service area"
+                  }
+                ].map((service, index) => (
+                  <Card key={index} className="border-0 shadow-card">
+                    <CardContent className="flex items-start space-x-4 p-6">
+                      <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                        <service.icon size={24} className="text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                        <p className="text-muted-foreground">{service.description}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
