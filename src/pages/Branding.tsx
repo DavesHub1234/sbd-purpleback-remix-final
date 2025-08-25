@@ -78,6 +78,41 @@ const Branding = () => {
         </div>
       </section>
 
+      {/* Logo Showcase Section */}
+      <section className="py-16 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+            Trusted by Industry Leaders
+          </h2>
+          <div className="relative">
+            <div className="flex animate-scroll space-x-16 items-center">
+              {[...Array(2)].map((_, setIndex) => (
+                <div key={setIndex} className="flex space-x-16 items-center">
+                  <div className="flex-shrink-0 h-16 w-32 bg-muted/30 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-muted-foreground">BuildCorp</span>
+                  </div>
+                  <div className="flex-shrink-0 h-16 w-32 bg-muted/30 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-muted-foreground">SolarMax</span>
+                  </div>
+                  <div className="flex-shrink-0 h-16 w-32 bg-muted/30 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-muted-foreground">GreenScape</span>
+                  </div>
+                  <div className="flex-shrink-0 h-16 w-32 bg-muted/30 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-muted-foreground">RoofPro</span>
+                  </div>
+                  <div className="flex-shrink-0 h-16 w-32 bg-muted/30 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-muted-foreground">EliteWork</span>
+                  </div>
+                  <div className="flex-shrink-0 h-16 w-32 bg-muted/30 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-muted-foreground">PowerGen</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

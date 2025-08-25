@@ -43,15 +43,24 @@ const ServicesSection = () => {
     <section className="py-24 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Complete Digital Solutions for{" "}
-            <span className="gradient-text">Local Contractors</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We specialize in roofing contractors, landscaping companies, and solar panel installers. 
-            Our tailored approach ensures maximum ROI for your industry.
-          </p>
+        <div className="text-center mb-16 relative">
+          <div className="absolute inset-0 flex items-center justify-center opacity-20">
+            <img 
+              src="/lovable-uploads/ab2f14a1-bdab-4f01-a4a4-ea21998e031d.png" 
+              alt="Professional contractors team" 
+              className="w-96 h-auto object-contain"
+            />
+          </div>
+          <div className="relative z-10">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Professional Web Design for{" "}
+              <span className="gradient-text">Contractors</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We specialize in roofing contractors, landscaping companies, and solar panel installers. 
+              Our tailored approach ensures maximum ROI for your industry.
+            </p>
+          </div>
         </div>
 
         {/* Services Grid */}

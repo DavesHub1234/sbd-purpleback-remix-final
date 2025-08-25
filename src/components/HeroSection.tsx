@@ -26,21 +26,17 @@ const HeroSection = () => {
 
             {/* Main Headline */}
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
-                We Don't Just Build{" "}
+            <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+                We Don't Just Build Websites.{" "}
                 <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-                  Websites
-                </span>
-                <br />
-                We Build{" "}
-                <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-                  Opportunity
+                  We Build Something GREAT Together!
                 </span>
               </h1>
               
               <p className="text-xl text-white/90 max-w-2xl leading-relaxed">
+                <span className="font-semibold text-accent">We build opportunity!</span><br />
                 Specialized web development and digital marketing for roofing contractors, 
-                landscaping companies, and solar panel installers. We build something GREAT together!
+                landscaping companies, and solar panel installers.
               </p>
             </div>
 
