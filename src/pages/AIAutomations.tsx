@@ -65,7 +65,7 @@ const AIAutomations = () => {
                 ].map((solution, index) => (
                   <Card key={index} className="border-0 shadow-card">
                     <CardContent className="flex items-start space-x-4 p-6">
-                      <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-primary-gold rounded-lg flex items-center justify-center flex-shrink-0">
                         <solution.icon size={24} className="text-white" />
                       </div>
                       <div>

@@ -69,7 +69,7 @@ const About = () => {
             ].map((value, index) => (
               <Card key={index} className="text-center border-0 shadow-card">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon size={32} className="text-white" />
                   </div>
                   <CardTitle className="text-xl font-bold">{value.title}</CardTitle>

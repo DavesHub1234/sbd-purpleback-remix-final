@@ -40,6 +40,7 @@
 
     /* Dx1 Custom Design Tokens */
     --gradient-primary: linear-gradient(135deg, hsl(259 84% 30%), hsl(262 57% 66%));
+    --gradient-primary-gold: linear-gradient(135deg, hsl(259 84% 30%), hsl(262 57% 66%)), linear-gradient(135deg, hsl(45 100% 75% / 0.3) 0%, hsl(35 100% 65% / 0.4) 50%, hsl(45 100% 85% / 0.2) 100%);
     --gradient-secondary: linear-gradient(135deg, hsl(218 49% 22%), hsl(259 84% 30%));
     --gradient-hero: linear-gradient(135deg, hsl(259 84% 30%) 0%, hsl(218 49% 22%) 50%, hsl(262 57% 66%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(262 57% 98%) 100%);
@@ -107,6 +108,7 @@
 
     /* Dark mode custom tokens */
     --gradient-primary: linear-gradient(135deg, hsl(259 84% 40%), hsl(262 57% 76%));
+    --gradient-primary-gold: linear-gradient(135deg, hsl(259 84% 40%), hsl(262 57% 76%)), linear-gradient(135deg, hsl(45 100% 80% / 0.25) 0%, hsl(35 100% 70% / 0.35) 50%, hsl(45 100% 90% / 0.15) 100%);
     --gradient-secondary: linear-gradient(135deg, hsl(218 49% 32%), hsl(259 84% 40%));
     --gradient-hero: linear-gradient(135deg, hsl(259 84% 40%) 0%, hsl(218 49% 32%) 50%, hsl(262 57% 76%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(222.2 84% 4.9%) 0%, hsl(259 84% 8%) 100%);
@@ -135,5 +137,27 @@
   
   .glass-effect {
     @apply bg-white/10 backdrop-blur-sm border border-white/20;
+  }
+  
+  .bg-gradient-primary-gold {
+    background: var(--gradient-primary-gold);
+    background-blend-mode: overlay;
+    position: relative;
+  }
+  
+  .bg-gradient-primary-gold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      hsl(45 100% 75% / 0.3) 0%, 
+      hsl(35 100% 65% / 0.4) 30%, 
+      transparent 60%, 
+      hsl(45 100% 85% / 0.2) 100%);
+    border-radius: inherit;
+    pointer-events: none;
   }
 }
