@@ -28,7 +28,7 @@ const Navigation = () => {
               <img 
                 src="/lovable-uploads/b422b1bf-95f4-4c21-98d6-52e439296099.png" 
                 alt="Dx1 Solutions Logo" 
-                className="w-12 h-12"
+                className="w-16 h-16"
               />
               <span className="text-xl font-bold text-primary">Dx1 Solutions</span>
             </Link>

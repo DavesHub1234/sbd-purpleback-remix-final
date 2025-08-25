@@ -32,11 +32,12 @@ const Footer = () => {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">D</span>
-              </div>
-              <span className="text-xl font-bold">Dx1 Solutions</span>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/src/assets/dx1-logo.png" 
+                alt="Dx1 Solutions Logo" 
+                className="h-16 w-auto"
+              />
             </div>
             <p className="text-white/80 leading-relaxed">
               We don't just build websites. We build opportunity. We build something GREAT together!
