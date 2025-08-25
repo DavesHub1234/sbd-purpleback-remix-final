@@ -96,6 +96,15 @@ const HeroSection = () => {
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
+                
+                {/* Company Mascot in corner */}
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 animate-bounce z-10">
+                  <img 
+                    src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830.png" 
+                    alt="Dx1 Solutions mascot - AI brain and contractor partnership" 
+                    className="w-full h-full object-contain drop-shadow-lg"
+                  />
+                </div>
               </div>
 
               {/* Floating Elements */}
