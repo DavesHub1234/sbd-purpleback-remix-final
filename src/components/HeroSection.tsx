@@ -26,11 +26,9 @@ const HeroSection = () => {
 
             {/* Main Headline */}
             <div className="space-y-6">
-            <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
-                We Don't Just Build Websites.{" "}
-                <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-                  We Build Something GREAT Together!
-                </span>
+            <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+                We Don't Just Build You a Website.{" "}
+                We Build Something <span className="text-trophy-gold font-bold">GREAT</span> Together!
               </h1>
               
               <p className="text-xl text-white/90 max-w-2xl leading-relaxed">

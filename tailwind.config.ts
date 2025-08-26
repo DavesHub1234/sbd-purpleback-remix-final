@@ -61,13 +61,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'trophy-gold': 'hsl(var(--trophy-gold))'
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-trophy-gold': 'var(--gradient-trophy-gold)',
 			},
 			boxShadow: {
 				'brand': 'var(--shadow-brand)',

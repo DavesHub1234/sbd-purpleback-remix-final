@@ -14,6 +14,7 @@ const Navigation = () => {
     { name: "AI Automations", path: "/ai-automations" },
     { name: "Google Optimization", path: "/google-optimization" },
     { name: "About Us", path: "/about" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;

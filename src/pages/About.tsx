@@ -122,6 +122,47 @@ const About = () => {
         </div>
       </section>
 
+      {/* Our Core Values Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-6">Our Core Values</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              These fundamental principles guide everything we do at Dx1 Solutions.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Value",
+                description: "We deliver exceptional results that exceed your investment, ensuring every dollar spent generates meaningful returns for your business."
+              },
+              {
+                title: "Integrity",
+                description: "We operate with complete honesty and transparency, building trust through consistent actions and reliable communication."
+              },
+              {
+                title: "Trust",
+                description: "We earn your confidence through proven expertise, dependable service, and a commitment to your long-term success."
+              }
+            ].map((value, index) => (
+              <Card key={index} className="text-center border-0 shadow-card">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-trophy-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle size={32} className="text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold">{value.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base leading-relaxed">{value.description}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us Section */}
       <section className="py-24 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
