@@ -34,9 +34,9 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/ab2f14a1-bdab-4f01-a4a4-ea21998e031d.png" 
+                src="/lovable-uploads/e5ffd9f6-4196-4d1f-b599-23872de83cbe.png" 
                 alt="Dx1 Solutions Logo" 
-                className="h-24 w-auto"
+                className="h-28 w-auto"
               />
             </div>
             <p className="text-white/80 leading-relaxed">
@@ -45,7 +45,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-white/80">
                 <Phone size={18} className="text-accent" />
-                <span>(555) 123-4567</span>
+                <span>(704) 473-8188</span>
               </div>
               <div className="flex items-center space-x-3 text-white/80">
                 <Mail size={18} className="text-accent" />
@@ -53,7 +53,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-white/80">
                 <MapPin size={18} className="text-accent" />
-                <span>Local Service Area</span>
+                <span>Shelby, NC 28152</span>
               </div>
             </div>
           </div>

@@ -100,7 +100,7 @@ const Contact = () => {
                   {
                     icon: Phone,
                     title: "Phone",
-                    description: "(555) 123-4567",
+                    description: "(704) 473-8188",
                     subtitle: "Mon-Fri 9AM-6PM EST"
                   },
                   {
@@ -112,7 +112,7 @@ const Contact = () => {
                   {
                     icon: MapPin,
                     title: "Service Area",
-                    description: "Local & Regional",
+                    description: "Shelby, NC 28152",
                     subtitle: "Serving contractors nationwide"
                   },
                   {
