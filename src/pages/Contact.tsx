@@ -15,7 +15,7 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-6xl lg:text-7xl font-bold text-white mb-6 text-center">
             Let's Build Something{" "}
             <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
               GREAT
