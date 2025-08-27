@@ -106,7 +106,7 @@ const Contact = () => {
                   {
                     icon: Mail,
                     title: "Email",
-                    description: "hello@dx1solutions.com",
+                    description: "davidrichardson@dx1solutions.com",
                     subtitle: "We reply within 24 hours"
                   },
                   {

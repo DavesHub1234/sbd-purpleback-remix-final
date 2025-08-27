@@ -81,7 +81,7 @@ const WebDesign = () => {
             
             <div className="relative">
               <img 
-                src="/lovable-uploads/cce00c4a-bc6a-4693-9858-9cc5970c8096.png" 
+                src="/lovable-uploads/cce00c4a-bc6a-4693-9858-9cc5970c8096-cropped.png" 
                 alt="Responsive web design mockup showing professional websites on multiple devices" 
                 className="w-full h-auto rounded-2xl shadow-elegant"
               />
