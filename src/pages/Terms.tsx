@@ -1,9 +1,15 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Terms = () => {
   return (
     <>
+      <SEO
+        title="Terms of Service - Dx1 Solutions"
+        description="Terms of Service for Dx1 Solutions. Review our terms and conditions for web design, SEO, AI automation, and digital marketing services."
+        noindex={true}
+      />
       <Navigation />
       <main className="min-h-screen">
         {/* Hero Section */}
@@ -80,8 +86,8 @@ const Terms = () => {
               <div className="bg-muted p-6 rounded-lg">
                 <p className="font-semibold text-foreground">Dx1 Solutions</p>
                 <p className="text-foreground/80">Email: davidrichardson@dx1solutions.com</p>
-                <p className="text-foreground/80">Phone: (970) 301-3468</p>
-                <p className="text-foreground/80">Address: 1234 Business Ave, Fort Collins, CO 80525</p>
+                <p className="text-foreground/80">Phone: (704) 473-8188</p>
+                <p className="text-foreground/80">Address: 125 S. Toney Street Shelby, North Carolina</p>
               </div>
             </div>
           </div>

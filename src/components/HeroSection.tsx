@@ -83,11 +83,11 @@ const HeroSection = () => {
             <div className="relative">
               {/* Hero Image */}
               <div className="aspect-square rounded-2xl overflow-hidden shadow-glow border border-white/20">
-                <img 
-                  src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea.png" 
-                  alt="Professional websites showcase - custom web design solutions for contractors and businesses" 
-                  className="w-full h-full object-cover"
-                />
+              <img 
+                src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea.png" 
+                alt="Professional contractor websites showcase - custom web design examples for roofing, landscaping, and solar businesses" 
+                className="w-full h-full object-cover"
+              />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
                 
@@ -95,7 +95,7 @@ const HeroSection = () => {
                 <div className="absolute -bottom-6 -right-6 w-24 h-24 animate-bounce z-10">
                   <img 
                     src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830.png" 
-                    alt="Dx1 Solutions mascot - AI brain and contractor partnership" 
+                    alt="Dx1 Solutions AI-powered contractor marketing mascot - representing innovation in web design and digital marketing" 
                     className="w-full h-full object-contain drop-shadow-lg"
                   />
                 </div>

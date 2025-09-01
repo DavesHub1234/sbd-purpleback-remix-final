@@ -6,10 +6,60 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
+import { trackFormSubmission } from "@/components/GoogleAnalytics";
+import SEO from "@/components/SEO";
+import { breadcrumbSchema } from "@/data/structuredData";
 
 const Contact = () => {
+  const { toast } = useToast();
+
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: "https://dx1solutions.com" },
+    { name: "Contact", url: "https://dx1solutions.com/contact" }
+  ]);
+
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Dx1 Solutions",
+    "description": "Get in touch with Dx1 Solutions for professional web design, SEO, AI automations, and branding services. Free consultations available.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Dx1 Solutions",
+      "telephone": "+1-704-473-8188",
+      "email": "davidrichardson@dx1solutions.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "125 S. Toney Street",
+        "addressLocality": "Shelby",
+        "addressRegion": "NC",
+        "addressCountry": "US"
+      }
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    // Track form submission
+    trackFormSubmission('contact_form');
+    
+    toast({
+      title: "Message Sent!",
+      description: "We'll get back to you within 24 hours.",
+      duration: 5000,
+    });
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Contact Dx1 Solutions - Get Your Free Quote Today"
+        description="Contact Dx1 Solutions for professional web design, SEO, AI automations, and branding services. Free consultations available. Call (704) 473-8188 or email us today."
+        keywords="contact dx1 solutions, free web design quote, contractor web design consultation, SEO services quote, AI automation consultation, Shelby NC web design"
+        structuredData={[breadcrumbs, contactSchema]}
+      />
       <Navigation />
       
       {/* Hero Section */}
@@ -43,44 +93,48 @@ const Contact = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input id="firstName" placeholder="John" />
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="firstName">First Name</Label>
+                      <Input id="firstName" name="firstName" placeholder="John" required />
+                    </div>
+                    <div>
+                      <Label htmlFor="lastName">Last Name</Label>
+                      <Input id="lastName" name="lastName" placeholder="Smith" required />
+                    </div>
                   </div>
+                  
                   <div>
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input id="lastName" placeholder="Smith" />
+                    <Label htmlFor="email">Email Address</Label>
+                    <Input id="email" name="email" type="email" placeholder="john@example.com" required />
                   </div>
-                </div>
-                
-                <div>
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" />
-                </div>
-                
-                <div>
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" type="tel" placeholder="(555) 123-4567" />
-                </div>
-                
-                <div>
-                  <Label htmlFor="business">Business Type</Label>
-                  <Input id="business" placeholder="e.g., Roofing Contractor, Landscaping, Solar" />
-                </div>
-                
-                <div>
-                  <Label htmlFor="message">Project Details</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Tell us about your project, goals, and timeline..."
-                    className="min-h-[120px]"
-                  />
-                </div>
-                
-                <Button variant="primary" size="lg" className="w-full">
-                  Send Message
-                </Button>
+                  
+                  <div>
+                    <Label htmlFor="phone">Phone Number</Label>
+                    <Input id="phone" name="phone" type="tel" placeholder="(555) 123-4567" required />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="business">Business Type</Label>
+                    <Input id="business" name="business" placeholder="e.g., Roofing Contractor, Landscaping, Solar" />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="message">Project Details</Label>
+                    <Textarea 
+                      id="message" 
+                      name="message"
+                      placeholder="Tell us about your project, goals, and timeline..."
+                      className="min-h-[120px]"
+                      required
+                    />
+                  </div>
+                  
+                  <Button type="submit" variant="primary" size="lg" className="w-full">
+                    Send Message
+                  </Button>
+                </form>
               </CardContent>
             </Card>
 

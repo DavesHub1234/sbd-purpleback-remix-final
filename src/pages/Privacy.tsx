@@ -1,9 +1,15 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Privacy = () => {
   return (
     <>
+      <SEO
+        title="Privacy Policy - Dx1 Solutions"
+        description="Privacy Policy for Dx1 Solutions. Learn how we collect, use, and protect your personal information when you use our web design and digital marketing services."
+        noindex={true}
+      />
       <Navigation />
       <main className="min-h-screen">
         {/* Hero Section */}

@@ -4,10 +4,39 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Bot, MessageSquare, Calendar, Phone, Target, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import { breadcrumbSchema } from "@/data/structuredData";
 
 const AIAutomations = () => {
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: "https://dx1solutions.com" },
+    { name: "AI Automations", url: "https://dx1solutions.com/ai-automations" }
+  ]);
+
+  const aiAutomationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Automation Services for Contractors",
+    "description": "Cutting-edge AI solutions including chatbots, automated scheduling, lead qualification, and process automation for contractor businesses.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Dx1 Solutions"
+    },
+    "serviceType": "AI Automation and Business Intelligence",
+    "offers": {
+      "@type": "Offer",
+      "description": "AI-powered business automation including chatbots, smart scheduling, lead qualification, and process automation."
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="AI Automations for Contractors - Chatbots & Business Automation"
+        description="Transform your contractor business with AI automations. 24/7 chatbots, automated scheduling, lead qualification, and process automation. Save 20+ hours per week with intelligent business solutions."
+        keywords="AI automation contractors, chatbots for contractors, automated scheduling, lead qualification AI, business process automation, contractor chatbots, AI solutions business"
+        structuredData={[breadcrumbs, aiAutomationSchema]}
+      />
       <Navigation />
       
       {/* Hero Section */}
@@ -81,7 +110,7 @@ const AIAutomations = () => {
             <div className="relative">
               <img 
                 src="/lovable-uploads/c29af7c3-5a1b-4163-ace4-9e4709c6453b.png" 
-                alt="AI automation workflow showing phone calls, email automation, and chatbot integration" 
+                alt="AI automation workflow diagram - intelligent systems for phone calls, email automation, and chatbot customer service integration" 
                 className="w-full h-auto rounded-2xl shadow-elegant"
               />
             </div>

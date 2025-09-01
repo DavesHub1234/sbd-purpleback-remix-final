@@ -4,10 +4,39 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Palette, Users, Target, Award } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import { breadcrumbSchema } from "@/data/structuredData";
 
 const Branding = () => {
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: "https://dx1solutions.com" },
+    { name: "Logo Design & Branding", url: "https://dx1solutions.com/branding" }
+  ]);
+
+  const brandingSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Logo Design and Branding Services",
+    "description": "Professional logo design and complete branding packages for contractors and local businesses. Create memorable brands that build trust and credibility.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Dx1 Solutions"
+    },
+    "serviceType": "Logo Design and Brand Identity",
+    "offers": {
+      "@type": "Offer",
+      "description": "Complete branding solutions including logo design, brand identity packages, business cards, and marketing materials."
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Professional Logo Design & Branding for Contractors - Brand Identity"
+        description="Professional logo design and branding services for contractors and local businesses. Create memorable brand identity that builds trust with customers. Custom logos and complete branding packages."
+        keywords="logo design contractors, branding for contractors, professional logo design, brand identity design, business logo design, contractor branding, marketing materials design"
+        structuredData={[breadcrumbs, brandingSchema]}
+      />
       <Navigation />
       
       {/* Hero Section */}
@@ -139,7 +168,7 @@ const Branding = () => {
           <div className="relative">
             <img 
               src="/lovable-uploads/1b899310-7b14-4da3-bf28-f2459baa928d.png" 
-              alt="Celebrating contractors saying 'Yay Dx!' representing successful business partnerships" 
+              alt="Successful contractor partnership celebration - team of professionals celebrating business growth and collaboration" 
               className="w-full h-auto rounded-2xl shadow-elegant"
             />
           </div>

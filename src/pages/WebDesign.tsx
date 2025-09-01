@@ -4,10 +4,43 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Globe, Smartphone, Zap, Search } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import { breadcrumbSchema } from "@/data/structuredData";
 
 const WebDesign = () => {
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: "https://dx1solutions.com" },
+    { name: "Web Design", url: "https://dx1solutions.com/web-design" }
+  ]);
+
+  const webDesignSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Professional Web Design for Contractors",
+    "description": "Custom responsive websites designed specifically for roofing contractors, landscaping companies, and solar panel installers.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Dx1 Solutions"
+    },
+    "areaServed": {
+      "@type": "Country", 
+      "name": "United States"
+    },
+    "serviceType": "Web Design and Development",
+    "offers": {
+      "@type": "Offer",
+      "description": "Professional web design services including mobile-first design, SEO optimization, and lead generation systems."
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Professional Web Design for Contractors - Mobile-Responsive Websites"
+        description="Custom web design for roofing contractors, landscaping companies, and solar installers. Mobile-first responsive websites that convert visitors into customers. Get your free quote today."
+        keywords="contractor web design, roofing contractor websites, landscaping web design, solar installer websites, mobile responsive design, lead generation websites, professional web development"
+        structuredData={[breadcrumbs, webDesignSchema]}
+      />
       <Navigation />
       
       {/* Hero Section */}
@@ -82,7 +115,7 @@ const WebDesign = () => {
             <div className="relative">
               <img 
                 src="/lovable-uploads/cce00c4a-bc6a-4693-9858-9cc5970c8096-cropped.png" 
-                alt="Responsive web design mockup showing professional websites on multiple devices" 
+                alt="Mobile responsive web design mockup - professional contractor websites displayed on desktop, tablet, and smartphone devices" 
                 className="w-full h-auto rounded-2xl shadow-elegant"
               />
             </div>

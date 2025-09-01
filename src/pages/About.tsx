@@ -4,10 +4,23 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Users, Award, Target, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import { breadcrumbSchema, faqSchema } from "@/data/structuredData";
 
 const About = () => {
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: "https://dx1solutions.com" },
+    { name: "About Us", url: "https://dx1solutions.com/about" }
+  ]);
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="About Dx1 Solutions - Web Design & Digital Marketing Experts"
+        description="Learn about Dx1 Solutions, your trusted partner for web design, SEO, AI automations, and branding. Specialized in helping roofing contractors, landscaping companies, and solar installers grow their business online."
+        keywords="about dx1 solutions, web design company, digital marketing experts, contractor specialists, north carolina web design, local business marketing"
+        structuredData={[breadcrumbs, faqSchema]}
+      />
       <Navigation />
       
       {/* Hero Section */}

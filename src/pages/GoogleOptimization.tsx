@@ -4,10 +4,39 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Search, MapPin, Star, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import { breadcrumbSchema } from "@/data/structuredData";
 
 const GoogleOptimization = () => {
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: "https://dx1solutions.com" },
+    { name: "Google Optimization", url: "https://dx1solutions.com/google-optimization" }
+  ]);
+
+  const googleOptimizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Google Optimization Services for Contractors",
+    "description": "Complete Google ecosystem optimization including local SEO, Google My Business, review management, and Google Ads for contractor businesses.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Dx1 Solutions"
+    },
+    "serviceType": "Google Optimization and Local SEO",
+    "offers": {
+      "@type": "Offer",
+      "description": "Comprehensive Google optimization including local SEO, Google My Business optimization, review management, and Google Ads management."
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Google Optimization for Contractors - Local SEO & Google My Business"
+        description="Dominate local search results with our Google optimization services. Local SEO, Google My Business optimization, review management, and Google Ads for contractors. Get more customers online."
+        keywords="Google optimization contractors, local SEO contractors, Google My Business optimization, contractor SEO, Google Ads contractors, local search optimization, review management"
+        structuredData={[breadcrumbs, googleOptimizationSchema]}
+      />
       <Navigation />
       
       {/* Hero Section */}
