@@ -25,7 +25,7 @@ const NonExclusiveSection = () => {
           </p>
           
           <p className="text-base text-muted-foreground">
-            Your success is our success - no contracts, no exclusivity, just great results.
+            Your success is our success - no exclusivity, just great results.
           </p>
         </div>
       </div>
