@@ -29,7 +29,7 @@ const Navigation = () => {
               <img 
                 src="/lovable-uploads/e5ffd9f6-4196-4d1f-b599-23872de83cbe.png" 
                 alt="Dx1 Solutions logo - professional web design and digital marketing for contractors" 
-                className="h-16 w-auto"
+                className="h-20 w-auto"
               />
               <span className="text-2xl font-bold text-primary">Dx1 Solutions</span>
             </Link>

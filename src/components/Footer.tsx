@@ -36,7 +36,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/e5ffd9f6-4196-4d1f-b599-23872de83cbe.png" 
                 alt="Dx1 Solutions Logo" 
-                className="h-20 w-auto"
+                className="h-24 w-auto"
               />
             </div>
             <p className="text-white/80 leading-relaxed">

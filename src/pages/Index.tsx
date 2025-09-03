@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
+import NonExclusiveSection from "@/components/NonExclusiveSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { organizationSchema, servicesSchema, localBusinessSchema } from "@/data/structuredData";
@@ -20,6 +21,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <ServicesSection />
+        <NonExclusiveSection />
       </main>
       <Footer />
     </div>
