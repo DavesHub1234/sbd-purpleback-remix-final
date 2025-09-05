@@ -166,7 +166,7 @@ const Contact = () => {
                   {
                     icon: MapPin,
                     title: "Service Area",
-                    description: "Shelby, NC 28152",
+                    description: "Shelby, NC Surrounding Area",
                     subtitle: "Serving contractors nationwide"
                   },
                   {
