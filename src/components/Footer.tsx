@@ -40,7 +40,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-white/80 leading-relaxed">
-              We don't just build websites. We build opportunity. We build something GREAT together!
+              We don't just build you a website. We build something GREAT together!
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-white/80">
