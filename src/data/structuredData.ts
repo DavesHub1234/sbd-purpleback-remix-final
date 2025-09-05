@@ -2,15 +2,15 @@
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Dx1 Solutions",
+  "name": "StudiosbyDave",
   "description": "Professional web design, SEO, AI automations, and digital marketing for roofing contractors, landscaping companies, and solar panel installers.",
-  "url": "https://dx1solutions.com",
-  "logo": "https://dx1solutions.com/lovable-uploads/e5ffd9f6-4196-4d1f-b599-23872de83cbe.png",
+  "url": "https://studiosbydave.com",
+  "logo": "https://studiosbydave.com/assets/dx1-logo.png",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+1-704-473-8188",
     "contactType": "customer service",
-    "email": "davidrichardson@dx1solutions.com",
+    "email": "davidrichardson@studiosbydave.com",
     "availableLanguage": "English"
   },
   "address": {
@@ -21,8 +21,8 @@ export const organizationSchema = {
     "addressCountry": "US"
   },
   "sameAs": [
-    "https://www.linkedin.com/company/dx1solutions",
-    "https://www.facebook.com/dx1solutions"
+    "https://www.linkedin.com/company/studiosbydave",
+    "https://www.facebook.com/studiosbydave"
   ],
   "foundingDate": "2023",
   "numberOfEmployees": "2-10",
@@ -41,7 +41,7 @@ export const servicesSchema = {
   "@type": "Service",
   "provider": {
     "@type": "Organization",
-    "name": "Dx1 Solutions"
+    "name": "StudiosbyDave"
   },
   "serviceType": "Web Design and Digital Marketing",
   "description": "Professional web design, SEO optimization, AI automations, and branding services for contractors and local businesses.",
@@ -92,10 +92,10 @@ export const servicesSchema = {
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Dx1 Solutions",
-  "image": "https://dx1solutions.com/lovable-uploads/e5ffd9f6-4196-4d1f-b599-23872de83cbe.png",
+  "name": "StudiosbyDave",
+  "image": "https://studiosbydave.com/assets/dx1-logo.png",
   "telephone": "+1-704-473-8188",
-  "email": "davidrichardson@dx1solutions.com",
+  "email": "davidrichardson@studiosbydave.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "125 S. Toney Street",
@@ -109,7 +109,7 @@ export const localBusinessSchema = {
     "latitude": "35.2901",
     "longitude": "-81.5357"
   },
-  "url": "https://dx1solutions.com",
+  "url": "https://studiosbydave.com",
   "priceRange": "$$",
   "openingHours": "Mo-Fr 09:00-17:00",
   "aggregateRating": {
@@ -125,10 +125,10 @@ export const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What services does Dx1 Solutions offer?",
+      "name": "What services does StudiosbyDave offer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dx1 Solutions specializes in web design and development, SEO optimization, AI automations, logo design and branding, and Google optimization services specifically for contractors and local businesses."
+        "text": "StudiosbyDave specializes in web design and development, SEO optimization, AI automations, logo design and branding, and Google optimization services specifically for contractors and local businesses."
       }
     },
     {

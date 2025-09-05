@@ -34,8 +34,8 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/e5ffd9f6-4196-4d1f-b599-23872de83cbe.png" 
-                alt="Dx1 Solutions Logo" 
+                src="/assets/dx1-logo.png" 
+                alt="StudiosbyDave Logo" 
                 className="h-24 w-auto"
               />
             </div>
@@ -49,7 +49,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-white/80">
                 <Mail size={18} className="text-accent" />
-                <span>davidrichardson@dx1solutions.com</span>
+                <span>davidrichardson@studiosbydave.com</span>
               </div>
               <div className="flex items-center space-x-3 text-white/80">
                 <MapPin size={18} className="text-accent" />
@@ -128,7 +128,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-white/60 text-sm">
-              © {currentYear} Dx1 Solutions. All rights reserved.
+              © {currentYear} StudiosbyDave. All rights reserved.
             </p>
             <div className="flex items-center space-x-6 text-sm text-white/60">
               <Link to="/privacy" className="hover:text-accent transition-colors">

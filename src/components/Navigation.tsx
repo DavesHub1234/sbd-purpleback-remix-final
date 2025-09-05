@@ -27,11 +27,11 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/e5ffd9f6-4196-4d1f-b599-23872de83cbe.png" 
-                alt="Dx1 Solutions logo - professional web design and digital marketing for contractors" 
+                src="/assets/dx1-logo.png" 
+                alt="StudiosbyDave logo - professional web design and digital marketing for contractors" 
                 className="h-20 w-auto"
               />
-              <span className="text-2xl font-bold text-primary">Dx1 Solutions</span>
+              <span className="text-2xl font-bold text-primary">StudiosbyDave</span>
             </Link>
           </div>
 

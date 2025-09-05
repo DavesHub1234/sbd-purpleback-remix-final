@@ -16,13 +16,13 @@ const SEO = ({
   description,
   keywords,
   canonical,
-  ogImage = "https://dx1solutions.com/og-image.jpg",
+  ogImage = "https://studiosbydave.com/og-image.jpg",
   ogType = "website",
   structuredData,
   noindex = false
 }: SEOProps) => {
-  const fullTitle = title.includes("Dx1 Solutions") ? title : `${title} | Dx1 Solutions`;
-  const url = canonical || `https://dx1solutions.com${window.location.pathname}`;
+  const fullTitle = title.includes("StudiosbyDave") ? title : `${title} | StudiosbyDave`;
+  const url = canonical || `https://studiosbydave.com${window.location.pathname}`;
 
   return (
     <Helmet>
@@ -41,7 +41,7 @@ const SEO = ({
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Dx1 Solutions" />
+      <meta property="og:site_name" content="StudiosbyDave" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card */}
@@ -49,11 +49,11 @@ const SEO = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@dx1solutions" />
+      <meta name="twitter:site" content="@studiosbydave" />
       
       {/* Additional SEO Meta Tags */}
-      <meta name="author" content="Dx1 Solutions" />
-      <meta name="publisher" content="Dx1 Solutions" />
+      <meta name="author" content="StudiosbyDave" />
+      <meta name="publisher" content="StudiosbyDave" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="en" />
       
