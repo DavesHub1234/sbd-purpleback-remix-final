@@ -10,7 +10,7 @@ export const organizationSchema = {
     "@type": "ContactPoint",
     "telephone": "+1-704-473-8188",
     "contactType": "customer service",
-    "email": "davidrichardson@studiosbydave.com",
+    "email": "dx1creations25@gmail.com",
     "availableLanguage": "English"
   },
   "address": {
@@ -95,7 +95,7 @@ export const localBusinessSchema = {
   "name": "StudiosbyDave",
   "image": "https://studiosbydave.com/assets/dx1-logo.png",
   "telephone": "+1-704-473-8188",
-  "email": "davidrichardson@studiosbydave.com",
+  "email": "dx1creations25@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "125 S. Toney Street",
