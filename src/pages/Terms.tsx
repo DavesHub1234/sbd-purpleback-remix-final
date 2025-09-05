@@ -6,8 +6,8 @@ const Terms = () => {
   return (
     <>
       <SEO
-        title="Terms of Service - Dx1 Solutions"
-        description="Terms of Service for Dx1 Solutions. Review our terms and conditions for web design, SEO, AI automation, and digital marketing services."
+        title="Terms of Service - StudiosbyDave"
+        description="Terms of Service for StudiosbyDave. Review our terms and conditions for web design, SEO, AI automation, and digital marketing services."
         noindex={true}
       />
       <Navigation />
@@ -15,6 +15,13 @@ const Terms = () => {
         {/* Hero Section */}
         <section className="bg-gradient-hero py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="flex justify-center mb-8">
+              <img 
+                src="/lovable-uploads/6f340fde-df82-49e6-8e98-735c38a18099.png" 
+                alt="StudiosbyDave Logo" 
+                className="h-20 w-auto"
+              />
+            </div>
             <h1 className="text-6xl lg:text-7xl font-bold text-white mb-6 text-center">
               Terms of{" "}
               <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
@@ -37,14 +44,14 @@ const Terms = () => {
 
               <h2 className="text-3xl font-bold text-foreground mb-6">Acceptance of Terms</h2>
               <p className="text-foreground/80 mb-6">
-                By accessing and using Dx1 Solutions services, you accept and agree to be bound by 
+                By accessing and using StudiosbyDave services, you accept and agree to be bound by 
                 the terms and provision of this agreement. If you do not agree to abide by the above, 
                 please do not use this service.
               </p>
 
               <h2 className="text-3xl font-bold text-foreground mb-6">Services Provided</h2>
               <p className="text-foreground/80 mb-6">
-                Dx1 Solutions provides web design, branding, AI automation, and digital marketing services. 
+                StudiosbyDave provides web design, branding, AI automation, and digital marketing services. 
                 We reserve the right to modify, suspend, or discontinue any part of our services at any time.
               </p>
 
@@ -57,7 +64,7 @@ const Terms = () => {
               <h2 className="text-3xl font-bold text-foreground mb-6">Intellectual Property</h2>
               <p className="text-foreground/80 mb-6">
                 Upon full payment, clients receive ownership of custom work created specifically for them. 
-                Dx1 Solutions retains rights to general methodologies, techniques, and pre-existing intellectual property.
+                StudiosbyDave retains rights to general methodologies, techniques, and pre-existing intellectual property.
               </p>
 
               <h2 className="text-3xl font-bold text-foreground mb-6">Client Responsibilities</h2>
@@ -69,7 +76,7 @@ const Terms = () => {
 
               <h2 className="text-3xl font-bold text-foreground mb-6">Limitation of Liability</h2>
               <p className="text-foreground/80 mb-6">
-                Dx1 Solutions shall not be liable for any indirect, incidental, special, consequential, 
+                StudiosbyDave shall not be liable for any indirect, incidental, special, consequential, 
                 or punitive damages resulting from your use of our services.
               </p>
 
@@ -84,8 +91,8 @@ const Terms = () => {
                 For questions regarding these terms, please contact us at:
               </p>
               <div className="bg-muted p-6 rounded-lg">
-                <p className="font-semibold text-foreground">Dx1 Solutions</p>
-                <p className="text-foreground/80">Email: davidrichardson@dx1solutions.com</p>
+                <p className="font-semibold text-foreground">StudiosbyDave</p>
+                <p className="text-foreground/80">Email: davidrichardson@studiosbydave.com</p>
                 <p className="text-foreground/80">Phone: (704) 473-8188</p>
                 <p className="text-foreground/80">Address: 125 S. Toney Street Shelby, North Carolina</p>
               </div>
