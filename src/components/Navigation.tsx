@@ -29,7 +29,7 @@ const Navigation = () => {
               <img 
                 src="/lovable-uploads/6f340fde-df82-49e6-8e98-735c38a18099.png" 
                 alt="StudiosbyDave logo - professional web design and digital marketing for contractors" 
-                className="h-20 w-auto"
+                className="h-24 w-auto"
               />
               <span className="text-2xl font-bold text-primary">StudiosbyDave</span>
             </Link>
