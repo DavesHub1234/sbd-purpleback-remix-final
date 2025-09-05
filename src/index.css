@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Dx1 Solutions Design System - Professional Agency Branding */
+/* StudiosbyDave Design System - Professional Agency Branding */
 
 @layer base {
   :root {
-    /* Brand Colors - Dx1 Solutions Palette */
+    /* Brand Colors - StudiosbyDave Palette */
     --background: 0 0% 100%;
     --foreground: 218 49% 22%;
 

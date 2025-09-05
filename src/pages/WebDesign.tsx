@@ -9,8 +9,8 @@ import { breadcrumbSchema } from "@/data/structuredData";
 
 const WebDesign = () => {
   const breadcrumbs = breadcrumbSchema([
-    { name: "Home", url: "https://dx1solutions.com" },
-    { name: "Web Design", url: "https://dx1solutions.com/web-design" }
+    { name: "Home", url: "https://studiosbydave.com" },
+    { name: "Web Design", url: "https://studiosbydave.com/web-design" }
   ]);
 
   const webDesignSchema = {
@@ -19,8 +19,8 @@ const WebDesign = () => {
     "name": "Professional Web Design for Contractors",
     "description": "Custom responsive websites designed specifically for roofing contractors, landscaping companies, and solar panel installers.",
     "provider": {
-      "@type": "Organization",
-      "name": "Dx1 Solutions"
+      "@type": "Organization", 
+      "name": "StudiosbyDave"
     },
     "areaServed": {
       "@type": "Country", 

@@ -9,16 +9,16 @@ import { breadcrumbSchema, faqSchema } from "@/data/structuredData";
 
 const About = () => {
   const breadcrumbs = breadcrumbSchema([
-    { name: "Home", url: "https://dx1solutions.com" },
-    { name: "About Us", url: "https://dx1solutions.com/about" }
+    { name: "Home", url: "https://studiosbydave.com" },
+    { name: "About Us", url: "https://studiosbydave.com/about" }
   ]);
 
   return (
     <div className="min-h-screen">
       <SEO
-        title="About Dx1 Solutions - Web Design & Digital Marketing Experts"
-        description="Learn about Dx1 Solutions, your trusted partner for web design, SEO, AI automations, and branding. Specialized in helping roofing contractors, landscaping companies, and solar installers grow their business online."
-        keywords="about dx1 solutions, web design company, digital marketing experts, contractor specialists, north carolina web design, local business marketing"
+        title="About StudiosbyDave - Web Design & Digital Marketing Experts"
+        description="Learn about StudiosbyDave, your trusted partner for web design, SEO, AI automations, and branding. Specialized in helping roofing contractors, landscaping companies, and solar installers grow their business online."
+        keywords="about studiosbydave, web design company, digital marketing experts, contractor specialists, north carolina web design, local business marketing"
         structuredData={[breadcrumbs, faqSchema]}
       />
       <Navigation />
@@ -29,7 +29,7 @@ const About = () => {
           <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             About{" "}
             <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-              Dx1 Solutions
+              StudiosbyDave
             </span>
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
@@ -50,7 +50,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-6">Our Mission</h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              At Dx1 Solutions, we specialize in empowering local businesses with cutting-edge digital solutions. 
+              At StudiosbyDave, we specialize in empowering local businesses with cutting-edge digital solutions.
               We focus on roofing contractors, landscaping companies, and solar panel installers, helping them 
               reach their full potential through professional web design, powerful SEO, memorable branding, 
               and innovative AI automation.
@@ -141,7 +141,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-6">Our Core Values</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              These fundamental principles guide everything we do at Dx1 Solutions.
+              These fundamental principles guide everything we do at StudiosbyDave.
             </p>
           </div>
           
@@ -180,7 +180,7 @@ const About = () => {
       <section className="py-24 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-foreground mb-16">
-            Why Choose Dx1 Solutions?
+            Why Choose StudiosbyDave?
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">

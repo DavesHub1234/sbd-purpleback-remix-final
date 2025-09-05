@@ -15,20 +15,20 @@ const Contact = () => {
   const { toast } = useToast();
 
   const breadcrumbs = breadcrumbSchema([
-    { name: "Home", url: "https://dx1solutions.com" },
-    { name: "Contact", url: "https://dx1solutions.com/contact" }
+    { name: "Home", url: "https://studiosbydave.com" },
+    { name: "Contact", url: "https://studiosbydave.com/contact" }
   ]);
 
   const contactSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Contact Dx1 Solutions",
-    "description": "Get in touch with Dx1 Solutions for professional web design, SEO, AI automations, and branding services. Free consultations available.",
+    "name": "Contact StudiosbyDave",
+    "description": "Get in touch with StudiosbyDave for professional web design, SEO, AI automations, and branding services. Free consultations available.",
     "mainEntity": {
       "@type": "Organization",
-      "name": "Dx1 Solutions",
+      "name": "StudiosbyDave",
       "telephone": "+1-704-473-8188",
-      "email": "davidrichardson@dx1solutions.com",
+      "email": "davidrichardson@studiosbydave.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "125 S. Toney Street",
@@ -55,9 +55,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Contact Dx1 Solutions - Get Your Free Quote Today"
-        description="Contact Dx1 Solutions for professional web design, SEO, AI automations, and branding services. Free consultations available. Call (704) 473-8188 or email us today."
-        keywords="contact dx1 solutions, free web design quote, contractor web design consultation, SEO services quote, AI automation consultation, Shelby NC web design"
+        title="Contact StudiosbyDave - Get Your Free Quote Today"
+        description="Contact StudiosbyDave for professional web design, SEO, AI automations, and branding services. Free consultations available. Call (704) 473-8188 or email us today."
+        keywords="contact studiosbydave, free web design quote, contractor web design consultation, SEO services quote, AI automation consultation, Shelby NC web design"
         structuredData={[breadcrumbs, contactSchema]}
       />
       <Navigation />
@@ -160,7 +160,7 @@ const Contact = () => {
                   {
                     icon: Mail,
                     title: "Email",
-                    description: "davidrichardson@dx1solutions.com",
+                    description: "davidrichardson@studiosbydave.com",
                     subtitle: "We reply within 24 hours"
                   },
                   {

@@ -9,8 +9,8 @@ import { breadcrumbSchema } from "@/data/structuredData";
 
 const GoogleOptimization = () => {
   const breadcrumbs = breadcrumbSchema([
-    { name: "Home", url: "https://dx1solutions.com" },
-    { name: "Google Optimization", url: "https://dx1solutions.com/google-optimization" }
+    { name: "Home", url: "https://studiosbydave.com" },
+    { name: "Google Optimization", url: "https://studiosbydave.com/google-optimization" }
   ]);
 
   const googleOptimizationSchema = {
@@ -20,7 +20,7 @@ const GoogleOptimization = () => {
     "description": "Complete Google ecosystem optimization including local SEO, Google My Business, review management, and Google Ads for contractor businesses.",
     "provider": {
       "@type": "Organization",
-      "name": "Dx1 Solutions"
+      "name": "StudiosbyDave"
     },
     "serviceType": "Google Optimization and Local SEO",
     "offers": {

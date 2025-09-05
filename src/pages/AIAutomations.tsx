@@ -9,8 +9,8 @@ import { breadcrumbSchema } from "@/data/structuredData";
 
 const AIAutomations = () => {
   const breadcrumbs = breadcrumbSchema([
-    { name: "Home", url: "https://dx1solutions.com" },
-    { name: "AI Automations", url: "https://dx1solutions.com/ai-automations" }
+    { name: "Home", url: "https://studiosbydave.com" },
+    { name: "AI Automations", url: "https://studiosbydave.com/ai-automations" }
   ]);
 
   const aiAutomationSchema = {
@@ -20,7 +20,7 @@ const AIAutomations = () => {
     "description": "Cutting-edge AI solutions including chatbots, automated scheduling, lead qualification, and process automation for contractor businesses.",
     "provider": {
       "@type": "Organization",
-      "name": "Dx1 Solutions"
+      "name": "StudiosbyDave"
     },
     "serviceType": "AI Automation and Business Intelligence",
     "offers": {

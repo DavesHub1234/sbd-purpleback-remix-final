@@ -9,8 +9,8 @@ import { breadcrumbSchema } from "@/data/structuredData";
 
 const Branding = () => {
   const breadcrumbs = breadcrumbSchema([
-    { name: "Home", url: "https://dx1solutions.com" },
-    { name: "Logo Design & Branding", url: "https://dx1solutions.com/branding" }
+    { name: "Home", url: "https://studiosbydave.com" },
+    { name: "Logo Design & Branding", url: "https://studiosbydave.com/branding" }
   ]);
 
   const brandingSchema = {
@@ -19,8 +19,8 @@ const Branding = () => {
     "name": "Logo Design and Branding Services",
     "description": "Professional logo design and complete branding packages for contractors and local businesses. Create memorable brands that build trust and credibility.",
     "provider": {
-      "@type": "Organization",
-      "name": "Dx1 Solutions"
+      "@type": "Organization", 
+      "name": "StudiosbyDave"
     },
     "serviceType": "Logo Design and Brand Identity",
     "offers": {
