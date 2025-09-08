@@ -4,7 +4,7 @@ const Watermark = () => {
       <img 
         src="/lovable-uploads/02546e96-b12e-44fe-a4fd-f45b6a001adb.png" 
         alt="Watermark" 
-        className="w-8 h-8 object-contain"
+        className="w-12 h-12 object-contain"
       />
     </div>
   );
