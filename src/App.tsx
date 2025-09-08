@@ -15,6 +15,7 @@ import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
+import Watermark from "./components/Watermark";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <GoogleAnalytics />
+          <Watermark />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/web-design" element={<WebDesign />} />
