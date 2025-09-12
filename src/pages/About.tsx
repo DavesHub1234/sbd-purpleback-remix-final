@@ -96,6 +96,51 @@ const About = () => {
         </div>
       </section>
 
+      {/* Meet Dave Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-foreground mb-12">Meet Dave</h2>
+            <div className="max-w-md mx-auto">
+              <img 
+                src="/lovable-uploads/d08deff8-3748-4ab1-be7c-1f0aa5062b8b.png" 
+                alt="Dave - Founder of StudiosbyDave"
+                className="w-64 h-64 rounded-full object-cover mx-auto mb-4 shadow-lg"
+              />
+              <p className="text-2xl font-semibold text-foreground">Dave</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Philosophy Section */}
+      <section className="py-24 bg-gradient-subtle">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <img 
+                src="/lovable-uploads/3c4b682e-a53b-465e-811c-b2b12172b4fc.png" 
+                alt="How can we make our clients more money - Dave thinking"
+                className="w-full max-w-lg mx-auto rounded-2xl shadow-lg"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="text-4xl font-bold text-foreground mb-8">
+                Our Philosophy
+              </h2>
+              <p className="text-xl text-muted-foreground mb-6">
+                Every day, we wake up asking ourselves one simple question: "How can we make our clients more money today?"
+              </p>
+              <p className="text-lg text-muted-foreground">
+                This isn't just a catchy phrase - it's the driving force behind every decision we make, 
+                every strategy we develop, and every solution we create. Your success is our success, 
+                and we're committed to delivering results that directly impact your bottom line.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What We Do Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
