@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, Bot, MessageSquare, Calendar, Phone, Target, Zap } from "lucide-react";
+import { CheckCircle, ArrowRight, Bot, MessageSquare, Calendar, Phone, Target, Zap, ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { breadcrumbSchema } from "@/data/structuredData";
@@ -116,11 +116,23 @@ const AIAutomations = () => {
               
               {/* Additional contractor images */}
               <div className="grid md:grid-cols-2 gap-6">
-                <img 
-                  src="/contractor-innovation.jpg" 
-                  alt="Contractor using innovative AI technology with digital sparks of innovation in construction setting" 
-                  className="w-full h-auto rounded-2xl shadow-elegant"
-                />
+                <div className="relative">
+                  <img 
+                    src="/contractor-innovation.jpg" 
+                    alt="Contractor using innovative AI technology with digital sparks of innovation in construction setting" 
+                    className="w-full h-auto rounded-2xl shadow-elegant"
+                  />
+                  {/* Arrow pointing to fingers */}
+                  <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                    <ArrowDown className="text-white w-6 h-6 mx-auto mb-1 drop-shadow-lg" />
+                    <span className="text-white text-sm font-bold drop-shadow-lg">Me</span>
+                  </div>
+                  {/* Arrow pointing to utility worker */}
+                  <div className="absolute top-1/3 right-1/4 transform translate-x-1/2 -translate-y-1/2 text-center">
+                    <ArrowDown className="text-white w-6 h-6 mx-auto mb-1 drop-shadow-lg" />
+                    <span className="text-white text-sm font-bold drop-shadow-lg">You</span>
+                  </div>
+                </div>
                 <img 
                   src="/contractor-professional.jpg" 
                   alt="Professional contractor with safety helmet and sunglasses representing modern construction leadership" 
