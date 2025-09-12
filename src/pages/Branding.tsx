@@ -127,7 +127,7 @@ const Branding = () => {
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                     <Palette size={32} className="text-white" />
                   </div>
-                  <CardTitle className="text-2xl font-bold">Starter Brand Package</CardTitle>
+                  <CardTitle className="text-2xl font-bold italic">Starter Brand Package</CardTitle>
                   <CardDescription className="text-lg mt-2">Perfect for new businesses getting started</CardDescription>
                 </div>
               </CardHeader>
@@ -161,7 +161,7 @@ const Branding = () => {
                   <div className="w-16 h-16 bg-gradient-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users size={32} className="text-white" />
                   </div>
-                  <CardTitle className="text-2xl font-bold">Professional Brand Package</CardTitle>
+                  <CardTitle className="text-2xl font-bold italic">Professional Brand Package</CardTitle>
                   <CardDescription className="text-lg mt-2">Complete branding solution for established businesses</CardDescription>
                 </div>
               </CardHeader>
@@ -195,7 +195,7 @@ const Branding = () => {
                   <div className="w-16 h-16 bg-gradient-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
                     <Award size={32} className="text-white" />
                   </div>
-                  <CardTitle className="text-2xl font-bold">Enterprise Brand Package</CardTitle>
+                  <CardTitle className="text-2xl font-bold italic">Enterprise Brand Package</CardTitle>
                   <CardDescription className="text-lg mt-2">Complete marketing system for growing companies</CardDescription>
                 </div>
               </CardHeader>
