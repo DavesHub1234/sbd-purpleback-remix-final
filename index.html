@@ -9,6 +9,9 @@
     <meta name="author" content="StudiosbyDave" />
     <link rel="canonical" href="https://studiosbydave.com" />
 
+    <!-- Resource Hints for Performance -->
+    <link rel="modulepreload" href="/src/main.tsx">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +34,6 @@
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" defer></script>
   </body>
 </html>
