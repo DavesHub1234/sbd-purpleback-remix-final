@@ -61,7 +61,7 @@ const Branding = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Overview Section */}
       <section className="py-24 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-foreground mb-16">
@@ -73,22 +73,22 @@ const Branding = () => {
               {
                 icon: Palette,
                 title: "Logo Design",
-                description: "Custom logos that represent your business professionally"
+                description: "Custom logos crafted to capture your business essence and create lasting first impressions with professional, memorable designs."
               },
               {
                 icon: Users,
                 title: "Brand Identity",
-                description: "Complete visual identity systems and brand guidelines"
+                description: "Comprehensive visual identity systems including color palettes, typography, and brand guidelines for consistent messaging."
               },
               {
                 icon: Target,
                 title: "Marketing Materials",
-                description: "Business cards, brochures, and promotional materials"
+                description: "Complete suite of print and digital materials from business cards to vehicle wraps that amplify your brand presence."
               },
               {
                 icon: Award,
                 title: "Brand Strategy",
-                description: "Strategic positioning to differentiate your business"
+                description: "Strategic positioning and messaging that differentiates your business and resonates with your target market."
               }
             ].map((service, index) => (
               <Card key={index} className="text-center border-0 shadow-card">
@@ -103,6 +103,135 @@ const Branding = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Branding Packages Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-6">
+              Choose Your Branding Package
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              From essential brand basics to comprehensive marketing systems, we have the perfect package to establish and grow your business identity.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Starter Package */}
+            <Card className="border-0 shadow-card">
+              <CardHeader>
+                <div className="text-center mb-4">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Palette size={32} className="text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold">Starter Brand Package</CardTitle>
+                  <CardDescription className="text-lg mt-2">Perfect for new businesses getting started</CardDescription>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-3">
+                  {[
+                    "Custom Logo Design (3 concepts)",
+                    "Basic Brand Guidelines",
+                    "Business Card Design",
+                    "Letterhead Template",
+                    "Email Signature Design",
+                    "Social Media Profile Package",
+                    "Basic Brand Color Palette"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <CheckCircle className="text-primary w-5 h-5 flex-shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Professional Package */}
+            <Card className="border-2 border-primary shadow-elegant relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-sm font-semibold">
+                MOST POPULAR
+              </div>
+              <CardHeader>
+                <div className="text-center mb-4">
+                  <div className="w-16 h-16 bg-gradient-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users size={32} className="text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold">Professional Brand Package</CardTitle>
+                  <CardDescription className="text-lg mt-2">Complete branding solution for established businesses</CardDescription>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-3">
+                  {[
+                    "Premium Logo Design (5 concepts + revisions)",
+                    "Comprehensive Brand Guidelines",
+                    "Business Cards & Stationery Suite",
+                    "Brochure & Flyer Templates",
+                    "Vehicle Decal/Wrap Design",
+                    "Yard Sign & Banners",
+                    "Website Header Graphics",
+                    "Social Media Brand Kit",
+                    "Invoice & Estimate Templates",
+                    "Extended Brand Color System"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <CheckCircle className="text-primary w-5 h-5 flex-shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Enterprise Package */}
+            <Card className="border-0 shadow-card">
+              <CardHeader>
+                <div className="text-center mb-4">
+                  <div className="w-16 h-16 bg-gradient-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award size={32} className="text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold">Enterprise Brand Package</CardTitle>
+                  <CardDescription className="text-lg mt-2">Complete marketing system for growing companies</CardDescription>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-3">
+                  {[
+                    "Premium Logo Suite (Multiple variations)",
+                    "Complete Brand Manual & Guidelines",
+                    "Full Stationery & Business Materials",
+                    "Marketing Collateral Suite",
+                    "Full Vehicle Wrap Design",
+                    "Large Format Signage Package",
+                    "Trade Show & Event Materials",
+                    "Uniform & Apparel Designs",
+                    "Complete Digital Brand Package",
+                    "Brand Photography Guidelines",
+                    "Ongoing Brand Consultation (3 months)",
+                    "Brand Implementation Support"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <CheckCircle className="text-primary w-5 h-5 flex-shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/contact">
+              <Button variant="hero" size="lg">
+                Get Started with Your Brand Package
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
