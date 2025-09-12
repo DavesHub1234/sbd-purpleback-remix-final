@@ -105,7 +105,7 @@ const About = () => {
               <img 
                 src="/lovable-uploads/d08deff8-3748-4ab1-be7c-1f0aa5062b8b.png" 
                 alt="Dave - Founder of StudiosbyDave"
-                className="w-64 h-64 rounded-full object-cover mx-auto mb-4 shadow-lg"
+                className="w-64 h-auto mx-auto mb-4 shadow-lg rounded-lg"
               />
               <p className="text-2xl font-semibold text-foreground">Dave</p>
             </div>
