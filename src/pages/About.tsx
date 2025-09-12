@@ -132,8 +132,7 @@ const About = () => {
                 Every day, we wake up asking ourselves one simple question: "How can we make our clients more money today?"
               </p>
               <p className="text-lg text-muted-foreground">
-                This isn't just a catchy phrase - it's the driving force behind every decision we make, 
-                every strategy we develop, and every solution we create. Your success is our success, 
+                This isn't just a catchy phrase - Your success is our success, 
                 and we're committed to delivering results that directly impact your bottom line.
               </p>
             </div>
