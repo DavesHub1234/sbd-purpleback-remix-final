@@ -88,7 +88,7 @@ const HeroSection = () => {
                 alt="Professional contractor websites showcase - custom web design examples for roofing, landscaping, and solar businesses" 
                 className="w-full h-full object-cover"
                 fetchPriority="high"
-                decoding="async"
+                decoding="sync"
                 width="550"
                 height="550"
               />
