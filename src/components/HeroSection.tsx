@@ -89,6 +89,8 @@ const HeroSection = () => {
                 className="w-full h-full object-cover"
                 fetchPriority="high"
                 decoding="async"
+                width="550"
+                height="550"
               />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />

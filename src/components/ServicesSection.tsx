@@ -49,6 +49,10 @@ const ServicesSection = () => {
               src="/lovable-uploads/ab2f14a1-bdab-4f01-a4a4-ea21998e031d.png" 
               alt="Professional contractor team working together - roofing, landscaping, and solar installation specialists" 
               className="w-96 h-auto object-contain"
+              width="384"
+              height="384"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div className="relative z-10">
