@@ -111,8 +111,22 @@ const AIAutomations = () => {
               <img 
                 src="/lovable-uploads/c29af7c3-5a1b-4163-ace4-9e4709c6453b.png" 
                 alt="AI automation workflow diagram - intelligent systems for phone calls, email automation, and chatbot customer service integration" 
-                className="w-full h-auto rounded-2xl shadow-elegant"
+                className="w-full h-auto rounded-2xl shadow-elegant mb-8"
               />
+              
+              {/* Additional contractor images */}
+              <div className="grid md:grid-cols-2 gap-6">
+                <img 
+                  src="/contractor-innovation.jpg" 
+                  alt="Contractor using innovative AI technology with digital sparks of innovation in construction setting" 
+                  className="w-full h-auto rounded-2xl shadow-elegant"
+                />
+                <img 
+                  src="/contractor-professional.jpg" 
+                  alt="Professional contractor with safety helmet and sunglasses representing modern construction leadership" 
+                  className="w-full h-auto rounded-2xl shadow-elegant"
+                />
+              </div>
             </div>
           </div>
         </div>
