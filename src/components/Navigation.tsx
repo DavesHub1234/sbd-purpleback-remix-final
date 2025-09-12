@@ -28,7 +28,7 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/6f340fde-df82-49e6-8e98-735c38a18099.png" 
+                src="/lovable-uploads/53e3faf8-91ca-4a91-841b-36561dcb91f1.png" 
                 alt="StudiosbyDave logo - professional web design and digital marketing for contractors" 
                 className="h-24 w-auto"
               />

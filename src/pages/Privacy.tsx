@@ -17,7 +17,7 @@ const Privacy = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex justify-center mb-8">
               <img 
-                src="/lovable-uploads/6f340fde-df82-49e6-8e98-735c38a18099.png" 
+                src="/lovable-uploads/53e3faf8-91ca-4a91-841b-36561dcb91f1.png" 
                 alt="StudiosbyDave Logo" 
                 className="h-20 w-auto"
               />

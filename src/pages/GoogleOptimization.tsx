@@ -61,6 +61,25 @@ const GoogleOptimization = () => {
         </div>
       </section>
 
+      {/* Google My Business Showcase */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-foreground mb-8">
+            Get Found on Google My Business
+          </h2>
+          <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+            Your Google My Business profile is often the first thing customers see. We optimize it to get you more calls, reviews, and customers.
+          </p>
+          <div className="max-w-2xl mx-auto">
+            <img 
+              src="/lovable-uploads/b56502ca-7d57-469f-a63b-c87e8173c7c4.png" 
+              alt="Google My Business optimization showing business listing with 5-star reviews and local search results" 
+              className="w-full h-auto rounded-2xl shadow-elegant"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Google Optimization Features with Visual */}
       <section className="py-24 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
