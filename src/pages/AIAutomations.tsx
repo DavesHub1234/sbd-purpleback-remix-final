@@ -112,6 +112,8 @@ const AIAutomations = () => {
                 src="/lovable-uploads/c29af7c3-5a1b-4163-ace4-9e4709c6453b.png" 
                 alt="AI automation workflow diagram - intelligent systems for phone calls, email automation, and chatbot customer service integration" 
                 className="w-full h-auto rounded-2xl shadow-elegant mb-8"
+                loading="lazy"
+                decoding="async"
               />
               
               {/* Additional contractor images */}
@@ -121,6 +123,8 @@ const AIAutomations = () => {
                     src="/contractor-innovation.jpg" 
                     alt="Contractor using innovative AI technology with digital sparks of innovation in construction setting" 
                     className="w-full h-auto rounded-2xl shadow-elegant"
+                    loading="lazy"
+                    decoding="async"
                   />
                   {/* Arrow pointing to fingers */}
                   <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 text-center">
@@ -137,6 +141,8 @@ const AIAutomations = () => {
                   src="/contractor-professional.jpg" 
                   alt="Professional contractor with safety helmet and sunglasses representing modern construction leadership" 
                   className="w-full h-auto rounded-2xl shadow-elegant"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -153,6 +159,10 @@ const AIAutomations = () => {
               src="/lovable-uploads/994de390-9bc5-4484-b50b-23d538286dc8.png" 
               alt="Brain lightbulb representing innovative AI solutions" 
               className="w-32 h-32 mx-auto mb-6"
+              loading="lazy"
+              decoding="async"
+              width="128"
+              height="128"
             />
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Automate?</h3>
             <p className="text-white/90 mb-6">
