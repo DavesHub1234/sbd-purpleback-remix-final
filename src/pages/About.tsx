@@ -107,7 +107,7 @@ const About = () => {
                 alt="Dave - Founder of StudiosbyDave"
                 className="w-64 h-auto mx-auto mb-4 shadow-lg rounded-lg"
               />
-              <p className="text-2xl font-semibold text-foreground">Dave</p>
+              <p className="text-2xl font-semibold text-foreground">"Dave" David Richardson</p>
             </div>
           </div>
         </div>
