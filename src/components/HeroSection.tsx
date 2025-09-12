@@ -87,6 +87,8 @@ const HeroSection = () => {
                 src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea.png" 
                 alt="Professional contractor websites showcase - custom web design examples for roofing, landscaping, and solar businesses" 
                 className="w-full h-full object-cover"
+                fetchPriority="high"
+                decoding="async"
               />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
@@ -97,6 +99,10 @@ const HeroSection = () => {
                     src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830.png" 
                     alt="StudiosbyDave AI-powered contractor marketing mascot - representing innovation in web design and digital marketing" 
                     className="w-full h-full object-contain drop-shadow-lg"
+                    loading="lazy"
+                    decoding="async"
+                    width="96"
+                    height="96"
                   />
                 </div>
               </div>
