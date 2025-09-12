@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // Google Analytics tracking ID - replace with your actual GA4 measurement ID
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+const GA_MEASUREMENT_ID: string = 'G-XXXXXXXXXX';
 
 declare global {
   interface Window {
@@ -15,40 +15,49 @@ const GoogleAnalytics = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Initialize Google Analytics
-    const script1 = document.createElement('script');
-    script1.async = true;
-    script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-    document.head.appendChild(script1);
+    // Only load GA if we have a valid measurement ID (not placeholder)
+    if (GA_MEASUREMENT_ID === 'G-XXXXXXXXXX' || !GA_MEASUREMENT_ID.startsWith('G-')) {
+      return;
+    }
 
-    const script2 = document.createElement('script');
-    script2.innerHTML = `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${GA_MEASUREMENT_ID}', {
-        page_title: document.title,
-        page_location: window.location.href,
-        send_page_view: true
-      });
-    `;
-    document.head.appendChild(script2);
+    // Defer GA loading to improve initial page load
+    const loadGA = () => {
+      // Initialize Google Analytics
+      const script1 = document.createElement('script');
+      script1.async = true;
+      script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+      document.head.appendChild(script1);
 
-    // Make gtag available globally
-    window.gtag = function(...args: any[]) {
-      window.dataLayer.push(arguments);
+      const script2 = document.createElement('script');
+      script2.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GA_MEASUREMENT_ID}', {
+          page_title: document.title,
+          page_location: window.location.href,
+          send_page_view: true
+        });
+      `;
+      document.head.appendChild(script2);
+
+      // Make gtag available globally
+      window.gtag = function(...args: any[]) {
+        window.dataLayer.push(arguments);
+      };
     };
 
+    // Load GA after a short delay to not block initial render
+    const timeoutId = setTimeout(loadGA, 1000);
+
     return () => {
-      // Cleanup scripts on unmount
-      document.head.removeChild(script1);
-      document.head.removeChild(script2);
+      clearTimeout(timeoutId);
     };
   }, []);
 
   useEffect(() => {
     // Track page views on route changes
-    if (window.gtag) {
+    if (window.gtag && GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
       window.gtag('config', GA_MEASUREMENT_ID, {
         page_path: location.pathname + location.search,
         page_title: document.title,
@@ -62,13 +71,13 @@ const GoogleAnalytics = () => {
 
 // Utility functions for tracking events
 export const trackEvent = (eventName: string, parameters: any = {}) => {
-  if (window.gtag) {
+  if (window.gtag && GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
     window.gtag('event', eventName, parameters);
   }
 };
 
 export const trackConversion = (conversionLabel: string, value?: number) => {
-  if (window.gtag) {
+  if (window.gtag && GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
     window.gtag('event', 'conversion', {
       send_to: `${GA_MEASUREMENT_ID}/${conversionLabel}`,
       value: value,
