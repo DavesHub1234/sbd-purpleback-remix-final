@@ -13,6 +13,7 @@ const Navigation = () => {
     { name: "Logo Design & Branding", path: "/branding" },
     { name: "AI Automations", path: "/ai-automations" },
     { name: "Google Optimization", path: "/google-optimization" },
+    { name: "SEO Services", path: "/seo" },
     { name: "About Us", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];

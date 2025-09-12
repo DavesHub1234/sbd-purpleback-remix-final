@@ -10,6 +10,7 @@ import WebDesign from "./pages/WebDesign";
 import Branding from "./pages/Branding";
 import AIAutomations from "./pages/AIAutomations";
 import GoogleOptimization from "./pages/GoogleOptimization";
+import SEOPage from "./pages/SEO";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/branding" element={<Branding />} />
           <Route path="/ai-automations" element={<AIAutomations />} />
           <Route path="/google-optimization" element={<GoogleOptimization />} />
+          <Route path="/seo" element={<SEOPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />

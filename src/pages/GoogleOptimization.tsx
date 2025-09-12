@@ -67,8 +67,8 @@ const GoogleOptimization = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <img 
-                src="/lovable-uploads/fcb1bb7e-61b9-4c5a-aea3-3eab98e83ebf.png" 
-                alt="Futuristic Google search interface showing SEO optimization results" 
+                src="/lovable-uploads/1e32a73d-031e-4dfc-becf-0bd28772b676.png" 
+                alt="SEO optimization graph showing keywords, ranking, content, traffic, backlinks and web analysis components" 
                 className="w-full h-auto rounded-2xl shadow-elegant"
               />
             </div>
