@@ -111,20 +111,6 @@ const HeroSection = () => {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
                 
-                {/* YouTube Music Player */}
-                <div className="absolute bottom-4 left-4 w-48 h-28 rounded-lg overflow-hidden shadow-xl border border-white/20 bg-black/20 backdrop-blur-sm z-10">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/0ipv_l7KoSI?autoplay=1&loop=1&playlist=0ipv_l7KoSI&controls=1&rel=0&modestbranding=1"
-                    title="StudiosbyDave Background Music"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="rounded-lg"
-                  />
-                </div>
-                
                 {/* Company Mascot in corner */}
                 <div className="absolute -bottom-6 -right-6 w-28 h-28 animate-bounce z-20">
                   <img 
