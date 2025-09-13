@@ -10,6 +10,7 @@ const services = [
     description: "Custom, responsive websites that convert visitors into customers. Optimized for local contractors and service businesses.",
     features: ["Mobile-First Design", "Lightning Fast Loading", "Lead Generation Forms", "Local SEO Built-In"],
     link: "/studiosweb/web-design",
+    linkText: "Learn About Web Design",
     gradient: "from-primary to-accent"
   },
   {
@@ -18,6 +19,7 @@ const services = [
     description: "Professional branding packages that make your business stand out from competitors and build trust with customers.",
     features: ["Custom Logo Design", "Brand Identity Package", "Business Card Design", "Social Media Assets"],
     link: "/studiosweb/branding",
+    linkText: "Learn About Branding",
     gradient: "from-accent to-secondary"
   },
   {
@@ -26,6 +28,7 @@ const services = [
     description: "Cutting-edge AI solutions that streamline operations, improve customer service, and boost efficiency.",
     features: ["Automated Lead Follow-up", "Customer Service Chatbots", "Appointment Scheduling", "Review Management"],
     link: "/studiosweb/ai-automations",
+    linkText: "Learn About AI Automations",
     gradient: "from-secondary to-primary"
   },
   {
@@ -34,6 +37,7 @@ const services = [
     description: "Complete Google ecosystem optimization to dominate local search results and attract more customers.",
     features: ["Local SEO", "Google My Business", "Review Optimization", "Google Ads Management"],
     link: "/studiosweb/google-optimization",
+    linkText: "Learn About Google Optimization",
     gradient: "from-primary to-accent"
   }
 ];
@@ -95,7 +99,7 @@ const ServicesSection = () => {
                   </ul>
                   <Link to={service.link}>
                     <Button variant="outline" className="group/btn w-full">
-                      Learn More
+                      {service.linkText}
                       <ArrowRight size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
