@@ -119,11 +119,17 @@ const Navigation = () => {
               )}
             </div>
 
-            {/* StudiosInk - Coming Soon */}
-            <div className="flex flex-col items-center">
-              <span className="text-sm font-bold text-primary">StudiosInk</span>
-              <span className="text-xs text-muted-foreground">Coming Soon</span>
-            </div>
+            {/* StudiosInk */}
+            <Link
+              to="/studiosink"
+              className={`text-sm font-bold transition-colors hover:text-primary ${
+                isActive('/studiosink')
+                  ? "text-primary border-b-2 border-primary pb-1"
+                  : "text-primary"
+              }`}
+            >
+              StudiosInk
+            </Link>
             
             <Link to="/contact">
               <Button variant="primary" size="sm" className="ml-4">
@@ -188,14 +194,17 @@ const Navigation = () => {
               </div>
             </div>
 
-            {/* Mobile StudiosInk - Coming Soon */}
+            {/* Mobile StudiosInk */}
             <div className="border-t pt-4">
-              <div className="block text-base font-bold text-primary mb-2">
+              <Link
+                to="/studiosink"
+                onClick={() => setIsOpen(false)}
+                className={`block text-base font-bold transition-colors hover:text-primary ${
+                  isActive('/studiosink') ? "text-primary" : "text-primary"
+                }`}
+              >
                 StudiosInk
-              </div>
-              <div className="ml-4 text-sm text-muted-foreground">
-                Coming Soon
-              </div>
+              </Link>
             </div>
             
             <Link to="/contact" onClick={() => setIsOpen(false)}>
