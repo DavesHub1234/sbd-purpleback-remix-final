@@ -34,9 +34,13 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/53e3faf8-91ca-4a91-841b-36561dcb91f1.png" 
+                src="/lovable-uploads/53e3faf8-91ca-4a91-841b-36561dcb91f1-optimized.jpg" 
                 alt="StudiosbyDave Logo" 
                 className="h-24 w-auto"
+                width="96"
+                height="96"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="text-white/80 leading-relaxed">
