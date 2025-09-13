@@ -89,6 +89,7 @@ const HeroSection = () => {
                 className="w-full h-full object-cover"
                 fetchPriority="high"
                 decoding="sync"
+                loading="eager"
                 width="550"
                 height="550"
               />

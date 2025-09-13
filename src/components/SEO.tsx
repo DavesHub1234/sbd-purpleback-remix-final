@@ -51,6 +51,9 @@ const SEO = ({
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@studiosbydave" />
       
+      {/* Performance Optimization - Preload LCP Image */}
+      <link rel="preload" as="image" href="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" />
+      
       {/* Additional SEO Meta Tags */}
       <meta name="author" content="StudiosbyDave" />
       <meta name="publisher" content="StudiosbyDave" />
