@@ -58,11 +58,68 @@ const StudiosInk = () => {
               Where words come alive and stories find their voice. Explore our literary world 
               filled with captivating narratives and creative storytelling.
             </p>
-            <Link to="/studiosink/books">
+            <Link to="/studiosink/sacred-arsenal">
               <Button size="lg" className="text-lg px-8 py-6">
-                Explore Our Books
+                Discover Sacred Arsenal
               </Button>
             </Link>
+          </div>
+        </section>
+
+        {/* Featured Book - Sacred Arsenal */}
+        <section className="py-20 bg-gradient-to-r from-primary/10 to-accent/5">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  Featured Release
+                </h2>
+                <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
+              </div>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="flex justify-center">
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl blur-xl scale-105 opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                    <Link to="/studiosink/sacred-arsenal" className="block relative">
+                      <img 
+                        src="/sacred-arsenal-cover.jpg" 
+                        alt="Sacred Arsenal book cover - The 5G Defense Superscript"
+                        className="w-full max-w-sm h-auto rounded-lg shadow-xl transform group-hover:scale-105 transition-transform duration-300"
+                        width="300"
+                        height="450"
+                      />
+                    </Link>
+                  </div>
+                </div>
+                
+                <div className="text-center lg:text-left">
+                  <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                    Sacred Arsenal
+                  </h3>
+                  <p className="text-lg text-muted-foreground mb-2">
+                    The 5G Defense Superscript
+                  </p>
+                  <p className="text-base text-muted-foreground mb-6">
+                    by David P Richardson
+                  </p>
+                  <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                    A groundbreaking exploration that weaves together ancient wisdom and modern technology, 
+                    revealing the hidden connections between spiritual defense and the digital age.
+                  </p>
+                  <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+                    <Link to="/studiosink/sacred-arsenal">
+                      <Button size="lg" className="text-lg px-8 py-6">
+                        Explore This Book
+                      </Button>
+                    </Link>
+                    <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+                      Read Sample
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
