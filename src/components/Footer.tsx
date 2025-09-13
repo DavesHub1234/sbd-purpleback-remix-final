@@ -7,10 +7,10 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: "Web Design", href: "/web-design" },
-      { name: "Logo Design & Branding", href: "/branding" },
-      { name: "AI Automations", href: "/ai-automations" },
-      { name: "Google Optimization", href: "/google-optimization" },
+      { name: "Web Design", href: "/studiosweb/web-design" },
+      { name: "Logo Design & Branding", href: "/studiosweb/branding" },
+      { name: "AI Automations", href: "/studiosweb/ai-automations" },
+      { name: "Google Optimization", href: "/studiosweb/google-optimization" },
     ],
     company: [
       { name: "About Us", href: "/about" },

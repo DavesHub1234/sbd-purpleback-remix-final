@@ -9,7 +9,7 @@ const services = [
     title: "Web Design & Development",
     description: "Custom, responsive websites that convert visitors into customers. Optimized for local contractors and service businesses.",
     features: ["Mobile-First Design", "Lightning Fast Loading", "Lead Generation Forms", "Local SEO Built-In"],
-    link: "/web-design",
+    link: "/studiosweb/web-design",
     gradient: "from-primary to-accent"
   },
   {
@@ -17,7 +17,7 @@ const services = [
     title: "Logo Design & Branding",
     description: "Professional branding packages that make your business stand out from competitors and build trust with customers.",
     features: ["Custom Logo Design", "Brand Identity Package", "Business Card Design", "Social Media Assets"],
-    link: "/branding",
+    link: "/studiosweb/branding",
     gradient: "from-accent to-secondary"
   },
   {
@@ -25,7 +25,7 @@ const services = [
     title: "AI Automations",
     description: "Cutting-edge AI solutions that streamline operations, improve customer service, and boost efficiency.",
     features: ["Automated Lead Follow-up", "Customer Service Chatbots", "Appointment Scheduling", "Review Management"],
-    link: "/ai-automations",
+    link: "/studiosweb/ai-automations",
     gradient: "from-secondary to-primary"
   },
   {
@@ -33,7 +33,7 @@ const services = [
     title: "Google Optimization",
     description: "Complete Google ecosystem optimization to dominate local search results and attract more customers.",
     features: ["Local SEO", "Google My Business", "Review Optimization", "Google Ads Management"],
-    link: "/google-optimization",
+    link: "/studiosweb/google-optimization",
     gradient: "from-primary to-accent"
   }
 ];

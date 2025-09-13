@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Index from "./pages/Index";
+import StudiosWeb from "./pages/StudiosWeb";
 import WebDesign from "./pages/WebDesign";
 import Branding from "./pages/Branding";
 import AIAutomations from "./pages/AIAutomations";
@@ -31,11 +32,12 @@ const App = () => (
           <Watermark />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/web-design" element={<WebDesign />} />
-          <Route path="/branding" element={<Branding />} />
-          <Route path="/ai-automations" element={<AIAutomations />} />
-          <Route path="/google-optimization" element={<GoogleOptimization />} />
-          <Route path="/seo" element={<SEOPage />} />
+          <Route path="/studiosweb" element={<StudiosWeb />} />
+          <Route path="/studiosweb/web-design" element={<WebDesign />} />
+          <Route path="/studiosweb/branding" element={<Branding />} />
+          <Route path="/studiosweb/ai-automations" element={<AIAutomations />} />
+          <Route path="/studiosweb/google-optimization" element={<GoogleOptimization />} />
+          <Route path="/studiosweb/seo" element={<SEOPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
