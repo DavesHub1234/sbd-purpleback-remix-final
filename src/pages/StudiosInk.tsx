@@ -9,10 +9,17 @@ import { Book, User, Star, Feather } from "lucide-react";
 const StudiosInk = () => {
   const services = [
     {
+      title: "Sacred Arsenal",
+      description: "The 5G Defense Superscript - A groundbreaking exploration of ancient wisdom and modern technology",
+      icon: Book,
+      path: "/studiosink/sacred-arsenal",
+      features: ["Featured Release", "Defense Strategies", "Ancient Wisdom", "Hidden Connections"]
+    },
+    {
       title: "Book Showcase",
       description: "Explore our published works and literary collections",
       icon: Book,
-      path: "/studiosink/books",
+      path: "/studiosink/books", 
       features: ["Published Works", "Genre Collections", "Book Previews", "Publication Timeline"]
     },
     {
