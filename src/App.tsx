@@ -7,6 +7,7 @@ import { HelmetProvider } from "react-helmet-async";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Index from "./pages/Index";
 import StudiosWeb from "./pages/StudiosWeb";
+import StudiosInk from "./pages/StudiosInk";
 import WebDesign from "./pages/WebDesign";
 import Branding from "./pages/Branding";
 import AIAutomations from "./pages/AIAutomations";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/studiosweb/ai-automations" element={<AIAutomations />} />
           <Route path="/studiosweb/google-optimization" element={<GoogleOptimization />} />
           <Route path="/studiosweb/seo" element={<SEOPage />} />
+          <Route path="/studiosink" element={<StudiosInk />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
