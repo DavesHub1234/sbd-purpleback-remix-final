@@ -80,20 +80,6 @@ const HeroSection = () => {
 
           {/* Right Column - Hero Image */}
           <div className="relative lg:pl-8">
-            {/* YouTube Music Player */}
-            <div className="absolute -top-8 right-0 z-20 w-64 h-36 rounded-lg overflow-hidden shadow-lg border border-white/20 bg-black/20 backdrop-blur-sm">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/0ipv_l7KoSI?autoplay=1&mute=1&loop=1&playlist=0ipv_l7KoSI&controls=1&rel=0&modestbranding=1"
-                title="StudiosbyDave Background Music"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="rounded-lg"
-              />
-            </div>
-            
             <div className="relative">
               {/* Hero Image */}
               <div className="aspect-square rounded-2xl overflow-hidden shadow-glow border border-white/20">
