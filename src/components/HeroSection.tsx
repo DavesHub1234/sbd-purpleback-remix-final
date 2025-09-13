@@ -82,7 +82,7 @@ const HeroSection = () => {
           <div className="relative lg:pl-8">
             <div className="relative">
               {/* Hero Image */}
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-glow border border-white/20">
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-glow border border-white/20 relative">
               <img 
                 src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" 
                 alt="Professional contractor websites showcase - custom web design examples for roofing, landscaping, and solar businesses" 
@@ -95,6 +95,20 @@ const HeroSection = () => {
               />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
+                
+                {/* YouTube Music Player */}
+                <div className="absolute bottom-4 left-4 w-48 h-28 rounded-lg overflow-hidden shadow-xl border border-white/20 bg-black/20 backdrop-blur-sm z-10">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/0ipv_l7KoSI?autoplay=1&loop=1&playlist=0ipv_l7KoSI&controls=1&rel=0&modestbranding=1"
+                    title="StudiosbyDave Background Music"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="rounded-lg"
+                  />
+                </div>
                 
                 {/* Company Mascot in corner */}
                 <div className="absolute -bottom-6 -right-6 w-24 h-24 animate-bounce z-10">

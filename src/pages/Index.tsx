@@ -24,20 +24,6 @@ const Index = () => {
         <NonExclusiveSection />
       </main>
       <Footer />
-      
-      {/* Fixed YouTube Music Player */}
-      <div className="fixed bottom-4 left-4 z-50 w-48 h-28 rounded-lg overflow-hidden shadow-xl border border-white/20 bg-black/20 backdrop-blur-sm">
-        <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/0ipv_l7KoSI?autoplay=1&loop=1&playlist=0ipv_l7KoSI&controls=1&rel=0&modestbranding=1"
-          title="StudiosbyDave Background Music"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          className="rounded-lg"
-        />
-      </div>
     </div>
   );
 };
