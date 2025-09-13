@@ -15,10 +15,10 @@ const HeroSection = () => {
           <div className="text-center">
             <p className="text-white/80 text-sm font-medium mb-1">Call Now</p>
             <a 
-              href="tel:+19804445555" 
+              href="tel:+17044738188" 
               className="text-white text-2xl font-bold hover:text-accent transition-colors duration-300"
             >
-              (980) 444-5555
+              (704) 473-8188
             </a>
           </div>
         </div>
