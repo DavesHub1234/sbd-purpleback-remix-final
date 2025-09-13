@@ -191,11 +191,11 @@ const Navigation = () => {
           <div className="lg:hidden">
             <Button
               variant="ghost"
-              size="sm"
+              size="lg"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-primary"
+              className="text-foreground hover:text-foreground/80"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
             </Button>
           </div>
         </div>
