@@ -9,6 +9,21 @@ const HeroSection = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 hero-pattern opacity-50" />
       
+      {/* Phone Number Display */}
+      <div className="absolute top-8 right-8 z-30">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 px-6 py-4 shadow-glow">
+          <div className="text-center">
+            <p className="text-white/80 text-sm font-medium mb-1">Call Now</p>
+            <a 
+              href="tel:+19804445555" 
+              className="text-white text-2xl font-bold hover:text-accent transition-colors duration-300"
+            >
+              (980) 444-5555
+            </a>
+          </div>
+        </div>
+      </div>
+      
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-200px)]">
