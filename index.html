@@ -11,6 +11,7 @@
 
     <!-- Resource Hints for Performance -->
     <link rel="dns-prefetch" href="https://studiosbydave-final.lovable.app">
+    <link rel="dns-prefetch" href="https://omnisnippet1.com">
     <link rel="modulepreload" href="/src/main.tsx">
     <link rel="preload" as="image" href="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" fetchpriority="high">
 
@@ -39,16 +40,23 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx" defer></script>
     
-    <!-- Omnisend Tracking -->
+    <!-- Omnisend Tracking - Optimized Loading -->
     <script type="text/javascript">
+        // Initialize Omnisend with deferred loading to prevent forced reflows
         window.omnisend = window.omnisend || [];
         omnisend.push(["brandID", "678f5723f9d19334d6009afe"]);
-        omnisend.push(["track", "$pageViewed"]);
-        !function(){var e=document.createElement("script");
-        e.type="text/javascript",e.async=!0,
-        e.src="https://omnisnippet1.com/inshop/launcher-v2.js";
-        var t=document.getElementsByTagName("script")[0];
-        t.parentNode.insertBefore(e,t)}();
-</script>
+        
+        // Defer script loading to prevent blocking initial render
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                omnisend.push(["track", "$pageViewed"]);
+                var e = document.createElement("script");
+                e.type = "text/javascript";
+                e.async = true;
+                e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
+                document.head.appendChild(e);
+            }, 1000);
+        });
+    </script>
   </body>
 </html>
