@@ -135,9 +135,11 @@ const StudiosInk = () => {
                         Explore This Book
                       </Button>
                     </Link>
-                    <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                      Read Sample
-                    </Button>
+                    <Link to="/studiosink/book-release-sacred-arsenal">
+                      <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+                        Book Release Details
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
