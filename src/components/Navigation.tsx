@@ -81,7 +81,7 @@ const Navigation = () => {
                     : "text-primary"
                 }`}
               >
-                <span>StudiosWeb</span>
+                <span>Studios-Web</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${studiosWebOpen ? 'rotate-180' : ''}`} />
               </button>
               
@@ -94,7 +94,7 @@ const Navigation = () => {
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md hover:bg-muted/80 transition-colors"
                     >
                       <div className="mb-2 mt-4 text-lg font-medium">
-                        StudiosWeb
+                        Studios-Web
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
                         Complete digital solutions for your business growth
@@ -128,7 +128,7 @@ const Navigation = () => {
                   : "text-primary"
               }`}
             >
-              StudiosInk
+              Studios-Ink
             </Link>
             
             <Link to="/contact">
@@ -176,7 +176,7 @@ const Navigation = () => {
                   isStudiosWebActive() ? "text-primary" : "text-primary"
                 }`}
               >
-                StudiosWeb
+                Studios-Web
               </Link>
               <div className="ml-4 space-y-2">
                 {studiosWebServices.map((service) => (
@@ -203,7 +203,7 @@ const Navigation = () => {
                   isActive('/studiosink') ? "text-primary" : "text-primary"
                 }`}
               >
-                StudiosInk
+                Studios-Ink
               </Link>
             </div>
             
