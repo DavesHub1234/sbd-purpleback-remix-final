@@ -28,7 +28,7 @@ const Contact = () => {
       "@type": "Organization",
       "name": "Studios by Dave",
       "telephone": "+1-704-473-8188",
-      "email": "dx1creations25@gmail.com",
+      "email": "David.Richardson@studiosbydave.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "125 S. Toney Street",
@@ -160,7 +160,7 @@ const Contact = () => {
                   {
                     icon: Mail,
                     title: "Email",
-                    description: "dx1creations25@gmail.com",
+                    description: "David.Richardson@studiosbydave.com",
                     subtitle: "We reply within 24 hours"
                   },
                   {
