@@ -16,8 +16,8 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="About StudiosbyDave - Web Design & Digital Marketing Experts"
-        description="Learn about StudiosbyDave, your trusted partner for web design, SEO, AI automations, and branding. Specialized in helping roofing contractors, landscaping companies, and solar installers grow their business online."
+        title="About Studios by Dave - Web Design & Digital Marketing Experts"
+        description="Learn about Studios by Dave, your trusted partner for web design, SEO, AI automations, and branding. Specialized in helping roofing contractors, landscaping companies, and solar installers grow their business online."
         keywords="about studiosbydave, web design company, digital marketing experts, contractor specialists, north carolina web design, local business marketing"
         structuredData={[breadcrumbs, faqSchema]}
       />
@@ -29,7 +29,7 @@ const About = () => {
           <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             About{" "}
             <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-              StudiosbyDave
+              Studios by Dave
             </span>
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
@@ -50,7 +50,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-6">Our Mission</h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              At StudiosbyDave, we specialize in empowering local businesses with cutting-edge digital solutions.
+              At Studios by Dave, we specialize in empowering local businesses with cutting-edge digital solutions.
               We focus on roofing contractors, landscaping companies, and solar panel installers, helping them 
               reach their full potential through professional web design, powerful SEO, memorable branding, 
               and innovative AI automation.
@@ -104,12 +104,12 @@ const About = () => {
             <div className="max-w-md mx-auto">
               <img 
                 src="/lovable-uploads/d08deff8-3748-4ab1-be7c-1f0aa5062b8b.png" 
-                alt="Dave - Founder of StudiosbyDave"
+                alt="Dave - Founder of Studios by Dave"
                 className="w-64 h-auto mx-auto mb-4 shadow-lg rounded-lg"
               />
               <p className="text-2xl font-semibold text-foreground mb-6">"Dave" David Richardson</p>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                "Dave" David Richardson is a seasoned-long veteran in the various fields of Technology. He attended The University of North Carolina at Charlotte in 1997 and transferred to ECPI College of Technology in 2001 where he earned President of the National Vocational Technical Honor Society along with his College Degree. He then ventured into various service positions, one being Broadband Specialist/Installer with Shelby's own Computer Connections Inc. "Hey Eddie! Hi Lynne!" 😄 And then eventually proceeded to become Network Engineer at several private IT Firms. Local firms all the way to the deserts of Las Vegas, NV. David is also a life long musician that started playing music at the age of 8. He took to the love of recording music starting back at the turn of 1999-2000 and continued this craft on the side of work for nearly over 3 decades. Eventually coined his own status of Audio Mastering Engineer. "Dave" has always had a love for building websites and learning code and has taken this road full on as a Web Designer/Developer. Here at StudiosbyDave we wanna see you succeed. Because when our clients are happy, Everybody is Happy! 😁
+                "Dave" David Richardson is a seasoned-long veteran in the various fields of Technology. He attended The University of North Carolina at Charlotte in 1997 and transferred to ECPI College of Technology in 2001 where he earned President of the National Vocational Technical Honor Society along with his College Degree. He then ventured into various service positions, one being Broadband Specialist/Installer with Shelby's own Computer Connections Inc. "Hey Eddie! Hi Lynne!" 😄 And then eventually proceeded to become Network Engineer at several private IT Firms. Local firms all the way to the deserts of Las Vegas, NV. David is also a life long musician that started playing music at the age of 8. He took to the love of recording music starting back at the turn of 1999-2000 and continued this craft on the side of work for nearly over 3 decades. Eventually coined his own status of Audio Mastering Engineer. "Dave" has always had a love for building websites and learning code and has taken this road full on as a Web Designer/Developer. Here at Studios by Dave we wanna see you succeed. Because when our clients are happy, Everybody is Happy! 😁
               </p>
             </div>
           </div>
@@ -188,7 +188,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-6">Our Core Values</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              These fundamental principles guide everything we do at StudiosbyDave.
+              These fundamental principles guide everything we do at Studios by Dave.
             </p>
           </div>
           
@@ -227,7 +227,7 @@ const About = () => {
       <section className="py-24 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-foreground mb-16">
-            Why Choose StudiosbyDave?
+            Why Choose Studios by Dave?
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">

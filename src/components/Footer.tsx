@@ -35,7 +35,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/53e3faf8-91ca-4a91-841b-36561dcb91f1-optimized.jpg" 
-                alt="StudiosbyDave Logo" 
+                alt="Studios by Dave Logo" 
                 className="h-24 w-auto"
                 width="96"
                 height="96"
@@ -132,7 +132,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-white/60 text-sm">
-              © {currentYear} StudiosbyDave. All rights reserved.
+              © {currentYear} Studios by Dave. All rights reserved.
             </p>
             <div className="flex items-center space-x-6 text-sm text-white/60">
               <Link to="/privacy" className="hover:text-accent transition-colors">

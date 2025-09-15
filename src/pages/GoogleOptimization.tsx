@@ -20,7 +20,7 @@ const GoogleOptimization = () => {
     "description": "Complete Google ecosystem optimization including local SEO, Google My Business, review management, and Google Ads for contractor businesses.",
     "provider": {
       "@type": "Organization",
-      "name": "StudiosbyDave"
+      "name": "Studios by Dave"
     },
     "serviceType": "Google Optimization and Local SEO",
     "offers": {

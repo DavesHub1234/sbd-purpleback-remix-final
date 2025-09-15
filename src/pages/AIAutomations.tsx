@@ -20,7 +20,7 @@ const AIAutomations = () => {
     "description": "Cutting-edge AI solutions including chatbots, automated scheduling, lead qualification, and process automation for contractor businesses.",
     "provider": {
       "@type": "Organization",
-      "name": "StudiosbyDave"
+      "name": "Studios by Dave"
     },
     "serviceType": "AI Automation and Business Intelligence",
     "offers": {

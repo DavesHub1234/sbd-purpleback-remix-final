@@ -6,8 +6,8 @@ const Privacy = () => {
   return (
     <>
       <SEO
-        title="Privacy Policy - StudiosbyDave"
-        description="Privacy Policy for StudiosbyDave. Learn how we collect, use, and protect your personal information when you use our web design and digital marketing services."
+        title="Privacy Policy - Studios by Dave"
+        description="Privacy Policy for Studios by Dave. Learn how we collect, use, and protect your personal information when you use our web design and digital marketing services."
         noindex={true}
       />
       <Navigation />
@@ -18,7 +18,7 @@ const Privacy = () => {
             <div className="flex justify-center mb-8">
               <img 
                 src="/lovable-uploads/53e3faf8-91ca-4a91-841b-36561dcb91f1-optimized.jpg" 
-                alt="StudiosbyDave Logo" 
+                alt="Studios by Dave Logo" 
                 className="h-20 w-auto"
                 width="96"
                 height="96"
@@ -84,7 +84,7 @@ const Privacy = () => {
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
               <div className="bg-muted p-6 rounded-lg">
-                <p className="font-semibold text-foreground">StudiosbyDave</p>
+                <p className="font-semibold text-foreground">Studios by Dave</p>
                 <p className="text-foreground/80">Email: dx1creations25@gmail.com</p>
                 <p className="text-foreground/80">Phone: (704) 473-8188</p>
                 <p className="text-foreground/80">Address: 125 S. Toney Street Shelby, North Carolina</p>

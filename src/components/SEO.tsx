@@ -21,7 +21,7 @@ const SEO = ({
   structuredData,
   noindex = false
 }: SEOProps) => {
-  const fullTitle = title.includes("StudiosbyDave") ? title : `${title} | StudiosbyDave`;
+  const fullTitle = title.includes("Studios by Dave") ? title : `${title} | Studios by Dave`;
   const url = canonical || `https://studiosbydave.com${window.location.pathname}`;
 
   return (
@@ -41,7 +41,7 @@ const SEO = ({
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="StudiosbyDave" />
+      <meta property="og:site_name" content="Studios by Dave" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card */}
@@ -55,8 +55,8 @@ const SEO = ({
       <link rel="preload" as="image" href="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" />
       
       {/* Additional SEO Meta Tags */}
-      <meta name="author" content="StudiosbyDave" />
-      <meta name="publisher" content="StudiosbyDave" />
+      <meta name="author" content="Studios by Dave" />
+      <meta name="publisher" content="Studios by Dave" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="en" />
       

@@ -20,7 +20,7 @@ const SEOPage = () => {
     "description": "Complete SEO services including on-page, off-page, local SEO, technical SEO, and image optimization for contractor businesses.",
     "provider": {
       "@type": "Organization",
-      "name": "StudiosbyDave"
+      "name": "Studios by Dave"
     },
     "serviceType": "Search Engine Optimization",
     "offers": {

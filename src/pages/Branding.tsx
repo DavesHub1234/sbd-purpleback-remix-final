@@ -20,7 +20,7 @@ const Branding = () => {
     "description": "Professional logo design and complete branding packages for contractors and local businesses. Create memorable brands that build trust and credibility.",
     "provider": {
       "@type": "Organization", 
-      "name": "StudiosbyDave"
+      "name": "Studios by Dave"
     },
     "serviceType": "Logo Design and Brand Identity",
     "offers": {

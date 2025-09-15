@@ -22,11 +22,11 @@ const Contact = () => {
   const contactSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Contact StudiosbyDave",
-    "description": "Get in touch with StudiosbyDave for professional web design, SEO, AI automations, and branding services. Free consultations available.",
+    "name": "Contact Studios by Dave",
+    "description": "Get in touch with Studios by Dave for professional web design, SEO, AI automations, and branding services. Free consultations available.",
     "mainEntity": {
       "@type": "Organization",
-      "name": "StudiosbyDave",
+      "name": "Studios by Dave",
       "telephone": "+1-704-473-8188",
       "email": "dx1creations25@gmail.com",
       "address": {
@@ -55,8 +55,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Contact StudiosbyDave - Get Your Free Quote Today"
-        description="Contact StudiosbyDave for professional web design, SEO, AI automations, and branding services. Free consultations available. Call (704) 473-8188 or email us today."
+        title="Contact Studios by Dave - Get Your Free Quote Today"
+        description="Contact Studios by Dave for professional web design, SEO, AI automations, and branding services. Free consultations available. Call (704) 473-8188 or email us today."
         keywords="contact studiosbydave, free web design quote, contractor web design consultation, SEO services quote, AI automation consultation, Shelby NC web design"
         structuredData={[breadcrumbs, contactSchema]}
       />

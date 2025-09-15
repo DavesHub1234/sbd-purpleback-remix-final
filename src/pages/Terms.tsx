@@ -6,8 +6,8 @@ const Terms = () => {
   return (
     <>
       <SEO
-        title="Terms of Service - StudiosbyDave"
-        description="Terms of Service for StudiosbyDave. Review our terms and conditions for web design, SEO, AI automation, and digital marketing services."
+        title="Terms of Service - Studios by Dave"
+        description="Terms of Service for Studios by Dave. Review our terms and conditions for web design, SEO, AI automation, and digital marketing services."
         noindex={true}
       />
       <Navigation />
@@ -18,7 +18,7 @@ const Terms = () => {
             <div className="flex justify-center mb-8">
               <img 
                 src="/lovable-uploads/53e3faf8-91ca-4a91-841b-36561dcb91f1-optimized.jpg" 
-                alt="StudiosbyDave Logo" 
+                alt="Studios by Dave Logo" 
                 className="h-20 w-auto"
                 width="96"
                 height="96"
@@ -48,14 +48,14 @@ const Terms = () => {
 
               <h2 className="text-3xl font-bold text-foreground mb-6">Acceptance of Terms</h2>
               <p className="text-foreground/80 mb-6">
-                By accessing and using StudiosbyDave services, you accept and agree to be bound by 
+                By accessing and using Studios by Dave services, you accept and agree to be bound by 
                 the terms and provision of this agreement. If you do not agree to abide by the above, 
                 please do not use this service.
               </p>
 
               <h2 className="text-3xl font-bold text-foreground mb-6">Services Provided</h2>
               <p className="text-foreground/80 mb-6">
-                StudiosbyDave provides web design, branding, AI automation, and digital marketing services. 
+                Studios by Dave provides web design, branding, AI automation, and digital marketing services. 
                 We reserve the right to modify, suspend, or discontinue any part of our services at any time.
               </p>
 
@@ -68,7 +68,7 @@ const Terms = () => {
               <h2 className="text-3xl font-bold text-foreground mb-6">Intellectual Property</h2>
               <p className="text-foreground/80 mb-6">
                 Upon full payment, clients receive ownership of custom work created specifically for them. 
-                StudiosbyDave retains rights to general methodologies, techniques, and pre-existing intellectual property.
+                Studios by Dave retains rights to general methodologies, techniques, and pre-existing intellectual property.
               </p>
 
               <h2 className="text-3xl font-bold text-foreground mb-6">Client Responsibilities</h2>
@@ -80,7 +80,7 @@ const Terms = () => {
 
               <h2 className="text-3xl font-bold text-foreground mb-6">Limitation of Liability</h2>
               <p className="text-foreground/80 mb-6">
-                StudiosbyDave shall not be liable for any indirect, incidental, special, consequential, 
+                Studios by Dave shall not be liable for any indirect, incidental, special, consequential, 
                 or punitive damages resulting from your use of our services.
               </p>
 
@@ -95,7 +95,7 @@ const Terms = () => {
                 For questions regarding these terms, please contact us at:
               </p>
               <div className="bg-muted p-6 rounded-lg">
-                <p className="font-semibold text-foreground">StudiosbyDave</p>
+                <p className="font-semibold text-foreground">Studios by Dave</p>
                 <p className="text-foreground/80">Email: dx1creations25@gmail.com</p>
                 <p className="text-foreground/80">Phone: (704) 473-8188</p>
                 <p className="text-foreground/80">Address: 125 S. Toney Street Shelby, North Carolina</p>

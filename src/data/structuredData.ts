@@ -2,7 +2,7 @@
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "StudiosbyDave",
+  "name": "Studios by Dave",
   "description": "Professional web design, SEO, AI automations, and digital marketing for roofing contractors, landscaping companies, and solar panel installers.",
   "url": "https://studiosbydave.com",
   "logo": "https://studiosbydave.com/lovable-uploads/53e3faf8-91ca-4a91-841b-36561dcb91f1-optimized.jpg",
@@ -41,7 +41,7 @@ export const servicesSchema = {
   "@type": "Service",
   "provider": {
     "@type": "Organization",
-    "name": "StudiosbyDave"
+    "name": "Studios by Dave"
   },
   "serviceType": "Web Design and Digital Marketing",
   "description": "Professional web design, SEO optimization, AI automations, and branding services for contractors and local businesses.",
@@ -92,7 +92,7 @@ export const servicesSchema = {
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "StudiosbyDave",
+  "name": "Studios by Dave",
   "image": "https://studiosbydave.com/lovable-uploads/53e3faf8-91ca-4a91-841b-36561dcb91f1-optimized.jpg",
   "telephone": "+1-704-473-8188",
   "email": "dx1creations25@gmail.com",
@@ -125,10 +125,10 @@ export const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What services does StudiosbyDave offer?",
+      "name": "What services does Studios by Dave offer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "StudiosbyDave specializes in web design and development, SEO optimization, AI automations, logo design and branding, and Google optimization services specifically for contractors and local businesses."
+        "text": "Studios by Dave specializes in web design and development, SEO optimization, AI automations, logo design and branding, and Google optimization services specifically for contractors and local businesses."
       }
     },
     {

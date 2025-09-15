@@ -20,7 +20,7 @@ const WebDesign = () => {
     "description": "Custom responsive websites designed specifically for roofing contractors, landscaping companies, and solar panel installers.",
     "provider": {
       "@type": "Organization", 
-      "name": "StudiosbyDave"
+      "name": "Studios by Dave"
     },
     "areaServed": {
       "@type": "Country", 

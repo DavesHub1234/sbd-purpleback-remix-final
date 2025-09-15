@@ -18,7 +18,7 @@ const NonExclusiveSection = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            At StudiosbyDave, we believe in building relationships, not restrictions. 
+            At Studios by Dave, we believe in building relationships, not restrictions. 
             We're proud to be a <span className="font-semibold text-primary">non-exclusive agency</span> that 
             welcomes and caters to anyone in need of our services. Whether you're a small startup, 
             an established business, or anywhere in between, we're here to help you succeed online.
