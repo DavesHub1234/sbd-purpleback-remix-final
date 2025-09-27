@@ -96,7 +96,7 @@ const Terms = () => {
               </p>
               <div className="bg-muted p-6 rounded-lg">
                 <p className="font-semibold text-foreground">Studios by Dave</p>
-                <p className="text-foreground/80">Email: David.Richardson@studiosbydave.com</p>
+                <p className="text-foreground/80">Email: dx1creations25@gmail.com</p>
                 <p className="text-foreground/80">Phone: (704) 473-8188</p>
                 <p className="text-foreground/80">Address: 125 S. Toney Street Shelby, North Carolina</p>
               </div>
