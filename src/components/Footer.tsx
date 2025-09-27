@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Globe, Linkedin, Facebook, Instagram } from "lucide-react";
+import logoOptimized from "@/assets/logo-optimized.webp";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -34,7 +35,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/53e3faf8-91ca-4a91-841b-36561dcb91f1-optimized.jpg" 
+                src={logoOptimized}
                 alt="Studios by Dave Logo" 
                 className="h-24 w-auto"
                 width="96"
