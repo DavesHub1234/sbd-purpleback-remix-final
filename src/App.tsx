@@ -8,6 +8,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Index from "./pages/Index";
 import StudiosWeb from "./pages/StudiosWeb";
 import StudiosInk from "./pages/StudiosInk";
+import StudiosGear from "./pages/StudiosGear";
 import SacredArsenal from "./pages/SacredArsenal";
 
 import WebDesign from "./pages/WebDesign";
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/studiosweb/seo" element={<SEOPage />} />
           <Route path="/studiosink" element={<StudiosInk />} />
           <Route path="/studiosink/sacred-arsenal" element={<SacredArsenal />} />
+          <Route path="/studiosgear" element={<StudiosGear />} />
           
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

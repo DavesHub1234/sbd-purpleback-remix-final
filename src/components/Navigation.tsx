@@ -130,6 +130,18 @@ const Navigation = () => {
             >
               Studios-Ink
             </Link>
+
+            {/* StudiosGear */}
+            <Link
+              to="/studiosgear"
+              className={`text-sm font-bold transition-colors hover:text-primary ${
+                isActive('/studiosgear')
+                  ? "text-primary border-b-2 border-primary pb-1"
+                  : "text-primary"
+              }`}
+            >
+              Studios-Gear
+            </Link>
             
             <Link to="/contact">
               <Button variant="primary" size="sm" className="ml-4">
@@ -204,6 +216,19 @@ const Navigation = () => {
                 }`}
               >
                 Studios-Ink
+              </Link>
+            </div>
+
+            {/* Mobile StudiosGear */}
+            <div className="border-t pt-4">
+              <Link
+                to="/studiosgear"
+                onClick={() => setIsOpen(false)}
+                className={`block text-base font-bold transition-colors hover:text-primary ${
+                  isActive('/studiosgear') ? "text-primary" : "text-primary"
+                }`}
+              >
+                Studios-Gear
               </Link>
             </div>
             
