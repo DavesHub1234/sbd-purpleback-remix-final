@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Palette, Search, Bot, TrendingUp, Globe } from "lucide-react";
+import constructionWorker from "@/assets/construction-worker.jpg";
 
 const StudiosWeb = () => {
   const services = [
@@ -74,7 +75,7 @@ const StudiosWeb = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-background relative">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -120,6 +121,15 @@ const StudiosWeb = () => {
                 );
               })}
             </div>
+          </div>
+          
+          {/* Construction Worker Image */}
+          <div className="absolute bottom-8 right-8 hidden lg:block">
+            <img 
+              src={constructionWorker} 
+              alt="Professional construction worker" 
+              className="w-48 h-auto rounded-lg shadow-lg"
+            />
           </div>
         </section>
 
