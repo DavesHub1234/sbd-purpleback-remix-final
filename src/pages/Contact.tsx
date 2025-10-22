@@ -188,6 +188,21 @@ const Contact = () => {
                   </div>
                 ))}
               </div>
+
+              {/* CTA Box */}
+              <Card className="bg-gradient-primary text-white border-0">
+                <CardHeader>
+                  <CardTitle className="text-white">Ready to Start?</CardTitle>
+                  <CardDescription className="text-white/80">
+                    Schedule a free 30-minute consultation to discuss your project.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Button variant="hero" className="w-full">
+                    Schedule Free Consultation
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
