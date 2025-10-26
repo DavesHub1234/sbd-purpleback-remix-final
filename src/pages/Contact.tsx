@@ -53,6 +53,7 @@ const contactFormSchema = z.object({
     .trim()
     .min(1, "Message is required")
     .max(2000, "Message must be less than 2000 characters"),
+  honeypot: z.string().optional(),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
@@ -70,6 +71,7 @@ const Contact = () => {
       phone: "",
       business: "",
       message: "",
+      honeypot: "",
     },
   });
 
@@ -106,7 +108,13 @@ const Contact = () => {
         body: data
       });
 
-      if (error) throw error;
+      if (error) {
+        const errorMessage = error.message?.includes("Too many requests") || error.message?.includes("429")
+          ? "You've submitted too many requests. Please try again in an hour."
+          : "Failed to send message. Please try again or contact us directly at dx1creations25@gmail.com";
+        
+        throw new Error(errorMessage);
+      }
 
       // Track successful form submission
       trackFormSubmission('contact_form');
@@ -118,11 +126,11 @@ const Contact = () => {
       });
       
       form.reset();
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error sending message");
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again or contact us directly at dx1creations25@gmail.com",
+        description: error.message || "Failed to send message. Please try again or contact us directly at dx1creations25@gmail.com",
         variant: "destructive",
         duration: 7000,
       });
@@ -259,6 +267,20 @@ const Contact = () => {
                             />
                           </FormControl>
                           <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    {/* Honeypot field - hidden from users but visible to bots */}
+                    <FormField
+                      control={form.control}
+                      name="honeypot"
+                      render={({ field }) => (
+                        <FormItem className="hidden">
+                          <FormLabel>Leave this field empty</FormLabel>
+                          <FormControl>
+                            <Input {...field} tabIndex={-1} autoComplete="off" />
+                          </FormControl>
                         </FormItem>
                       )}
                     />

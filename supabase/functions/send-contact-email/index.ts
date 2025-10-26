@@ -15,6 +15,38 @@ interface ContactEmailRequest {
   phone: string;
   business?: string;
   message: string;
+  honeypot?: string;
+}
+
+// Rate limiting configuration
+const RATE_LIMIT_WINDOW = 3600000; // 1 hour in ms
+const MAX_SUBMISSIONS = 5; // per IP per hour
+const submissionLog = new Map<string, number[]>();
+
+// HTML escape function to prevent XSS
+function escapeHtml(unsafe: string): string {
+  return unsafe
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+// Rate limiting check
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const submissions = submissionLog.get(ip) || [];
+  const recentSubmissions = submissions.filter(time => now - time < RATE_LIMIT_WINDOW);
+  
+  if (recentSubmissions.length >= MAX_SUBMISSIONS) {
+    console.log(`Rate limit exceeded for IP: ${ip}`);
+    return false;
+  }
+  
+  recentSubmissions.push(now);
+  submissionLog.set(ip, recentSubmissions);
+  return true;
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -24,7 +56,35 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { firstName, lastName, email, phone, business, message }: ContactEmailRequest = await req.json();
+    // Rate limiting check
+    const ip = req.headers.get('x-forwarded-for')?.split(',')[0].trim() || 
+               req.headers.get('x-real-ip') || 
+               'unknown';
+    
+    if (!checkRateLimit(ip)) {
+      console.log(`Rate limit exceeded for IP: ${ip}`);
+      return new Response(
+        JSON.stringify({ error: "Too many requests. Please try again later." }),
+        {
+          status: 429,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    const { firstName, lastName, email, phone, business, message, honeypot }: ContactEmailRequest = await req.json();
+
+    // Honeypot protection - reject if filled
+    if (honeypot) {
+      console.log("Honeypot triggered - potential bot submission");
+      return new Response(
+        JSON.stringify({ error: "Invalid submission" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
 
     console.log("Contact form submission received from:", email);
 
@@ -51,34 +111,47 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Send notification email to business owner
+    // Input length validation
+    if (firstName.length > 100 || lastName.length > 100 || 
+        email.length > 255 || phone.length > 50 || 
+        message.length > 5000 || (business && business.length > 200)) {
+      return new Response(
+        JSON.stringify({ error: "Input exceeds maximum length" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    // Send notification email to business owner (with XSS protection)
     const notificationEmail = await resend.emails.send({
       from: "Studios by Dave Contact Form <onboarding@resend.dev>",
       to: ["dx1creations25@gmail.com"],
-      subject: `New Contact Form Submission from ${firstName} ${lastName}`,
+      subject: `New Contact Form Submission from ${escapeHtml(firstName)} ${escapeHtml(lastName)}`,
       html: `
         <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        ${business ? `<p><strong>Business Type:</strong> ${business}</p>` : ''}
+        <p><strong>Name:</strong> ${escapeHtml(firstName)} ${escapeHtml(lastName)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
+        ${business ? `<p><strong>Business Type:</strong> ${escapeHtml(business)}</p>` : ''}
         <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
+        <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
       `,
     });
 
-    // Send confirmation email to customer
+    // Send confirmation email to customer (with XSS protection)
     const confirmationEmail = await resend.emails.send({
       from: "Studios by Dave <onboarding@resend.dev>",
       to: [email],
       subject: "We received your message!",
       html: `
-        <h1>Thank you for contacting Studios by Dave, ${firstName}!</h1>
+        <h1>Thank you for contacting Studios by Dave, ${escapeHtml(firstName)}!</h1>
         <p>We have received your message and will get back to you within 24 hours.</p>
         <p>In the meantime, feel free to explore our services at <a href="https://studiosbydave.com">studiosbydave.com</a>.</p>
         <hr>
         <p><strong>Your message:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
+        <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
         <hr>
         <p>Best regards,<br>David<br>Studios by Dave<br>(704) 473-8188</p>
       `,
