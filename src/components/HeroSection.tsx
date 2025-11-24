@@ -2,10 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
+  return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 hero-pattern opacity-50" />
       
@@ -13,11 +11,8 @@ const HeroSection = () => {
       <div className="absolute top-8 right-8 z-30">
         <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 px-6 py-4 shadow-glow">
           <div className="text-center">
-            <p className="text-white/80 text-sm font-medium mb-1">Call Now</p>
-            <a 
-              href="tel:+17044738188" 
-              className="text-white text-2xl font-bold hover:text-accent transition-colors duration-300"
-            >
+            <p className="text-white/80 text-sm font-medium mb-1">Call Us -- TEXT us!          </p>
+            <a href="tel:+17044738188" className="text-white text-2xl font-bold hover:text-accent transition-colors duration-300">
               (704) 473-8188
             </a>
           </div>
@@ -32,9 +27,7 @@ const HeroSection = () => {
             {/* Trust Badge */}
             <div className="flex items-center space-x-2 text-white/90">
               <div className="flex items-center space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} className="fill-accent text-accent" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-accent text-accent" />)}
               </div>
               <span className="text-sm font-medium">Trusted by 100+ Local Businesses</span>
             </div>
@@ -55,16 +48,10 @@ const HeroSection = () => {
 
             {/* Key Benefits */}
             <div className="space-y-4">
-              {[
-                "Custom websites that convert visitors into customers",
-                "SEO optimization to dominate local search results",
-                "AI automations that streamline your business operations"
-              ].map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3 text-white/90">
+              {["Custom websites that convert visitors into customers", "SEO optimization to dominate local search results", "AI automations that streamline your business operations"].map((benefit, index) => <div key={index} className="flex items-center space-x-3 text-white/90">
                   <CheckCircle size={20} className="text-accent flex-shrink-0" />
                   <span className="font-medium">{benefit}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             {/* CTA Buttons */}
@@ -98,30 +85,13 @@ const HeroSection = () => {
             <div className="relative">
               {/* Hero Image */}
               <div className="aspect-square rounded-2xl overflow-hidden shadow-glow border border-white/20 relative">
-              <img 
-                src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" 
-                alt="Professional contractor websites showcase - custom web design examples for roofing, landscaping, and solar businesses" 
-                className="w-full h-full object-cover"
-                fetchPriority="high"
-                decoding="sync"
-                loading="eager"
-                width="550"
-                height="550"
-              />
+              <img src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" alt="Professional contractor websites showcase - custom web design examples for roofing, landscaping, and solar businesses" className="w-full h-full object-cover" fetchPriority="high" decoding="sync" loading="eager" width="550" height="550" />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
                 
                 {/* Company Mascot in corner */}
                 <div className="absolute -bottom-6 -right-6 w-28 h-28 animate-bounce z-20">
-                  <img 
-                    src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830-optimized.jpg" 
-                    alt="Studios by Dave AI-powered contractor marketing mascot - representing innovation in web design and digital marketing" 
-                    className="w-full h-full object-contain drop-shadow-lg"
-                    loading="lazy"
-                    decoding="async"
-                    width="112"
-                    height="112"
-                  />
+                  <img src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830-optimized.jpg" alt="Studios by Dave AI-powered contractor marketing mascot - representing innovation in web design and digital marketing" className="w-full h-full object-contain drop-shadow-lg" loading="lazy" decoding="async" width="112" height="112" />
                 </div>
               </div>
 
@@ -132,8 +102,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
