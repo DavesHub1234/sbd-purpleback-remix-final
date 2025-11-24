@@ -1,8 +1,6 @@
 import { Users, Heart, Handshake } from "lucide-react";
-
 const NonExclusiveSection = () => {
-  return (
-    <section className="py-16 bg-gradient-subtle">
+  return <section className="py-16 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           <div className="flex justify-center mb-6">
@@ -14,7 +12,7 @@ const NonExclusiveSection = () => {
           </div>
           
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-            We're a Non-Exclusive Agency
+            We're also a Non-Exclusive Agency
           </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -29,8 +27,6 @@ const NonExclusiveSection = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default NonExclusiveSection;
