@@ -14,6 +14,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Form,
   FormControl,
@@ -353,9 +354,11 @@ const Contact = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button variant="hero" className="w-full">
-                    Schedule Free Consultation
-                  </Button>
+                  <Link to="/booking">
+                    <Button variant="hero" className="w-full">
+                      Schedule Free Consultation
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </div>
