@@ -39,10 +39,9 @@ const HeroSection = () => {
                 We Build Something <span className="text-trophy-gold font-bold">GREAT</span> Together!
               </h1>
               
-              <p className="text-xl text-white/90 max-w-2xl leading-relaxed">We build opportunity!
-Specialized web development and digital marketing for YOUR local busine.<span className="font-semibold text-accent">We build opportunity!</span><br />
-                Specialized web development and digital marketing for roofing contractors, 
-                landscaping companies, and solar panel installers.
+              <p className="text-xl text-white/90 max-w-2xl leading-relaxed">
+                <span className="font-bold text-white block mb-2">We build opportunity!</span>
+                Specialized web development and digital marketing for YOUR local business. At Studios by Dave we genuinely want to see YOU succeed!
               </p>
             </div>
 
@@ -56,9 +55,9 @@ Specialized web development and digital marketing for YOUR local busine.<span cl
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link to="/contact">
+              <Link to="/booking">
                 <Button variant="hero" size="lg" className="group">
-                  Start Your Project
+                  Get a Free Consultation
                   <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
