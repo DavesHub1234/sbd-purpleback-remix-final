@@ -39,8 +39,8 @@ const HeroSection = () => {
                 We Build Something <span className="text-trophy-gold font-bold">GREAT</span> Together!
               </h1>
               
-              <p className="text-xl text-white/90 max-w-2xl leading-relaxed">
-                <span className="font-semibold text-accent">We build opportunity!</span><br />
+              <p className="text-xl text-white/90 max-w-2xl leading-relaxed">We build opportunity!
+Specialized web development and digital marketing for YOUR local busine.<span className="font-semibold text-accent">We build opportunity!</span><br />
                 Specialized web development and digital marketing for roofing contractors, 
                 landscaping companies, and solar panel installers.
               </p>
