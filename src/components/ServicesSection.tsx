@@ -21,7 +21,7 @@ const services = [{
 }, {
   icon: Bot,
   title: "AI Automations",
-  description: "Cutting-edge AI solutions that streamline operations, improve customer service, and boost efficiency.",
+  description: "Cutting-edge AI solutions that streamline operations, improve customer service, and maintain the jobs that we support.",
   features: ["Automated Lead Follow-up", "Customer Service Chatbots", "Appointment Scheduling", "Review Management"],
   link: "/studiosweb/ai-automations",
   linkText: "Learn About AI Automations",
