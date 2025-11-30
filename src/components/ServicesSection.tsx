@@ -92,10 +92,7 @@ const ServicesSection = () => {
             <h3 className="text-3xl font-bold text-foreground mb-4">
               Specialized for Your Industry
             </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We understand the unique challenges and opportunities in contractor businesses. 
-              Our solutions are built specifically for your success.
-            </p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">We understand the unique challenges and opportunities within local business. Our solutions are built specifically for you to further in success.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
