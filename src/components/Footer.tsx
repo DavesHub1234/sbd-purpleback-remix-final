@@ -102,9 +102,9 @@ const Footer = () => {
             <p className="text-white/80 mb-6">
               Let's discuss how we can help grow your business online.
             </p>
-            <Link to="/booking">
+            <Link to="/contact#get-in-touch">
               <Button variant="hero" className="w-full mb-6">
-                Get Free Consultation
+                Get in Touch
               </Button>
             </Link>
             

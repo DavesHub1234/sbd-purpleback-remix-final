@@ -169,7 +169,7 @@ const Contact = () => {
       {/* Contact Information Section */}
       <section className="py-24 bg-gradient-subtle">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
+          <div id="get-in-touch" className="space-y-8">
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">
                 Get in Touch
@@ -228,11 +228,11 @@ const Contact = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link to="/booking">
+                  <a href="#get-in-touch">
                     <Button variant="hero" className="w-full">
-                      Schedule Free Consultation
+                      Get in Touch
                     </Button>
-                  </Link>
+                  </a>
                 </CardContent>
               </Card>
             </div>
