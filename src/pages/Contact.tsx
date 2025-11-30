@@ -166,140 +166,14 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Form Section */}
+      {/* Contact Information Section */}
       <section className="py-24 bg-gradient-subtle">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
-            <Card className="shadow-card border-0">
-              <CardHeader>
-                <CardTitle className="text-3xl font-bold text-foreground">
-                  Get Your Free Consultation
-                </CardTitle>
-                <CardDescription className="text-base">
-                  Tell us about your project and we'll provide a custom solution for your business.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <FormField
-                        control={form.control}
-                        name="firstName"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>First Name</FormLabel>
-                            <FormControl>
-                              <Input placeholder="John" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="lastName"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Last Name</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Smith" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
-                    
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email Address</FormLabel>
-                          <FormControl>
-                            <Input type="email" placeholder="john@example.com" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="phone"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Phone Number</FormLabel>
-                          <FormControl>
-                            <Input type="tel" placeholder="(555) 123-4567" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="business"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Business Type</FormLabel>
-                          <FormControl>
-                            <Input placeholder="e.g., Roofing Contractor, Landscaping, Solar" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Project Details</FormLabel>
-                          <FormControl>
-                            <Textarea 
-                              placeholder="Tell us about your project, goals, and timeline..."
-                              className="min-h-[120px]"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    {/* Honeypot field - hidden from users but visible to bots */}
-                    <FormField
-                      control={form.control}
-                      name="honeypot"
-                      render={({ field }) => (
-                        <FormItem className="hidden">
-                          <FormLabel>Leave this field empty</FormLabel>
-                          <FormControl>
-                            <Input {...field} tabIndex={-1} autoComplete="off" />
-                          </FormControl>
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <Button type="submit" variant="primary" size="lg" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? "Sending..." : "Send Message"}
-                    </Button>
-                  </form>
-                </Form>
-              </CardContent>
-            </Card>
-
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold text-foreground mb-6">
-                  Get in Touch
-                </h2>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">
+                Get in Touch
+              </h2>
                 <p className="text-lg text-muted-foreground mb-8">
                   We're here to help your business succeed online. Reach out through any of these channels:
                 </p>
@@ -363,7 +237,6 @@ const Contact = () => {
               </Card>
             </div>
           </div>
-        </div>
       </section>
 
       <Footer />
