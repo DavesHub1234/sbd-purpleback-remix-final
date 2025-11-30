@@ -55,19 +55,16 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.path)
-                    ? "text-primary border-b-2 border-primary pb-1"
-                    : "text-foreground/80"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            <Link
+              to="/"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive('/')
+                  ? "text-primary border-b-2 border-primary pb-1"
+                  : "text-foreground/80"
+              }`}
+            >
+              Home
+            </Link>
             
             {/* StudiosWeb Dropdown */}
             <div className="relative">
@@ -81,7 +78,7 @@ const Navigation = () => {
                     : "text-primary"
                 }`}
               >
-                <span>Studios-Web</span>
+                <span>Studios Web</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${studiosWebOpen ? 'rotate-180' : ''}`} />
               </button>
               
@@ -94,7 +91,7 @@ const Navigation = () => {
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md hover:bg-muted/80 transition-colors"
                     >
                       <div className="mb-2 mt-4 text-lg font-medium">
-                        Studios-Web
+                        Studios Web
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
                         Complete digital solutions for your business growth
@@ -128,7 +125,7 @@ const Navigation = () => {
                   : "text-primary"
               }`}
             >
-              Studios-Ink
+              Studios Ink
             </Link>
 
             {/* StudiosGear */}
@@ -140,7 +137,29 @@ const Navigation = () => {
                   : "text-primary"
               }`}
             >
-              Studios-Gear
+              Studios Gear
+            </Link>
+
+            <Link
+              to="/about"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive('/about')
+                  ? "text-primary border-b-2 border-primary pb-1"
+                  : "text-foreground/80"
+              }`}
+            >
+              About Us
+            </Link>
+
+            <Link
+              to="/contact"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive('/contact')
+                  ? "text-primary border-b-2 border-primary pb-1"
+                  : "text-foreground/80"
+              }`}
+            >
+              Contact
             </Link>
             
             <Link to="/contact">
@@ -166,18 +185,15 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden pb-6 space-y-4">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={`block text-base font-medium transition-colors hover:text-primary ${
-                  isActive(item.path) ? "text-primary" : "text-foreground/80"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            <Link
+              to="/"
+              onClick={() => setIsOpen(false)}
+              className={`block text-base font-medium transition-colors hover:text-primary ${
+                isActive('/') ? "text-primary" : "text-foreground/80"
+              }`}
+            >
+              Home
+            </Link>
             
             {/* Mobile StudiosWeb Section */}
             <div className="border-t pt-4">
@@ -188,7 +204,7 @@ const Navigation = () => {
                   isStudiosWebActive() ? "text-primary" : "text-primary"
                 }`}
               >
-                Studios-Web
+                Studios Web
               </Link>
               <div className="ml-4 space-y-2">
                 {studiosWebServices.map((service) => (
@@ -215,7 +231,7 @@ const Navigation = () => {
                   isActive('/studiosink') ? "text-primary" : "text-primary"
                 }`}
               >
-                Studios-Ink
+                Studios Ink
               </Link>
             </div>
 
@@ -228,9 +244,29 @@ const Navigation = () => {
                   isActive('/studiosgear') ? "text-primary" : "text-primary"
                 }`}
               >
-                Studios-Gear
+                Studios Gear
               </Link>
             </div>
+
+            <Link
+              to="/about"
+              onClick={() => setIsOpen(false)}
+              className={`block text-base font-medium transition-colors hover:text-primary ${
+                isActive('/about') ? "text-primary" : "text-foreground/80"
+              }`}
+            >
+              About Us
+            </Link>
+
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className={`block text-base font-medium transition-colors hover:text-primary ${
+                isActive('/contact') ? "text-primary" : "text-foreground/80"
+              }`}
+            >
+              Contact
+            </Link>
             
             <Link to="/contact" onClick={() => setIsOpen(false)}>
               <Button variant="primary" className="w-full">
