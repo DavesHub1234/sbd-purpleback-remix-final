@@ -76,7 +76,7 @@ const HeroSection = () => {
                 <span className="font-semibold">Green Landscapes LLC</span>
                 <span className="font-semibold">Solar Solutions Pro</span>
                 <span className="font-semibold">Elite Tree Services</span>
-                <span className="font-semibold">Premier Realty Group</span>
+                <span className="font-semibold">​  </span>
               </div>
             </div>
           </div>
