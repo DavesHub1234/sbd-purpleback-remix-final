@@ -11,7 +11,7 @@ const HeroSection = () => {
       <div className="absolute top-8 right-8 z-30">
         <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 px-6 py-4 shadow-glow">
           <div className="text-center">
-            <p className="text-white/80 text-sm font-medium mb-1">Call Us -- TEXT us!          </p>
+            <p className="text-white/80 text-sm font-medium mb-1">Call Us -- TEXT US!          </p>
             <a href="tel:+17044738188" className="text-white text-2xl font-bold hover:text-accent transition-colors duration-300">
               (704) 473-8188
             </a>
