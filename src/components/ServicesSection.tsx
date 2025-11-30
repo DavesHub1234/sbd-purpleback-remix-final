@@ -95,7 +95,7 @@ const ServicesSection = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">We understand the unique challenges and opportunities within local business. Our solutions are built specifically for you to further in success.</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
             {[{
             icon: "🏠",
             title: "Roofing Contractors",
@@ -108,6 +108,14 @@ const ServicesSection = () => {
             icon: "☀️",
             title: "Solar Panel Installers",
             description: "ROI calculators, financing options, and educational content that drives solar adoption."
+          }, {
+            icon: "🌳",
+            title: "Tree Specialists",
+            description: "Emergency tree services, project galleries, and seasonal care programs that attract homeowners."
+          }, {
+            icon: "🏡",
+            title: "Real Estate Agents",
+            description: "Property listings, virtual tours, and lead capture systems that convert buyers and sellers."
           }].map((industry, index) => <div key={index} className="text-center group">
                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
                   {industry.icon}
