@@ -2,6 +2,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Palette, Bot, Search, Target, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import webDesignBackdrop from "@/assets/web-design-backdrop.png";
+import brandingBackdrop from "@/assets/branding-backdrop.jpeg";
+import aiBackdrop from "@/assets/ai-backdrop.jpeg";
+import googleBackdrop from "@/assets/google-backdrop.jpeg";
 const services = [{
   icon: Globe,
   title: "Web Design & Development",
@@ -9,7 +13,8 @@ const services = [{
   features: ["Mobile-First Design", "Lightning Fast Loading", "Lead Generation Forms", "Local SEO Built-In"],
   link: "/studiosweb/web-design",
   linkText: "Learn About Web Design",
-  gradient: "from-primary to-accent"
+  gradient: "from-primary to-accent",
+  backdrop: webDesignBackdrop
 }, {
   icon: Palette,
   title: "Logo Design & Branding",
@@ -17,7 +22,8 @@ const services = [{
   features: ["Custom Logo Design", "Brand Identity Package", "Business Card Design", "Social Media Assets"],
   link: "/studiosweb/branding",
   linkText: "Learn About Branding",
-  gradient: "from-accent to-secondary"
+  gradient: "from-accent to-secondary",
+  backdrop: brandingBackdrop
 }, {
   icon: Bot,
   title: "AI Automations",
@@ -25,7 +31,8 @@ const services = [{
   features: ["Automated Lead Follow-up", "Customer Service Chatbots", "Appointment Scheduling", "Review Management"],
   link: "/studiosweb/ai-automations",
   linkText: "Learn About AI Automations",
-  gradient: "from-secondary to-primary"
+  gradient: "from-secondary to-primary",
+  backdrop: aiBackdrop
 }, {
   icon: Search,
   title: "Google Optimization",
@@ -33,7 +40,8 @@ const services = [{
   features: ["Local SEO", "Google My Business", "Review Optimization", "Google Ads Management"],
   link: "/studiosweb/google-optimization",
   linkText: "Learn About Google Optimization",
-  gradient: "from-primary to-accent"
+  gradient: "from-primary to-accent",
+  backdrop: googleBackdrop
 }];
 const ServicesSection = () => {
   return <section className="py-24 bg-gradient-subtle">
@@ -64,8 +72,18 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => {
           const IconComponent = service.icon;
-          return <Card key={index} className="group hover:shadow-card transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
-                <CardHeader className="pb-4">
+          return <Card key={index} className="group hover:shadow-card transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm overflow-hidden relative">
+                <div 
+                  className="absolute inset-0 opacity-[0.06] pointer-events-none"
+                  style={{
+                    backgroundImage: `url(${service.backdrop})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    filter: 'grayscale(100%) brightness(1.2) contrast(1.1)',
+                    mixBlendMode: 'multiply'
+                  }}
+                />
+                <CardHeader className="pb-4 relative z-10">
                   <div className={`w-14 h-14 rounded-lg bg-gradient-to-r ${service.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <IconComponent size={28} className="text-white" />
                   </div>
@@ -76,7 +94,7 @@ const ServicesSection = () => {
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="relative z-10">
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, idx) => <li key={idx} className="flex items-center text-foreground/80">
                         <Target size={16} className="text-accent mr-3 flex-shrink-0" />
