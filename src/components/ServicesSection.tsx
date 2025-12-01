@@ -150,6 +150,22 @@ const ServicesSection = () => {
                 <p className="text-muted-foreground">{industry.description}</p>
               </div>)}
           </div>
+
+          {/* YouTube Video Embed */}
+          <div className="mt-12 flex justify-center">
+            <div className="w-full max-w-2xl aspect-video rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/0ipv_l7KoSI?autoplay=1&mute=1&loop=1&playlist=0ipv_l7KoSI"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>;
