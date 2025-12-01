@@ -79,7 +79,7 @@ const ServicesSection = () => {
                     backgroundImage: `url(${service.backdrop})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    filter: 'grayscale(100%) brightness(1.2) contrast(1.1)',
+                    filter: 'grayscale(85%) brightness(1.2) contrast(1.1)',
                     mixBlendMode: 'multiply'
                   }}
                 />
