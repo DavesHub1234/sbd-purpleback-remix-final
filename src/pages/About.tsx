@@ -115,8 +115,12 @@ const About = () => {
             <div className="max-w-md mx-auto">
               <img 
                 src="/lovable-uploads/d08deff8-3748-4ab1-be7c-1f0aa5062b8b.png" 
-                alt="Dave - Founder of Studios by Dave"
+                alt="David Richardson - Founder and Lead Developer at Studios by Dave, web design expert and digital marketing specialist for contractors"
                 className="w-64 h-auto mx-auto mb-4 shadow-lg rounded-lg"
+                loading="lazy"
+                decoding="async"
+                width="256"
+                height="auto"
               />
               <p className="text-2xl font-semibold text-foreground mb-6">"Dave" David Richardson</p>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
@@ -134,8 +138,10 @@ const About = () => {
             <div className="order-2 lg:order-1">
               <img 
                 src="/lovable-uploads/3c4b682e-a53b-465e-811c-b2b12172b4fc.png" 
-                alt="How can we make our clients more money - Dave thinking"
+                alt="Studios by Dave philosophy - focused on maximizing client revenue through strategic web design and digital marketing solutions"
                 className="w-full max-w-lg mx-auto rounded-2xl shadow-lg"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="order-1 lg:order-2">

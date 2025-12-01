@@ -95,13 +95,30 @@ const HeroSection = () => {
             <div className="relative">
               {/* Hero Image */}
               <div className="aspect-square rounded-2xl overflow-hidden shadow-glow border border-white/20 relative">
-              <img src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" alt="Professional contractor websites showcase - custom web design examples for roofing, landscaping, and solar businesses" className="w-full h-full object-cover" fetchPriority="high" decoding="sync" loading="eager" width="550" height="550" />
+              <img 
+                src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" 
+                alt="Professional contractor website design showcase featuring responsive mobile-first websites for roofing, landscaping, and solar panel businesses with lead generation systems" 
+                className="w-full h-full object-cover" 
+                fetchPriority="high" 
+                decoding="sync" 
+                loading="eager" 
+                width="550" 
+                height="550" 
+              />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
                 
                 {/* Company Mascot in corner */}
                 <div className="absolute -bottom-6 -right-6 w-28 h-28 animate-bounce z-20">
-                  <img src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830-optimized.jpg" alt="Studios by Dave AI-powered contractor marketing mascot - representing innovation in web design and digital marketing" className="w-full h-full object-contain drop-shadow-lg" loading="lazy" decoding="async" width="112" height="112" />
+                  <img 
+                    src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830-optimized.jpg" 
+                    alt="Studios by Dave AI-powered mascot delivering innovative web design, SEO, and digital marketing solutions for contractors" 
+                    className="w-full h-full object-contain drop-shadow-lg" 
+                    loading="lazy" 
+                    decoding="async" 
+                    width="112" 
+                    height="112" 
+                  />
                 </div>
               </div>
 

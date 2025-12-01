@@ -141,7 +141,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" itemScope itemType="https://schema.org/WebPage">
       <SEO
         title="Contact Studios by Dave - Get Your Free Quote Today"
         description="Contact Studios by Dave for professional web design, SEO, AI automations, and branding services. Free consultations available. Call (704) 473-8188 or email us today."
@@ -151,7 +151,7 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-24">
+      <section className="bg-gradient-hero py-24" role="banner">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-6xl lg:text-7xl font-bold text-white mb-6 text-center">
             Let's Build Something{" "}

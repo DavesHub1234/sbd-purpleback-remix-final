@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import InternalLinksFooter from "@/components/InternalLinks";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Search, MapPin, Star, TrendingUp } from "lucide-react";
@@ -73,8 +74,10 @@ const GoogleOptimization = () => {
           <div className="max-w-2xl mx-auto">
             <img 
               src="/lovable-uploads/b56502ca-7d57-469f-a63b-c87e8173c7c4.png" 
-              alt="Google My Business optimization showing business listing with 5-star reviews and local search results" 
+              alt="Google My Business profile optimization featuring 5-star reviews, local search visibility, and enhanced business listing for contractors" 
               className="w-full h-auto rounded-2xl shadow-elegant"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
@@ -87,8 +90,10 @@ const GoogleOptimization = () => {
             <div className="relative">
               <img 
                 src="/lovable-uploads/1e32a73d-031e-4dfc-becf-0bd28772b676.png" 
-                alt="SEO optimization graph showing keywords, ranking, content, traffic, backlinks and web analysis components" 
+                alt="Comprehensive SEO optimization dashboard displaying keyword rankings, content strategy, traffic analytics, backlink profile, and search performance metrics" 
                 className="w-full h-auto rounded-2xl shadow-elegant"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             
@@ -218,6 +223,7 @@ const GoogleOptimization = () => {
         </div>
       </section>
 
+      <InternalLinksFooter />
       <Footer />
     </div>
   );

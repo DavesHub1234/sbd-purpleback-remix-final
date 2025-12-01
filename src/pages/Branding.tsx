@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import InternalLinksFooter from "@/components/InternalLinks";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Palette, Users, Target, Award } from "lucide-react";
@@ -297,14 +298,17 @@ const Branding = () => {
           <div className="relative">
             <img 
               src="/lovable-uploads/1b899310-7b14-4da3-bf28-f2459baa928d.png" 
-              alt="Successful contractor partnership celebration - team of professionals celebrating business growth and collaboration" 
+              alt="Professional contractor team celebrating successful branding and digital marketing results - logo design and brand identity success" 
               className="w-full h-auto rounded-2xl shadow-elegant"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           </div>
         </div>
       </section>
 
+      <InternalLinksFooter />
       <Footer />
     </div>
   );
