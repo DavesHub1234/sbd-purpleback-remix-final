@@ -157,7 +157,7 @@ const ServicesSection = () => {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/0ipv_l7KoSI?autoplay=1&mute=1&loop=1&playlist=0ipv_l7KoSI"
+                src="https://www.youtube.com/embed/0ipv_l7KoSI?autoplay=1&loop=1&playlist=0ipv_l7KoSI"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
