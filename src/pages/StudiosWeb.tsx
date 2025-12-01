@@ -57,7 +57,7 @@ const StudiosWeb = () => {
               we provide everything you need to succeed online.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="text-lg px-8 py-6">
+              <Button size="lg" className="text-lg px-8 py-6 bg-teal-500 hover:bg-teal-400">
                 Start Your Project Today
               </Button>
             </Link>
