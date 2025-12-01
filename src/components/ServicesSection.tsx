@@ -48,7 +48,7 @@ const ServicesSection = () => {
               Professional Web Design for{" "}
               <span className="gradient-text">YOUR Local Business</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">We're your local specialized web development and marketing &quot;took-kit!&quot;  Our tailored approach to your business needs ensures maximum ROI for your industry.  At Studios by Dave, we want to see YOU succeed!         </p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">We're your local specialized web development and marketing &quot;took-kit!&quot;  Our tailored approach to your business needs ensures maximum ROI for your industry.  At Studios by Dave, our focus is YOU!                  </p>
           </div>
         </div>
 
