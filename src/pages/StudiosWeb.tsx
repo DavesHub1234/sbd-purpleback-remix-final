@@ -48,7 +48,9 @@ const StudiosWeb = () => {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               <span className="text-foreground">Studios </span>
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Web</span>
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-blue-500 bg-clip-text text-transparent bg-[length:200%_auto] transition-all duration-300 hover:animate-shimmer hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                Web
+              </span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Complete digital solutions to grow your business. From stunning websites to powerful automation, 
