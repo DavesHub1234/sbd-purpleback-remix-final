@@ -228,15 +228,168 @@ const Contact = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <a href="#get-in-touch">
+                  <a href="#contact-form">
                     <Button variant="hero" className="w-full">
-                      Get in Touch
+                      Send Us a Message
                     </Button>
                   </a>
                 </CardContent>
               </Card>
             </div>
           </div>
+      </section>
+
+      {/* Contact Form Section with Background Image */}
+      <section id="contact-form" className="py-24 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Contact Form - Left Side */}
+            <div className="relative z-10">
+              <h2 className="text-4xl font-bold text-foreground mb-6">
+                Send Us a Message
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Fill out the form below and we'll get back to you within 24 hours.
+              </p>
+
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="firstName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>First Name *</FormLabel>
+                          <FormControl>
+                            <Input placeholder="John" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="lastName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Last Name *</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Doe" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email *</FormLabel>
+                        <FormControl>
+                          <Input type="email" placeholder="john@example.com" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Phone *</FormLabel>
+                        <FormControl>
+                          <Input type="tel" placeholder="(555) 123-4567" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="business"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Business Type</FormLabel>
+                        <FormControl>
+                          <Input placeholder="e.g., Landscaping, Roofing, HVAC" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Message *</FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            placeholder="Tell us about your project..."
+                            className="min-h-[150px]"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  {/* Honeypot field - hidden from users */}
+                  <FormField
+                    control={form.control}
+                    name="honeypot"
+                    render={({ field }) => (
+                      <FormItem className="hidden">
+                        <FormControl>
+                          <Input {...field} tabIndex={-1} autoComplete="off" />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+
+                  <Button 
+                    type="submit" 
+                    className="w-full"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
+
+                  <p className="text-sm text-muted-foreground text-center">
+                    By submitting this form, you agree to our{" "}
+                    <Link to="/privacy" className="text-primary hover:underline">
+                      Privacy Policy
+                    </Link>
+                    {" "}and{" "}
+                    <Link to="/terms" className="text-primary hover:underline">
+                      Terms of Service
+                    </Link>
+                  </p>
+                </form>
+              </Form>
+            </div>
+
+            {/* Background Image - Right Side */}
+            <div className="relative h-full min-h-[600px] rounded-lg overflow-hidden">
+              <img 
+                src="/lovable-uploads/brick-building-backdrop.jpg"
+                alt="Historic brick building in Shelby, NC"
+                className="absolute inset-0 w-full h-full object-cover opacity-15"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
       <Footer />
