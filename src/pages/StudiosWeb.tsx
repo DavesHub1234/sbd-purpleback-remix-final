@@ -6,61 +6,48 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Palette, Search, Bot, TrendingUp, Globe } from "lucide-react";
 import constructionWorker from "@/assets/construction-worker.jpg";
-
 const StudiosWeb = () => {
-  const services = [
-    {
-      title: "Web Design & Development",
-      description: "Professional, responsive websites that convert visitors into customers",
-      icon: Globe,
-      path: "/studiosweb/web-design",
-      features: ["Custom Design", "Mobile Responsive", "Fast Loading", "User-Friendly"]
-    },
-    {
-      title: "Logo Design & Branding", 
-      description: "Create a memorable brand identity that stands out from the competition",
-      icon: Palette,
-      path: "/studiosweb/branding",
-      features: ["Logo Design", "Brand Guidelines", "Business Cards", "Marketing Materials"]
-    },
-    {
-      title: "SEO Services",
-      description: "Get found by your ideal customers with proven SEO strategies",
-      icon: Search,
-      path: "/studiosweb/seo", 
-      features: ["Keyword Research", "On-Page SEO", "Local SEO", "Content Strategy"]
-    },
-    {
-      title: "Google Optimization",
-      description: "Dominate local search results and attract more qualified leads",
-      icon: TrendingUp,
-      path: "/studiosweb/google-optimization",
-      features: ["Google My Business", "Local Rankings", "Review Management", "Maps Optimization"]
-    },
-    {
-      title: "AI Automations",
-      description: "Streamline your business processes with intelligent automation solutions",
-      icon: Bot,
-      path: "/studiosweb/ai-automations", 
-      features: ["Lead Generation", "Customer Support", "Workflow Automation", "Data Analysis"]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
-      <SEO
-        title="StudiosWeb - Complete Digital Solutions for Your Business"
-        description="Comprehensive web design, SEO, branding, and automation services for roofing contractors, landscaping companies, and solar panel installers. Transform your digital presence."
-        keywords="web design services, SEO optimization, business branding, AI automation, digital marketing, contractor websites"
-      />
+  const services = [{
+    title: "Web Design & Development",
+    description: "Professional, responsive websites that convert visitors into customers",
+    icon: Globe,
+    path: "/studiosweb/web-design",
+    features: ["Custom Design", "Mobile Responsive", "Fast Loading", "User-Friendly"]
+  }, {
+    title: "Logo Design & Branding",
+    description: "Create a memorable brand identity that stands out from the competition",
+    icon: Palette,
+    path: "/studiosweb/branding",
+    features: ["Logo Design", "Brand Guidelines", "Business Cards", "Marketing Materials"]
+  }, {
+    title: "SEO Services",
+    description: "Get found by your ideal customers with proven SEO strategies",
+    icon: Search,
+    path: "/studiosweb/seo",
+    features: ["Keyword Research", "On-Page SEO", "Local SEO", "Content Strategy"]
+  }, {
+    title: "Google Optimization",
+    description: "Dominate local search results and attract more qualified leads",
+    icon: TrendingUp,
+    path: "/studiosweb/google-optimization",
+    features: ["Google My Business", "Local Rankings", "Review Management", "Maps Optimization"]
+  }, {
+    title: "AI Automations",
+    description: "Streamline your business processes with intelligent automation solutions",
+    icon: Bot,
+    path: "/studiosweb/ai-automations",
+    features: ["Lead Generation", "Customer Support", "Workflow Automation", "Data Analysis"]
+  }];
+  return <div className="min-h-screen">
+      <SEO title="StudiosWeb - Complete Digital Solutions for Your Business" description="Comprehensive web design, SEO, branding, and automation services for roofing contractors, landscaping companies, and solar panel installers. Transform your digital presence." keywords="web design services, SEO optimization, business branding, AI automation, digital marketing, contractor websites" />
       <Navigation />
       
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary/5 to-accent/10 py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              StudiosWeb
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-slate-500">
+              Studios Web 
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Complete digital solutions to grow your business. From stunning websites to powerful automation, 
@@ -88,9 +75,8 @@ const StudiosWeb = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => {
-                const Icon = service.icon;
-                return (
-                  <Card key={index} className="h-full hover:shadow-lg transition-shadow duration-300">
+              const Icon = service.icon;
+              return <Card key={index} className="h-full hover:shadow-lg transition-shadow duration-300">
                     <CardHeader>
                       <div className="flex items-center mb-4">
                         <div className="p-3 rounded-lg bg-primary/10 mr-4">
@@ -104,12 +90,10 @@ const StudiosWeb = () => {
                     </CardHeader>
                     <CardContent>
                       <ul className="space-y-2 mb-6">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-muted-foreground">
+                        {service.features.map((feature, idx) => <li key={idx} className="flex items-center text-sm text-muted-foreground">
                             <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
                             {feature}
-                          </li>
-                        ))}
+                          </li>)}
                       </ul>
                       <Link to={service.path}>
                         <Button variant="outline" className="w-full">
@@ -117,26 +101,20 @@ const StudiosWeb = () => {
                         </Button>
                       </Link>
                     </CardContent>
-                  </Card>
-                );
-              })}
+                  </Card>;
+            })}
             </div>
           </div>
           
           {/* Construction Worker Image */}
           <div className="absolute bottom-0 right-0 hidden lg:block pointer-events-none">
             <div className="relative">
-              <img 
-                src={constructionWorker} 
-                alt="Professional construction worker" 
-                className="w-64 h-auto animate-fade-in"
-                style={{
-                  maskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%), linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%)',
-                  WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%), linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%)',
-                  maskComposite: 'intersect',
-                  WebkitMaskComposite: 'source-in'
-                }}
-              />
+              <img src={constructionWorker} alt="Professional construction worker" className="w-64 h-auto animate-fade-in" style={{
+              maskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%), linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%), linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%)',
+              maskComposite: 'intersect',
+              WebkitMaskComposite: 'source-in'
+            }} />
             </div>
           </div>
         </section>
@@ -167,8 +145,6 @@ const StudiosWeb = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default StudiosWeb;
