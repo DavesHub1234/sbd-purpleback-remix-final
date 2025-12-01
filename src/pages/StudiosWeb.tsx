@@ -46,8 +46,9 @@ const StudiosWeb = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary/5 to-accent/10 py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-slate-500">
-              Studios Web 
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <span className="text-foreground">Studios </span>
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Web</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Complete digital solutions to grow your business. From stunning websites to powerful automation, 
