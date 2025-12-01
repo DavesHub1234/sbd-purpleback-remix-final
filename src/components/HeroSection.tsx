@@ -6,15 +6,12 @@ import robotBg from "@/assets/robot-construction-bg.jpg";
 const HeroSection = () => {
   return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Embossed Robot Background */}
-      <div 
-        className="absolute inset-0 opacity-[0.08] mix-blend-overlay"
-        style={{
-          backgroundImage: `url(${robotBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          filter: 'grayscale(100%) contrast(1.2)',
-        }}
-      />
+      <div className="absolute inset-0 opacity-[0.08] mix-blend-overlay" style={{
+      backgroundImage: `url(${robotBg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      filter: 'grayscale(100%) contrast(1.2)'
+    }} />
       
       {/* Background Pattern */}
       <div className="absolute inset-0 hero-pattern opacity-50" />
@@ -69,7 +66,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link to="/contact#get-in-touch">
                 <Button variant="hero" size="lg" className="group">
-                  Get in Touch
+                  ​Get Started Today    
                   <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
