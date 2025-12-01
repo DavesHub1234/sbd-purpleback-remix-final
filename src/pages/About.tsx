@@ -97,8 +97,19 @@ const About = () => {
       </section>
 
       {/* Meet Dave Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 relative bg-white">
+        {/* Embossed Robot Background */}
+        <div 
+          className="absolute inset-0 opacity-[0.06] mix-blend-overlay"
+          style={{
+            backgroundImage: `url(/lovable-uploads/f466cdd4e0b5547699825ab1bba156c4.jpg)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'grayscale(100%) contrast(1.2)',
+          }}
+        />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h2 className="text-4xl font-bold text-foreground mb-12">Meet Dave</h2>
             <div className="max-w-md mx-auto">
