@@ -6,6 +6,10 @@ import { CheckCircle, ArrowRight, Users, Award, Target, Lightbulb } from "lucide
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { breadcrumbSchema, faqSchema } from "@/data/structuredData";
+import webDesignBackdrop from "@/assets/web-design-backdrop.png";
+import brandingBackdrop from "@/assets/branding-backdrop.jpeg";
+import aiBackdrop from "@/assets/ai-backdrop.jpeg";
+import googleBackdrop from "@/assets/google-backdrop.jpeg";
 
 const About = () => {
   const breadcrumbs = breadcrumbSchema([
@@ -98,14 +102,45 @@ const About = () => {
 
       {/* Meet Dave Section */}
       <section className="py-24 relative bg-white">
-        {/* Embossed Robot Background */}
+        {/* Layered Embossed Backgrounds */}
         <div 
-          className="absolute inset-0 opacity-[0.06] mix-blend-overlay"
+          className="absolute inset-0 opacity-[0.06]"
           style={{
-            backgroundImage: `url(/lovable-uploads/f466cdd4e0b5547699825ab1bba156c4.jpg)`,
+            backgroundImage: `url(${webDesignBackdrop})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            filter: 'grayscale(100%) contrast(1.2)',
+            filter: 'grayscale(85%) brightness(1.2) contrast(1.1)',
+            mixBlendMode: 'multiply'
+          }}
+        />
+        <div 
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage: `url(${brandingBackdrop})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'grayscale(85%) brightness(1.2) contrast(1.1)',
+            mixBlendMode: 'multiply'
+          }}
+        />
+        <div 
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage: `url(${aiBackdrop})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'grayscale(85%) brightness(1.2) contrast(1.1)',
+            mixBlendMode: 'multiply'
+          }}
+        />
+        <div 
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage: `url(${googleBackdrop})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'grayscale(85%) brightness(1.2) contrast(1.1)',
+            mixBlendMode: 'multiply'
           }}
         />
         
