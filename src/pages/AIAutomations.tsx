@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import InternalLinksFooter from "@/components/InternalLinks";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Bot, MessageSquare, Calendar, Phone, Target, Zap, ArrowDown } from "lucide-react";
@@ -198,6 +199,7 @@ const AIAutomations = () => {
         </div>
       </section>
 
+      <InternalLinksFooter />
       <Footer />
     </div>
   );

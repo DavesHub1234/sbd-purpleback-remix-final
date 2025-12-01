@@ -41,7 +41,15 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 relative">
           <div className="absolute inset-0 flex items-center justify-center opacity-20">
-            <img src="/lovable-uploads/ab2f14a1-bdab-4f01-a4a4-ea21998e031d-optimized.jpg" alt="Professional contractor team working together - roofing, landscaping, and solar installation specialists" className="w-96 h-auto object-contain" width="384" height="384" loading="lazy" decoding="async" />
+            <img 
+              src="/lovable-uploads/ab2f14a1-bdab-4f01-a4a4-ea21998e031d-optimized.jpg" 
+              alt="Successful contractor team celebrating digital marketing success - web design, SEO, and branding services for roofing, landscaping, and solar businesses" 
+              className="w-96 h-auto object-contain" 
+              width="384" 
+              height="384" 
+              loading="lazy" 
+              decoding="async" 
+            />
           </div>
           <div className="relative z-10">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">

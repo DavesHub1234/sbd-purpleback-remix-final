@@ -4,6 +4,7 @@ import ServicesSection from "@/components/ServicesSection";
 import NonExclusiveSection from "@/components/NonExclusiveSection";
 import PromotionMarquee from "@/components/PromotionMarquee";
 import Footer from "@/components/Footer";
+import InternalLinksFooter from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { organizationSchema, servicesSchema, localBusinessSchema } from "@/data/structuredData";
 
@@ -25,6 +26,7 @@ const Index = () => {
         <ServicesSection />
         <NonExclusiveSection />
       </main>
+      <InternalLinksFooter />
       <Footer />
     </div>
   );

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import InternalLinksFooter from "@/components/InternalLinks";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Search, FileText, Link2, BarChart3, MapPin, Image } from "lucide-react";
@@ -213,6 +214,7 @@ const SEOPage = () => {
         </div>
       </section>
 
+      <InternalLinksFooter />
       <Footer />
     </div>
   );

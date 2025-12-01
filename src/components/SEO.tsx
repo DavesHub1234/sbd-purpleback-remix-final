@@ -59,6 +59,15 @@ const SEO = ({
       <meta name="publisher" content="Studios by Dave" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="en" />
+      <meta name="format-detection" content="telephone=yes" />
+      <meta name="HandheldFriendly" content="True" />
+      <meta name="MobileOptimized" content="320" />
+      
+      {/* Geo Tags */}
+      <meta name="geo.region" content="US-NC" />
+      <meta name="geo.placename" content="Shelby" />
+      <meta name="geo.position" content="35.2901;-81.5357" />
+      <meta name="ICBM" content="35.2901, -81.5357" />
       
       {/* Structured Data */}
       {structuredData && (

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import InternalLinksFooter from "@/components/InternalLinks";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Globe, Smartphone, Zap, Search } from "lucide-react";
@@ -44,15 +45,15 @@ const WebDesign = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-24">
+      <section className="bg-gradient-hero py-24" itemScope itemType="https://schema.org/WebPageElement">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6" itemProp="headline">
             Professional Web Design for{" "}
             <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
               Contractors
             </span>
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" itemProp="description">
             Custom websites that turn visitors into paying customers. Designed specifically 
             for roofing contractors, landscaping companies, and solar panel installers.
           </p>
@@ -66,9 +67,9 @@ const WebDesign = () => {
       </section>
 
       {/* Features Section with Image */}
-      <section className="py-24 bg-gradient-subtle">
+      <section className="py-24 bg-gradient-subtle" itemScope itemType="https://schema.org/ItemList">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-16">
+          <h2 className="text-4xl font-bold text-center text-foreground mb-16" itemProp="name">
             Everything Your Business Website Needs
           </h2>
           
@@ -115,14 +116,17 @@ const WebDesign = () => {
             <div className="relative">
               <img 
                 src="/lovable-uploads/cce00c4a-bc6a-4693-9858-9cc5970c8096-cropped.png" 
-                alt="Mobile responsive web design mockup - professional contractor websites displayed on desktop, tablet, and smartphone devices" 
+                alt="Mobile-first responsive web design mockup showcasing professional contractor websites optimized for desktop, tablet, and smartphone with SEO and lead generation" 
                 className="w-full h-auto rounded-2xl shadow-elegant"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
         </div>
       </section>
 
+      <InternalLinksFooter />
       <Footer />
     </div>
   );
