@@ -218,6 +218,18 @@ const About = () => {
                   </div>
                 ))}
               </div>
+              <div className="mt-8">
+                <img 
+                  src="/lovable-uploads/dave-landscaping.jpg"
+                  alt="Dave Richardson planting a tree, showcasing his passion for landscaping"
+                  className="w-full rounded-lg shadow-lg"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <p className="text-center text-sm text-muted-foreground mt-3 italic">
+                  Dave has taken an actual love for landscaping itself!
+                </p>
+              </div>
             </div>
             <div className="bg-gradient-primary rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Ready to Build Something GREAT?</h3>
