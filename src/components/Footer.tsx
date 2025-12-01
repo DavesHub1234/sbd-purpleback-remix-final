@@ -1,47 +1,54 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Globe, Linkedin, Facebook, Instagram } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   const footerLinks = {
-    services: [
-      { name: "Web Design", href: "/studiosweb/web-design" },
-      { name: "Logo Design & Branding", href: "/studiosweb/branding" },
-      { name: "AI Automations", href: "/studiosweb/ai-automations" },
-      { name: "Google Optimization", href: "/studiosweb/google-optimization" },
-    ],
-    company: [
-      { name: "About Us", href: "/about" },
-      { name: "Contact", href: "/contact" },
-      { name: "Privacy Policy", href: "/privacy" },
-      { name: "Terms of Service", href: "/terms" },
-    ],
-    industries: [
-      { name: "Roofing Contractors", href: "/industries/roofing" },
-      { name: "Landscaping Companies", href: "/industries/landscaping" },
-      { name: "Solar Panel Installers", href: "/industries/solar" },
-    ],
+    services: [{
+      name: "Web Design",
+      href: "/studiosweb/web-design"
+    }, {
+      name: "Logo Design & Branding",
+      href: "/studiosweb/branding"
+    }, {
+      name: "AI Automations",
+      href: "/studiosweb/ai-automations"
+    }, {
+      name: "Google Optimization",
+      href: "/studiosweb/google-optimization"
+    }],
+    company: [{
+      name: "About Us",
+      href: "/about"
+    }, {
+      name: "Contact",
+      href: "/contact"
+    }, {
+      name: "Privacy Policy",
+      href: "/privacy"
+    }, {
+      name: "Terms of Service",
+      href: "/terms"
+    }],
+    industries: [{
+      name: "Roofing Contractors",
+      href: "/industries/roofing"
+    }, {
+      name: "Landscaping Companies",
+      href: "/industries/landscaping"
+    }, {
+      name: "Solar Panel Installers",
+      href: "/industries/solar"
+    }]
   };
-
-  return (
-    <footer className="bg-secondary text-white">
+  return <footer className="bg-secondary text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/lovable-uploads/53e3faf8-91ca-4a91-841b-36561dcb91f1-optimized.jpg" 
-                alt="Studios by Dave Logo" 
-                className="h-24 w-auto"
-                width="96"
-                height="96"
-                loading="lazy"
-                decoding="async"
-              />
+              <img src="/lovable-uploads/53e3faf8-91ca-4a91-841b-36561dcb91f1-optimized.jpg" alt="Studios by Dave Logo" className="h-24 w-auto" width="96" height="96" loading="lazy" decoding="async" />
             </div>
             <p className="text-white/80 leading-relaxed">
               We don't just build you a website. We build something GREAT together!
@@ -66,16 +73,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Our Services</h3>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-white/80 hover:text-accent transition-colors"
-                  >
+              {footerLinks.services.map(link => <li key={link.name}>
+                  <Link to={link.href} className="text-white/80 hover:text-accent transition-colors">
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -83,16 +85,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Company</h3>
             <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-white/80 hover:text-accent transition-colors"
-                  >
+              {footerLinks.company.map(link => <li key={link.name}>
+                  <Link to={link.href} className="text-white/80 hover:text-accent transition-colors">
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -104,7 +101,7 @@ const Footer = () => {
             </p>
             <Link to="/contact#get-in-touch">
               <Button variant="hero" className="w-full mb-6">
-                Get in Touch
+                ​Contact Us   
               </Button>
             </Link>
             
@@ -146,8 +143,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
