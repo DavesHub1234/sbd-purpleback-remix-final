@@ -2,8 +2,20 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
+import robotBg from "@/assets/robot-construction-bg.jpg";
 const HeroSection = () => {
   return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
+      {/* Embossed Robot Background */}
+      <div 
+        className="absolute inset-0 opacity-[0.08] mix-blend-overlay"
+        style={{
+          backgroundImage: `url(${robotBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'grayscale(100%) contrast(1.2)',
+        }}
+      />
+      
       {/* Background Pattern */}
       <div className="absolute inset-0 hero-pattern opacity-50" />
       
