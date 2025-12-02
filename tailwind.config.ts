@@ -70,6 +70,8 @@ export default {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-subtle': 'var(--gradient-subtle)',
 				'gradient-trophy-gold': 'var(--gradient-trophy-gold)',
+				'gradient-bronze': 'var(--gradient-bronze)',
+				'gradient-platinum': 'var(--gradient-platinum)',
 			},
 			boxShadow: {
 				'brand': 'var(--shadow-brand)',
