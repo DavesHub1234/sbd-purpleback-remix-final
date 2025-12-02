@@ -92,14 +92,22 @@ const Branding = () => {
                 description: "Strategic positioning and messaging that differentiates your business and resonates with your target market."
               }
             ].map((service, index) => (
-              <Card key={index} className="text-center border-0 shadow-card">
-                <CardHeader>
+              <Card key={index} className="text-center border-0 shadow-card relative overflow-hidden">
+                <div 
+                  className="absolute inset-0 opacity-[0.12] pointer-events-none"
+                  style={{
+                    backgroundImage: `linear-gradient(135deg, hsl(40, 30%, 85%), hsl(35, 25%, 80%))`,
+                    filter: 'grayscale(20%) brightness(1.1) contrast(0.9)',
+                    mixBlendMode: 'multiply'
+                  }}
+                />
+                <CardHeader className="relative z-10">
                   <div className="w-16 h-16 bg-gradient-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
                     <service.icon size={32} className="text-white" />
                   </div>
                   <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="relative z-10">
                   <CardDescription className="text-base">{service.description}</CardDescription>
                 </CardContent>
               </Card>

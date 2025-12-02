@@ -67,11 +67,11 @@ const HeroSection = () => {
             <div className="space-y-6">
               <div className="relative">
                 {/* Pixie Dust Effect */}
-                <div className="absolute -top-8 -left-4 w-32 h-32 pointer-events-none">
-                  {[...Array(12)].map((_, i) => (
+                <div className="absolute -top-8 -left-4 w-40 h-40 pointer-events-none">
+                  {[...Array(18)].map((_, i) => (
                     <div
                       key={i}
-                      className="absolute w-1 h-1 rounded-full animate-dust-float"
+                      className="absolute w-1.5 h-1.5 rounded-full animate-dust-float"
                       style={{
                         left: `${Math.random() * 100}%`,
                         top: `${Math.random() * 100}%`,
@@ -80,10 +80,10 @@ const HeroSection = () => {
                           : i % 4 === 1 
                           ? 'hsl(var(--accent) / 0.6)'
                           : 'hsl(0, 0%, 30%)',
-                        animationDelay: `${i * 0.2}s`,
+                        animationDelay: `${i * 0.15}s`,
                         animationDuration: `${2 + Math.random() * 2}s`,
                         filter: 'blur(0.5px)',
-                        boxShadow: i % 4 === 0 ? '0 0 4px hsl(var(--trophy-gold))' : 'none'
+                        boxShadow: i % 4 === 0 ? '0 0 5px hsl(var(--trophy-gold))' : 'none'
                       }}
                     />
                   ))}
