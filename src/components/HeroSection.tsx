@@ -18,9 +18,31 @@ const HeroSection = () => {
       
       {/* Phone Number Display */}
       <div className="absolute top-8 right-8 z-30">
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 px-6 py-4 shadow-glow">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 px-6 py-4 shadow-glow relative">
+          {/* Pixie Dust Effect */}
+          <div className="absolute -top-6 -right-6 w-28 h-28 pointer-events-none">
+            {[...Array(10)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-1 h-1 rounded-full animate-dust-float-right"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  background: i % 4 === 0 
+                    ? 'hsl(var(--trophy-gold))' 
+                    : i % 4 === 1 
+                    ? 'hsl(var(--accent) / 0.6)'
+                    : 'hsl(0, 0%, 30%)',
+                  animationDelay: `${i * 0.25}s`,
+                  animationDuration: `${2.5 + Math.random() * 1.5}s`,
+                  filter: 'blur(0.5px)',
+                  boxShadow: i % 4 === 0 ? '0 0 4px hsl(var(--trophy-gold))' : 'none'
+                }}
+              />
+            ))}
+          </div>
           <div className="text-center">
-            <p className="text-white/80 text-sm font-medium mb-1">                                    Call Us    --    TEXT US!          </p>
+            <p className="text-white/80 text-sm font-medium mb-1">                                    Call Us    --    TEXT US!          </p>
             <a href="tel:+17044738188" className="text-white text-2xl font-bold hover:text-accent transition-colors duration-300">
               (704) 473-8188
             </a>

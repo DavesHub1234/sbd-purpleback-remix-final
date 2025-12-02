@@ -210,4 +210,25 @@
   .animate-dust-float {
     animation: dust-float 3s ease-out infinite;
   }
+
+  @keyframes dust-float-right {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(70px, -70px) scale(0.3);
+      opacity: 0;
+    }
+  }
+
+  .animate-dust-float-right {
+    animation: dust-float-right 3s ease-out infinite;
+  }
 }
