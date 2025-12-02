@@ -188,4 +188,26 @@
   .animate-scroll {
     animation: scroll 30s linear infinite;
   }
+
+  /* Pixie Dust Animation */
+  @keyframes dust-float {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(80px, -60px) scale(0.3);
+      opacity: 0;
+    }
+  }
+
+  .animate-dust-float {
+    animation: dust-float 3s ease-out infinite;
+  }
 }

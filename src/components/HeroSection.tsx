@@ -43,10 +43,34 @@ const HeroSection = () => {
 
             {/* Main Headline */}
             <div className="space-y-6">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                We Don't Just Build You a Website.{" "}
-                We Build Something <span className="text-trophy-gold font-bold">GREAT</span> Together!
-              </h1>
+              <div className="relative">
+                {/* Pixie Dust Effect */}
+                <div className="absolute -top-8 -left-4 w-32 h-32 pointer-events-none">
+                  {[...Array(12)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="absolute w-1 h-1 rounded-full animate-dust-float"
+                      style={{
+                        left: `${Math.random() * 100}%`,
+                        top: `${Math.random() * 100}%`,
+                        background: i % 4 === 0 
+                          ? 'hsl(var(--trophy-gold))' 
+                          : i % 4 === 1 
+                          ? 'hsl(var(--accent) / 0.6)'
+                          : 'hsl(0, 0%, 30%)',
+                        animationDelay: `${i * 0.2}s`,
+                        animationDuration: `${2 + Math.random() * 2}s`,
+                        filter: 'blur(0.5px)',
+                        boxShadow: i % 4 === 0 ? '0 0 4px hsl(var(--trophy-gold))' : 'none'
+                      }}
+                    />
+                  ))}
+                </div>
+                <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
+                  We Don't Just Build You a Website.{" "}
+                  We Build Something <span className="text-trophy-gold font-bold">GREAT</span> Together!
+                </h1>
+              </div>
               
               <p className="text-xl text-white/90 max-w-2xl leading-relaxed">
                 <span className="font-bold text-white block mb-2">We build opportunity!</span>
