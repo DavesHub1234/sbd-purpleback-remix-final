@@ -48,14 +48,14 @@ const WebDesign = () => {
       <section className="bg-gradient-hero py-24" itemScope itemType="https://schema.org/WebPageElement">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6" itemProp="headline">
-            Professional Web Design for{" "}
+            Professional Web Design{" "}
             <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-              Contractors
+              with You in Mind
             </span>
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" itemProp="description">
-            Custom websites that turn visitors into paying customers. Designed specifically 
-            for roofing contractors, landscaping companies, and solar panel installers.
+            Custom websites that turn visitors into paying customers—designed specifically 
+            for local small businesses.
           </p>
           <Link to="/contact">
             <Button variant="hero" size="lg">
