@@ -30,12 +30,36 @@ const About = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-            About{" "}
-            <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-              Studios by Dave
-            </span>
-          </h1>
+          <div className="relative inline-block">
+            {/* Pixie Dust Effect */}
+            <div className="absolute -top-8 -left-4 w-40 h-40 pointer-events-none">
+              {[...Array(18)].map((_, i) => (
+                <div
+                  key={i}
+                  className="absolute w-1.5 h-1.5 rounded-full animate-dust-float"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    background: i % 4 === 0 
+                      ? 'hsl(var(--trophy-gold))' 
+                      : i % 4 === 1 
+                      ? 'hsl(var(--accent) / 0.6)'
+                      : 'hsl(0, 0%, 30%)',
+                    animationDelay: `${i * 0.15}s`,
+                    animationDuration: `${2 + Math.random() * 2}s`,
+                    filter: 'blur(0.5px)',
+                    boxShadow: i % 4 === 0 ? '0 0 5px hsl(var(--trophy-gold))' : 'none'
+                  }}
+                />
+              ))}
+            </div>
+            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+              About{" "}
+              <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+                Studios by Dave
+              </span>
+            </h1>
+          </div>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
             We don't just build websites. We build opportunity. We build something GREAT together!
           </p>
