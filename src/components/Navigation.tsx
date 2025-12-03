@@ -112,7 +112,7 @@ const Navigation = () => {
             </Link>
             
             <Link to="/contact">
-              <Button variant="primary" size="sm" className="ml-4 bg-ring">
+              <Button variant="shimmer" size="sm" className="ml-4">
                 Get Started
               </Button>
             </Link>
