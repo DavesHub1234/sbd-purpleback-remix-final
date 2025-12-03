@@ -107,6 +107,11 @@ const Navigation = () => {
               Studios Gear
             </Link>
 
+            {/* Blog */}
+            <Link to="/blog" className={`text-sm font-medium transition-colors hover:text-primary ${isActive('/blog') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground/80"}`}>
+              Blog
+            </Link>
+
             <Link to="/about" className={`text-sm font-medium transition-colors hover:text-primary ${isActive('/about') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground/80"}`}>
               About Us
             </Link>
@@ -159,6 +164,13 @@ const Navigation = () => {
             <div className="border-t pt-4">
               <Link to="/studiosgear" onClick={() => setIsOpen(false)} className={`block text-base font-bold transition-colors hover:text-primary ${isActive('/studiosgear') ? "text-primary" : "text-primary"}`}>
                 Studios Gear
+              </Link>
+            </div>
+
+            {/* Mobile Blog */}
+            <div className="border-t pt-4">
+              <Link to="/blog" onClick={() => setIsOpen(false)} className={`block text-base font-medium transition-colors hover:text-primary ${isActive('/blog') ? "text-primary" : "text-foreground/80"}`}>
+                Blog
               </Link>
             </div>
 
