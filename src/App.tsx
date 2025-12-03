@@ -16,6 +16,7 @@ import Branding from "./pages/Branding";
 import AIAutomations from "./pages/AIAutomations";
 import GoogleOptimization from "./pages/GoogleOptimization";
 import SEOPage from "./pages/SEO";
+import Promos from "./pages/Promos";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/studiosweb/ai-automations" element={<AIAutomations />} />
           <Route path="/studiosweb/google-optimization" element={<GoogleOptimization />} />
           <Route path="/studiosweb/seo" element={<SEOPage />} />
+          <Route path="/studiosweb/promos" element={<Promos />} />
           <Route path="/studiosink" element={<StudiosInk />} />
           <Route path="/studiosink/sacred-arsenal" element={<SacredArsenal />} />
           <Route path="/studiosgear" element={<StudiosGear />} />
