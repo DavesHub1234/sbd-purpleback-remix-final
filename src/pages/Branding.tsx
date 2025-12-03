@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import InternalLinksFooter from "@/components/InternalLinks";
+import LogoMarquee from "@/components/LogoMarquee";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Palette, Users, Target, Award } from "lucide-react";
@@ -115,6 +116,9 @@ const Branding = () => {
           </div>
         </div>
       </section>
+
+      {/* Logo Portfolio Marquee */}
+      <LogoMarquee />
 
       {/* Branding Packages Section */}
       <section className="py-24">
