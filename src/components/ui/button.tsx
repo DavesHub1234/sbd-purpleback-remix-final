@@ -18,6 +18,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         hero: "bg-white text-primary font-semibold hover:bg-white/90 shadow-glow hover:shadow-brand transition-all hover:scale-105",
         "secondary-outline": "border-2 border-white/30 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm font-semibold",
+        shimmer: "relative overflow-hidden bg-ring text-primary-foreground font-semibold before:absolute before:inset-0 before:bg-[linear-gradient(110deg,transparent_25%,hsl(0_0%_90%/0.4)_50%,transparent_75%)] before:bg-[length:200%_100%] before:animate-shimmer hover:shadow-brand transition-all",
       },
       size: {
         default: "h-10 px-4 py-2",
