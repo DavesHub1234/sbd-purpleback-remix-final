@@ -37,6 +37,10 @@ const Navigation = () => {
     name: "AI Automations",
     path: "/studiosweb/ai-automations",
     description: "Intelligent business automation"
+  }, {
+    name: "Promos",
+    path: "/studiosweb/promos",
+    description: "Current promotions & offers"
   }];
   const isActive = (path: string) => location.pathname === path;
   const isStudiosWebActive = () => location.pathname.startsWith('/studiosweb');
