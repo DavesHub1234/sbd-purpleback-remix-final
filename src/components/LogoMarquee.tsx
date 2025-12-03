@@ -16,58 +16,52 @@ const clientLogos = [
 
 const LogoMarquee = () => {
   return (
-    <section className="py-12 bg-gradient-to-r from-muted/30 via-background to-muted/30 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-        <h3 className="text-2xl font-bold text-center text-foreground">
-          Our Logo Portfolio
-        </h3>
-      </div>
-      
+    <section className="py-10 bg-gradient-to-r from-muted/30 via-background to-muted/30 overflow-hidden">
       <div className="relative">
-        <div className="flex animate-[logo-scroll_25s_linear_infinite]">
+        <div className="flex animate-[logo-scroll_12s_linear_infinite]">
           {/* First set */}
-          <div className="flex items-center gap-16 px-8">
+          <div className="flex items-center gap-20 px-10">
             {clientLogos.map((logo, index) => (
               <div 
                 key={`set1-${index}`} 
-                className="flex-shrink-0 h-24 w-32 flex items-center justify-center"
+                className="flex-shrink-0 h-36 w-44 flex items-center justify-center"
               >
                 <img 
                   src={logo.src} 
                   alt={logo.alt}
-                  className="max-h-24 max-w-32 w-auto h-auto object-contain"
+                  className="max-h-36 max-w-44 w-auto h-auto object-contain"
                   loading="lazy"
                 />
               </div>
             ))}
           </div>
           {/* Second set for seamless loop */}
-          <div className="flex items-center gap-16 px-8">
+          <div className="flex items-center gap-20 px-10">
             {clientLogos.map((logo, index) => (
               <div 
                 key={`set2-${index}`} 
-                className="flex-shrink-0 h-24 w-32 flex items-center justify-center"
+                className="flex-shrink-0 h-36 w-44 flex items-center justify-center"
               >
                 <img 
                   src={logo.src} 
                   alt={logo.alt}
-                  className="max-h-24 max-w-32 w-auto h-auto object-contain"
+                  className="max-h-36 max-w-44 w-auto h-auto object-contain"
                   loading="lazy"
                 />
               </div>
             ))}
           </div>
           {/* Third set for extra coverage */}
-          <div className="flex items-center gap-16 px-8">
+          <div className="flex items-center gap-20 px-10">
             {clientLogos.map((logo, index) => (
               <div 
                 key={`set3-${index}`} 
-                className="flex-shrink-0 h-24 w-32 flex items-center justify-center"
+                className="flex-shrink-0 h-36 w-44 flex items-center justify-center"
               >
                 <img 
                   src={logo.src} 
                   alt={logo.alt}
-                  className="max-h-24 max-w-32 w-auto h-auto object-contain"
+                  className="max-h-36 max-w-44 w-auto h-auto object-contain"
                   loading="lazy"
                 />
               </div>
