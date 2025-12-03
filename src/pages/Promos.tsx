@@ -5,6 +5,8 @@ import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Gift, Users, Clock, CheckCircle, Star } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import logoShowcase1 from "@/assets/logo-showcase-1.png";
+import logoShowcase2 from "@/assets/logo-showcase-2.png";
 
 const Promos = () => {
   return (
@@ -37,6 +39,24 @@ const Promos = () => {
         {/* Free Logo Design Section */}
         <section className="py-20 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Scrolling Logo Banner */}
+            <div className="mb-8 overflow-hidden rounded-xl bg-gradient-to-r from-muted/50 via-background to-muted/50 py-6">
+              <div className="flex animate-scroll">
+                <div className="flex shrink-0 items-center gap-8 pr-8">
+                  <img src={logoShowcase1} alt="Professional logo designs" className="h-16 w-auto object-contain" />
+                  <img src={logoShowcase2} alt="Business logo examples" className="h-16 w-auto object-contain" />
+                </div>
+                <div className="flex shrink-0 items-center gap-8 pr-8">
+                  <img src={logoShowcase1} alt="Professional logo designs" className="h-16 w-auto object-contain" />
+                  <img src={logoShowcase2} alt="Business logo examples" className="h-16 w-auto object-contain" />
+                </div>
+                <div className="flex shrink-0 items-center gap-8 pr-8">
+                  <img src={logoShowcase1} alt="Professional logo designs" className="h-16 w-auto object-contain" />
+                  <img src={logoShowcase2} alt="Business logo examples" className="h-16 w-auto object-contain" />
+                </div>
+              </div>
+            </div>
+
             <Card className="border-2 border-primary/20 shadow-xl overflow-hidden">
               <div className="bg-gradient-to-r from-primary to-primary/80 p-6">
                 <div className="flex items-center gap-4">
@@ -45,7 +65,7 @@ const Promos = () => {
                   </div>
                   <div>
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      🎉 FREE Logo Design
+                      FREE Logo Design
                     </h2>
                     <p className="text-white/90">With Any Web Pack Purchase</p>
                   </div>
