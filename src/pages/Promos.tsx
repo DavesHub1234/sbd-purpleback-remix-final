@@ -5,8 +5,6 @@ import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Gift, Users, Clock, CheckCircle, Star } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import logoShowcase1 from "@/assets/logo-showcase-1.png";
-import logoShowcase2 from "@/assets/logo-showcase-2.png";
 
 const Promos = () => {
   return (
@@ -39,27 +37,32 @@ const Promos = () => {
         {/* Free Logo Design Section */}
         <section className="py-20 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Scrolling Logo Banner */}
-            <div className="mb-8 overflow-hidden rounded-xl bg-gradient-to-r from-muted/50 via-background to-muted/50 py-6">
-              <div className="flex animate-scroll">
-                <div className="flex shrink-0 items-center gap-8 pr-8">
-                  <img src={logoShowcase1} alt="Professional logo designs" className="h-16 w-auto object-contain" />
-                  <img src={logoShowcase2} alt="Business logo examples" className="h-16 w-auto object-contain" />
-                </div>
-                <div className="flex shrink-0 items-center gap-8 pr-8">
-                  <img src={logoShowcase1} alt="Professional logo designs" className="h-16 w-auto object-contain" />
-                  <img src={logoShowcase2} alt="Business logo examples" className="h-16 w-auto object-contain" />
-                </div>
-                <div className="flex shrink-0 items-center gap-8 pr-8">
-                  <img src={logoShowcase1} alt="Professional logo designs" className="h-16 w-auto object-contain" />
-                  <img src={logoShowcase2} alt="Business logo examples" className="h-16 w-auto object-contain" />
-                </div>
-              </div>
-            </div>
-
             <Card className="border-2 border-primary/20 shadow-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-primary to-primary/80 p-6">
-                <div className="flex items-center gap-4">
+              <div className="bg-gradient-to-r from-primary to-primary/80 p-6 relative overflow-hidden">
+                {/* Moving Reflection */}
+                <div className="absolute inset-0 overflow-hidden">
+                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" />
+                </div>
+                {/* Pixie Dust Effect */}
+                <div className="absolute inset-0 pointer-events-none">
+                  {[...Array(12)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="absolute w-1 h-1 rounded-full animate-dust-float"
+                      style={{
+                        left: `${10 + Math.random() * 80}%`,
+                        top: `${Math.random() * 100}%`,
+                        background: i % 3 === 0 
+                          ? 'hsl(var(--trophy-gold))' 
+                          : 'rgba(255, 255, 255, 0.6)',
+                        animationDelay: `${i * 0.2}s`,
+                        animationDuration: `${2 + Math.random() * 2}s`,
+                        boxShadow: i % 3 === 0 ? '0 0 4px hsl(var(--trophy-gold))' : '0 0 3px rgba(255,255,255,0.5)'
+                      }}
+                    />
+                  ))}
+                </div>
+                <div className="flex items-center gap-4 relative z-10">
                   <div className="bg-white/20 p-3 rounded-full">
                     <Gift className="h-8 w-8 text-white" />
                   </div>
@@ -122,14 +125,37 @@ const Promos = () => {
         <section className="py-20 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Card className="border-2 border-accent/20 shadow-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-accent to-accent/80 p-6">
-                <div className="flex items-center gap-4">
+              <div className="bg-gradient-to-r from-accent to-accent/80 p-6 relative overflow-hidden">
+                {/* Moving Reflection */}
+                <div className="absolute inset-0 overflow-hidden">
+                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-[shimmer_3s_infinite]" style={{ animationDelay: '1.5s' }} />
+                </div>
+                {/* Pixie Dust Effect */}
+                <div className="absolute inset-0 pointer-events-none">
+                  {[...Array(12)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="absolute w-1 h-1 rounded-full animate-dust-float"
+                      style={{
+                        left: `${10 + Math.random() * 80}%`,
+                        top: `${Math.random() * 100}%`,
+                        background: i % 3 === 0 
+                          ? 'hsl(var(--trophy-gold))' 
+                          : 'rgba(255, 255, 255, 0.6)',
+                        animationDelay: `${i * 0.2}s`,
+                        animationDuration: `${2 + Math.random() * 2}s`,
+                        boxShadow: i % 3 === 0 ? '0 0 4px hsl(var(--trophy-gold))' : '0 0 3px rgba(255,255,255,0.5)'
+                      }}
+                    />
+                  ))}
+                </div>
+                <div className="flex items-center gap-4 relative z-10">
                   <div className="bg-white/20 p-3 rounded-full">
                     <Users className="h-8 w-8 text-white" />
                   </div>
                   <div>
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      💰 Unlimited $100 Referral Bonus
+                      Unlimited $100 Referral Bonus
                     </h2>
                     <p className="text-white/90">No Limits. No Caps. Truly Unlimited.</p>
                   </div>
