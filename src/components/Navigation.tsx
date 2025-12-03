@@ -108,8 +108,10 @@ const Navigation = () => {
             </Link>
 
             {/* Blog */}
-            <Link to="/blog" className={`text-sm font-medium transition-colors hover:text-primary ${isActive('/blog') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground/80"}`}>
-              Blog
+            <Link to="/blog" className={`font-poofy text-base transition-all hover:scale-105 ${isActive('/blog') ? "border-b-2 border-primary pb-1" : ""}`}>
+              <span className="bg-gradient-to-r from-purple-500 via-violet-400 to-purple-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-shimmer drop-shadow-[0_0_8px_rgba(139,92,246,0.4)]">
+                Blog
+              </span>
             </Link>
 
             <Link to="/about" className={`text-sm font-medium transition-colors hover:text-primary ${isActive('/about') ? "text-primary border-b-2 border-primary pb-1" : "text-foreground/80"}`}>
@@ -169,8 +171,10 @@ const Navigation = () => {
 
             {/* Mobile Blog */}
             <div className="border-t pt-4">
-              <Link to="/blog" onClick={() => setIsOpen(false)} className={`block text-base font-medium transition-colors hover:text-primary ${isActive('/blog') ? "text-primary" : "text-foreground/80"}`}>
-                Blog
+              <Link to="/blog" onClick={() => setIsOpen(false)} className={`block font-poofy text-lg transition-all ${isActive('/blog') ? "text-primary" : ""}`}>
+                <span className="bg-gradient-to-r from-purple-500 via-violet-400 to-purple-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-shimmer drop-shadow-[0_0_8px_rgba(139,92,246,0.4)]">
+                  Blog
+                </span>
               </Link>
             </div>
 

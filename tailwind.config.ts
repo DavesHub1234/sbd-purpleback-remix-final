@@ -84,6 +84,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
+				poofy: ['Fredoka One', 'cursive'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
