@@ -48,7 +48,7 @@ const StudiosWeb = () => {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               <span className="text-foreground">Studios </span>
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-blue-500 bg-clip-text text-transparent bg-[length:200%_auto] transition-all duration-300 hover:animate-shimmer hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+              <span className="bg-gradient-to-r from-purple-500 via-violet-500 to-purple-600 bg-clip-text text-transparent bg-[length:200%_auto] transition-all duration-300 hover:animate-shimmer hover:drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">
                 Web
               </span>
             </h1>
@@ -57,7 +57,7 @@ const StudiosWeb = () => {
               we provide everything you need to succeed online.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="text-lg px-8 py-6 bg-teal-500 hover:bg-teal-400">
+              <Button size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90">
                 Start Your Project Today
               </Button>
             </Link>
