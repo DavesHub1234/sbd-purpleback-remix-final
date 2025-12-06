@@ -1,26 +1,62 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { CalendarIcon, Clock } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import SEO from "@/components/SEO";
 import { toast } from "sonner";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+
+// Validation schema matching Contact page security patterns
+const bookingFormSchema = z.object({
+  name: z.string()
+    .min(2, { message: "Name must be at least 2 characters" })
+    .max(100, { message: "Name must be less than 100 characters" })
+    .regex(/^[a-zA-Z\s'-]+$/, { message: "Name can only contain letters, spaces, hyphens, and apostrophes" }),
+  email: z.string()
+    .email({ message: "Please enter a valid email address" })
+    .max(255, { message: "Email must be less than 255 characters" }),
+  phone: z.string()
+    .min(10, { message: "Please enter a valid phone number" })
+    .max(20, { message: "Phone number must be less than 20 characters" })
+    .regex(/^[\d\s\-()+]+$/, { message: "Please enter a valid phone number" }),
+  message: z.string()
+    .max(2000, { message: "Message must be less than 2000 characters" })
+    .optional(),
+  honeypot: z.string().max(0).optional(), // Honeypot for spam protection
+});
+
+type BookingFormValues = z.infer<typeof bookingFormSchema>;
 
 const Booking = () => {
   const [selectedDate, setSelectedDate] = useState<Date>();
   const [selectedTime, setSelectedTime] = useState<string>("");
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
+
+  const form = useForm<BookingFormValues>({
+    resolver: zodResolver(bookingFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+      honeypot: "",
+    },
   });
 
   // Available time slots (9 AM to 5 PM, hourly)
@@ -29,16 +65,15 @@ const Booking = () => {
     "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM"
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!selectedDate || !selectedTime) {
-      toast.error("Please select a date and time for your consultation");
+  const onSubmit = (data: BookingFormValues) => {
+    // Honeypot check - reject if filled (bots fill hidden fields)
+    if (data.honeypot) {
+      toast.error("Invalid submission");
       return;
     }
 
-    if (!formData.name || !formData.email || !formData.phone) {
-      toast.error("Please fill in all required fields");
+    if (!selectedDate || !selectedTime) {
+      toast.error("Please select a date and time for your consultation");
       return;
     }
 
@@ -49,7 +84,7 @@ const Booking = () => {
     // Reset form
     setSelectedDate(undefined);
     setSelectedTime("");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    form.reset();
   };
 
   return (
@@ -76,125 +111,156 @@ const Booking = () => {
       {/* Booking Form Section */}
       <section className="py-16 bg-gradient-subtle">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <form onSubmit={handleSubmit}>
-            <div className="grid lg:grid-cols-2 gap-8">
-              {/* Calendar Section */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <CalendarIcon className="w-5 h-5 text-primary" />
-                    Select a Date
-                  </CardTitle>
-                  <CardDescription>
-                    Choose your preferred consultation date
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="flex justify-center">
-                  <Calendar
-                    mode="single"
-                    selected={selectedDate}
-                    onSelect={setSelectedDate}
-                    disabled={(date) => date < new Date() || date.getDay() === 0 || date.getDay() === 6}
-                    className={cn("rounded-md border pointer-events-auto")}
-                  />
-                </CardContent>
-              </Card>
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)}>
+              {/* Honeypot field - hidden from users, bots will fill it */}
+              <div className="absolute -left-[9999px]" aria-hidden="true">
+                <FormField
+                  control={form.control}
+                  name="honeypot"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input {...field} tabIndex={-1} autoComplete="off" />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+              </div>
 
-              {/* Time & Details Section */}
-              <div className="space-y-6">
+              <div className="grid lg:grid-cols-2 gap-8">
+                {/* Calendar Section */}
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <Clock className="w-5 h-5 text-primary" />
-                      Select a Time
+                      <CalendarIcon className="w-5 h-5 text-primary" />
+                      Select a Date
                     </CardTitle>
                     <CardDescription>
-                      {selectedDate 
-                        ? `Available times for ${format(selectedDate, "MMMM d, yyyy")}`
-                        : "Please select a date first"
-                      }
+                      Choose your preferred consultation date
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-3 gap-2">
-                      {timeSlots.map((time) => (
-                        <Button
-                          key={time}
-                          type="button"
-                          variant={selectedTime === time ? "default" : "outline"}
-                          className="w-full"
-                          onClick={() => setSelectedTime(time)}
-                          disabled={!selectedDate}
-                        >
-                          {time}
-                        </Button>
-                      ))}
-                    </div>
+                  <CardContent className="flex justify-center">
+                    <Calendar
+                      mode="single"
+                      selected={selectedDate}
+                      onSelect={setSelectedDate}
+                      disabled={(date) => date < new Date() || date.getDay() === 0 || date.getDay() === 6}
+                      className={cn("rounded-md border pointer-events-auto")}
+                    />
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Your Information</CardTitle>
-                    <CardDescription>
-                      Tell us about yourself and your project
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name *</Label>
-                      <Input
-                        id="name"
-                        placeholder="John Doe"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        required
-                      />
-                    </div>
+                {/* Time & Details Section */}
+                <div className="space-y-6">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <Clock className="w-5 h-5 text-primary" />
+                        Select a Time
+                      </CardTitle>
+                      <CardDescription>
+                        {selectedDate 
+                          ? `Available times for ${format(selectedDate, "MMMM d, yyyy")}`
+                          : "Please select a date first"
+                        }
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid grid-cols-3 gap-2">
+                        {timeSlots.map((time) => (
+                          <Button
+                            key={time}
+                            type="button"
+                            variant={selectedTime === time ? "default" : "outline"}
+                            className="w-full"
+                            onClick={() => setSelectedTime(time)}
+                            disabled={!selectedDate}
+                          >
+                            {time}
+                          </Button>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email Address *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="john@example.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        required
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Your Information</CardTitle>
+                      <CardDescription>
+                        Tell us about yourself and your project
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Full Name *</FormLabel>
+                            <FormControl>
+                              <Input placeholder="John Doe" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
-                    </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number *</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        placeholder="(704) 473-8188"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        required
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Email Address *</FormLabel>
+                            <FormControl>
+                              <Input type="email" placeholder="john@example.com" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
-                    </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Project Details (Optional)</Label>
-                      <Textarea
-                        id="message"
-                        placeholder="Tell us about your business and what you're looking for..."
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        rows={4}
+                      <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Phone Number *</FormLabel>
+                            <FormControl>
+                              <Input type="tel" placeholder="(704) 473-8188" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
-                    </div>
 
-                    <Button type="submit" className="w-full" size="lg">
-                      Confirm Consultation
-                    </Button>
-                  </CardContent>
-                </Card>
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Project Details (Optional)</FormLabel>
+                            <FormControl>
+                              <Textarea 
+                                placeholder="Tell us about your business and what you're looking for..."
+                                rows={4}
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <Button type="submit" className="w-full" size="lg">
+                        Confirm Consultation
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </Form>
         </div>
       </section>
 
