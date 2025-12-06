@@ -21,29 +21,19 @@ const HeroSection = () => {
         <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 px-6 py-4 shadow-glow relative">
           {/* Pixie Dust Effect */}
           <div className="absolute -top-6 -right-6 w-28 h-28 pointer-events-none">
-            {[...Array(10)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-1 h-1 rounded-full animate-dust-float-right"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  background: i % 4 === 0 
-                    ? 'hsl(var(--trophy-gold))' 
-                    : i % 4 === 1 
-                    ? 'hsl(var(--accent) / 0.6)'
-                    : 'hsl(0, 0%, 30%)',
-                  animationDelay: `${i * 0.25}s`,
-                  animationDuration: `${2.5 + Math.random() * 1.5}s`,
-                  filter: 'blur(0.5px)',
-                  boxShadow: i % 4 === 0 ? '0 0 4px hsl(var(--trophy-gold))' : 'none'
-                }}
-              />
-            ))}
+            {[...Array(10)].map((_, i) => <div key={i} className="absolute w-1 h-1 rounded-full animate-dust-float-right" style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            background: i % 4 === 0 ? 'hsl(var(--trophy-gold))' : i % 4 === 1 ? 'hsl(var(--accent) / 0.6)' : 'hsl(0, 0%, 30%)',
+            animationDelay: `${i * 0.25}s`,
+            animationDuration: `${2.5 + Math.random() * 1.5}s`,
+            filter: 'blur(0.5px)',
+            boxShadow: i % 4 === 0 ? '0 0 4px hsl(var(--trophy-gold))' : 'none'
+          }} />)}
           </div>
           <div className="text-center">
             <p className="text-white/80 text-sm font-medium mb-1">                                    Call Us    --    TEXT US!          </p>
-            <a href="tel:+17044738188" className="text-white text-2xl font-bold hover:text-accent transition-colors duration-300">
+            <a href="tel:+17044738188" className="text-2xl font-bold transition-colors duration-300 text-yellow-300">
               (704) 473-8188
             </a>
           </div>
@@ -68,25 +58,15 @@ const HeroSection = () => {
               <div className="relative">
                 {/* Pixie Dust Effect */}
                 <div className="absolute -top-8 -left-4 w-40 h-40 pointer-events-none">
-                  {[...Array(18)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute w-1.5 h-1.5 rounded-full animate-dust-float"
-                      style={{
-                        left: `${Math.random() * 100}%`,
-                        top: `${Math.random() * 100}%`,
-                        background: i % 4 === 0 
-                          ? 'hsl(var(--trophy-gold))' 
-                          : i % 4 === 1 
-                          ? 'hsl(var(--accent) / 0.6)'
-                          : 'hsl(0, 0%, 30%)',
-                        animationDelay: `${i * 0.15}s`,
-                        animationDuration: `${2 + Math.random() * 2}s`,
-                        filter: 'blur(0.5px)',
-                        boxShadow: i % 4 === 0 ? '0 0 5px hsl(var(--trophy-gold))' : 'none'
-                      }}
-                    />
-                  ))}
+                  {[...Array(18)].map((_, i) => <div key={i} className="absolute w-1.5 h-1.5 rounded-full animate-dust-float" style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  background: i % 4 === 0 ? 'hsl(var(--trophy-gold))' : i % 4 === 1 ? 'hsl(var(--accent) / 0.6)' : 'hsl(0, 0%, 30%)',
+                  animationDelay: `${i * 0.15}s`,
+                  animationDuration: `${2 + Math.random() * 2}s`,
+                  filter: 'blur(0.5px)',
+                  boxShadow: i % 4 === 0 ? '0 0 5px hsl(var(--trophy-gold))' : 'none'
+                }} />)}
                 </div>
                 <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
                   We Don't Just Build You a Website.{" "}
@@ -141,27 +121,13 @@ const HeroSection = () => {
             <div className="relative">
               {/* Hero Image */}
               <div className="aspect-[4/3] sm:aspect-[4/3] md:aspect-square lg:aspect-[4/3] xl:aspect-square rounded-2xl overflow-hidden shadow-glow border border-white/20 relative w-full max-w-full">
-              <img 
-                src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" 
-                alt="Professional contractor website design showcase featuring responsive mobile-first websites for roofing, landscaping, and solar panel businesses with lead generation systems" 
-                className="w-full h-full object-cover object-center" 
-                fetchPriority="high" 
-                decoding="sync" 
-                loading="eager" 
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 550px"
-              />
+              <img src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" alt="Professional contractor website design showcase featuring responsive mobile-first websites for roofing, landscaping, and solar panel businesses with lead generation systems" className="w-full h-full object-cover object-center" fetchPriority="high" decoding="sync" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 550px" />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
                 
                 {/* Company Mascot in corner */}
                 <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-20 h-20 sm:w-28 sm:h-28 animate-bounce z-20">
-                  <img 
-                    src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830-optimized.jpg" 
-                    alt="Studios by Dave AI-powered mascot delivering innovative web design, SEO, and digital marketing solutions for contractors" 
-                    className="w-full h-full object-contain drop-shadow-lg" 
-                    loading="lazy" 
-                    decoding="async" 
-                  />
+                  <img src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830-optimized.jpg" alt="Studios by Dave AI-powered mascot delivering innovative web design, SEO, and digital marketing solutions for contractors" className="w-full h-full object-contain drop-shadow-lg" loading="lazy" decoding="async" />
                 </div>
               </div>
 

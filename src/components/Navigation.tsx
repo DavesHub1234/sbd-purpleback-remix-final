@@ -63,36 +63,19 @@ const Navigation = () => {
             
             {/* StudiosWeb Collapsible */}
             <div className="relative">
-              <button 
-                onClick={() => setStudiosWebOpen(!studiosWebOpen)} 
-                className={`text-sm font-bold transition-colors hover:text-primary flex items-center space-x-1 ${isStudiosWebActive() ? "text-primary border-b-2 border-primary pb-1" : "text-primary"}`}
-              >
+              <button onClick={() => setStudiosWebOpen(!studiosWebOpen)} className={`text-sm font-bold transition-colors hover:text-primary flex items-center space-x-1 ${isStudiosWebActive() ? "text-primary border-b-2 border-primary pb-1" : "text-primary"}`}>
                 <span>Studios Web</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${studiosWebOpen ? 'rotate-180' : ''}`} />
               </button>
               
               {/* Fan-out dropdown underneath */}
-              <div 
-                className={`absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-border/50 z-50 overflow-hidden transition-all duration-300 ${
-                  studiosWebOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-                }`}
-              >
+              <div className={`absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-border/50 z-50 overflow-hidden transition-all duration-300 ${studiosWebOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                 <div className="p-2 flex flex-col">
-                  {studiosWebServices.map((service, index) => (
-                    <Link
-                      key={service.name}
-                      to={service.path}
-                      onClick={() => setStudiosWebOpen(false)}
-                      className={`text-sm font-medium whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-muted hover:text-primary ${
-                        isActive(service.path) ? "text-primary bg-muted/50" : "text-foreground/80"
-                      } ${studiosWebOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
-                      style={{
-                        transitionDelay: studiosWebOpen ? `${index * 60}ms` : '0ms',
-                      }}
-                    >
+                  {studiosWebServices.map((service, index) => <Link key={service.name} to={service.path} onClick={() => setStudiosWebOpen(false)} className={`text-sm font-medium whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-muted hover:text-primary ${isActive(service.path) ? "text-primary bg-muted/50" : "text-foreground/80"} ${studiosWebOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} style={{
+                  transitionDelay: studiosWebOpen ? `${index * 60}ms` : '0ms'
+                }}>
                       {service.name}
-                    </Link>
-                  ))}
+                    </Link>)}
                 </div>
               </div>
             </div>
@@ -109,7 +92,7 @@ const Navigation = () => {
 
             {/* Blog */}
             <Link to="/blog" className={`font-poofy text-base transition-all hover:scale-105 ${isActive('/blog') ? "border-b-2 border-primary pb-1" : ""}`}>
-              <span className="bg-gradient-to-r from-purple-500 via-violet-400 to-purple-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-shimmer drop-shadow-[0_0_8px_rgba(139,92,246,0.4)]">
+              <span className="bg-gradient-to-r from-purple-500 via-violet-400 to-purple-600 bg-clip-text bg-[length:200%_auto] animate-shimmer drop-shadow-[0_0_8px_rgba(139,92,246,0.4)] text-amber-600">
                 Blog
               </span>
             </Link>
