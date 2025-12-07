@@ -3,7 +3,6 @@ import { ArrowRight, CheckCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 import robotBg from "@/assets/robot-construction-bg.jpg";
-import mascotHero from "@/assets/mascot-hero.jpg";
 const HeroSection = () => {
   return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Embossed Robot Background */}
@@ -117,28 +116,24 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Column - Mascot Hero Image */}
-          <div className="relative lg:pl-8 flex items-center justify-center">
-            <div className="relative w-full max-w-lg">
-              {/* Mascot Hero Image with fading edges */}
-              <div className="relative">
-                <img 
-                  src={mascotHero} 
-                  alt="Studios by Dave mascot - AI-powered lightbulb character launching into space representing innovative web solutions" 
-                  className="w-full h-auto object-contain opacity-70"
-                  style={{
-                    maskImage: 'radial-gradient(ellipse 80% 80% at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0.6) 60%, transparent 100%)',
-                    WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0.6) 60%, transparent 100%)',
-                  }}
-                  fetchPriority="high" 
-                  decoding="sync" 
-                  loading="eager" 
-                />
+          {/* Right Column - Hero Image */}
+          <div className="relative lg:pl-8">
+            <div className="relative">
+              {/* Hero Image */}
+              <div className="aspect-[4/3] sm:aspect-[4/3] md:aspect-square lg:aspect-[4/3] xl:aspect-square rounded-2xl overflow-hidden shadow-glow border border-white/20 relative w-full max-w-full">
+              <img src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" alt="Professional contractor website design showcase featuring responsive mobile-first websites for roofing, landscaping, and solar panel businesses with lead generation systems" className="w-full h-full object-cover object-center" fetchPriority="high" decoding="sync" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 550px" />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
+                
+                {/* Company Mascot in corner */}
+                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-20 h-20 sm:w-28 sm:h-28 animate-bounce z-20">
+                  <img src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830-optimized.jpg" alt="Studios by Dave AI-powered mascot delivering innovative web design, SEO, and digital marketing solutions for contractors" className="w-full h-full object-contain drop-shadow-lg" loading="lazy" decoding="async" />
+                </div>
               </div>
 
-              {/* Subtle glow effects */}
-              <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-48 h-48 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
-              <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-32 h-32 bg-trophy-gold/10 rounded-full blur-2xl pointer-events-none" />
+              {/* Floating Elements */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 sm:w-20 sm:h-20 bg-accent/20 rounded-full blur-xl animate-pulse" />
+              <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 w-24 h-24 sm:w-32 sm:h-32 bg-white/10 rounded-full blur-2xl animate-pulse" />
             </div>
           </div>
         </div>
