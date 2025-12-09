@@ -1,20 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import brainMascot from "@/assets/brain-mascot.png";
 
 const Navigation = () => {
-  const [mascotVisible, setMascotVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [studiosWebOpen, setStudiosWebOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const timer = setTimeout(() => setMascotVisible(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
 
   const navItems = [{
     name: "Home",
@@ -114,20 +107,11 @@ const Navigation = () => {
               Contact
             </Link>
             
-            <div className="relative ml-4">
-              {/* Brain mascot pointing to button */}
-              <img 
-                src={brainMascot} 
-                alt="" 
-                className={`absolute -left-16 -top-2 w-14 h-14 object-contain pointer-events-none transition-all duration-700 ${mascotVisible ? 'opacity-40 translate-x-0' : 'opacity-0 -translate-x-4'}`}
-                style={{ transform: mascotVisible ? 'scaleX(-1)' : 'scaleX(-1) translateX(-1rem)' }}
-              />
-              <Link to="/contact">
-                <Button variant="shimmer" size="sm">
-                  Get Started
-                </Button>
-              </Link>
-            </div>
+            <Link to="/contact">
+              <Button variant="shimmer" size="sm" className="ml-4">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
