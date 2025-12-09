@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 import robotBg from "@/assets/robot-construction-bg.jpg";
+import mascotPointing from "@/assets/mascot-pointing.png";
 const HeroSection = () => {
   return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Embossed Robot Background */}
@@ -38,6 +39,14 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
+        {/* Mascot pointing to phone number */}
+        <img 
+          src={mascotPointing} 
+          alt="Studios by Dave mascot pointing to phone number" 
+          className="absolute -bottom-20 -left-16 w-24 h-24 object-contain transform -scale-x-100 drop-shadow-lg"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       
       {/* Content */}
