@@ -3,12 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [studiosWebOpen, setStudiosWebOpen] = useState(false);
   const location = useLocation();
-
   const navItems = [{
     name: "Home",
     path: "/"

@@ -1,18 +1,9 @@
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 import robotBg from "@/assets/robot-construction-bg.jpg";
-import brainMascot from "@/assets/brain-mascot.png";
-
 const HeroSection = () => {
-  const [mascotVisible, setMascotVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setMascotVisible(true), 800);
-    return () => clearTimeout(timer);
-  }, []);
   return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Embossed Robot Background */}
       <div className="absolute inset-0 opacity-[0.08] mix-blend-overlay" style={{
@@ -26,14 +17,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 hero-pattern opacity-50" />
       
       {/* Phone Number Display */}
-      <div className="absolute top-8 right-8 z-30 flex items-start gap-2">
-        {/* Brain mascot pointing to phone button */}
-        <img 
-          src={brainMascot} 
-          alt="" 
-          className={`w-20 h-20 object-contain pointer-events-none transition-all duration-1000 ease-out ${mascotVisible ? 'opacity-50 translate-x-0' : 'opacity-0 -translate-x-8'}`}
-          style={{ transform: 'scaleX(-1)', marginTop: '-0.5rem' }}
-        />
+      <div className="absolute top-8 right-8 z-30">
         <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 px-6 py-4 shadow-glow relative">
           {/* Pixie Dust Effect */}
           <div className="absolute -top-6 -right-6 w-28 h-28 pointer-events-none">
