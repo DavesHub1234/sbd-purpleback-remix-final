@@ -106,7 +106,7 @@ const Navigation = () => {
             </Link>
             
             <Link to="/contact">
-              <Button variant="shimmer" size="sm" className="ml-4">
+              <Button variant="shimmer" size="sm" className="ml-4 text-sm">
                 Get Started
               </Button>
             </Link>
