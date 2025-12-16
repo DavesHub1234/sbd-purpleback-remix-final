@@ -124,7 +124,7 @@ const HeroSection = () => {
             <div className="relative">
               {/* Hero Image */}
               <div className="aspect-[4/3] sm:aspect-[4/3] md:aspect-square lg:aspect-[4/3] xl:aspect-square rounded-2xl overflow-hidden shadow-glow border border-white/20 relative w-full max-w-full">
-              <img src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" alt="Professional contractor website design showcase featuring responsive mobile-first websites for roofing, landscaping, and solar panel businesses with lead generation systems" className="w-full h-full object-cover object-center animate-gentle-sway rounded-xl opacity-70" fetchPriority="high" decoding="sync" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 550px" />
+              <img src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" alt="Professional contractor website design showcase featuring responsive mobile-first websites for roofing, landscaping, and solar panel businesses with lead generation systems" className="w-full h-full object-cover object-center animate-gentle-sway" fetchPriority="high" decoding="sync" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 550px" />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
                 
