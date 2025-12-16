@@ -40,7 +40,7 @@ const HeroSection = () => {
           </div>
         </div>
         {/* Mascot pointing to phone number */}
-        <img src={mascotPointing} alt="Studios by Dave mascot pointing to phone number" loading="lazy" decoding="async" className="absolute -bottom-20 -left-16 w-24 h-24 drop-shadow-lg opacity-75 object-fill" />
+        <img src={mascotPointing} alt="Studios by Dave mascot pointing to phone number" loading="lazy" decoding="async" className="absolute -bottom-20 -left-16 w-24 h-24 drop-shadow-lg opacity-75 object-fill border-4" />
       </div>
       
       {/* Content */}
