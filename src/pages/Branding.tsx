@@ -1,7 +1,7 @@
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import InternalLinksFooter from "@/components/InternalLinks";
-import LogoMarquee from "@/components/LogoMarquee";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Palette, Users, Target, Award } from "lucide-react";
@@ -10,6 +10,17 @@ import SEO from "@/components/SEO";
 import { breadcrumbSchema } from "@/data/structuredData";
 
 const Branding = () => {
+  // Load Elfsight script
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://elfsightcdn.com/platform.js";
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   const breadcrumbs = breadcrumbSchema([
     { name: "Home", url: "https://studiosbydave.com" },
     { name: "Logo Design & Branding", url: "https://studiosbydave.com/branding" }
@@ -117,8 +128,12 @@ const Branding = () => {
         </div>
       </section>
 
-      {/* Logo Portfolio Marquee */}
-      <LogoMarquee />
+      {/* Logo Portfolio Showcase */}
+      <section className="py-16 bg-gradient-to-r from-muted/30 via-background to-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="elfsight-app-49626de7-3f1d-4603-aa71-6657cad5f0d0" data-elfsight-app-lazy></div>
+        </div>
+      </section>
 
       {/* Branding Packages Section */}
       <section className="py-24">
