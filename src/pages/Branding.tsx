@@ -8,7 +8,7 @@ import { CheckCircle, ArrowRight, Palette, Users, Target, Award } from "lucide-r
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { breadcrumbSchema } from "@/data/structuredData";
-
+import brandKitShowcase from "@/assets/brand-kit-showcase.png";
 const Branding = () => {
   const breadcrumbs = breadcrumbSchema([
     { name: "Home", url: "https://studiosbydave.com" },
@@ -309,8 +309,8 @@ const Branding = () => {
             </div>
           <div className="relative">
             <img 
-              src="/lovable-uploads/1b899310-7b14-4da3-bf28-f2459baa928d.png" 
-              alt="Professional contractor team celebrating successful branding and digital marketing results - logo design and brand identity success" 
+              src={brandKitShowcase} 
+              alt="Studios by Dave brand kit showcase featuring logo variations and brand identity designs" 
               className="w-full h-auto rounded-2xl shadow-elegant"
               loading="lazy"
               decoding="async"
