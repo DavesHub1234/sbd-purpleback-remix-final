@@ -236,7 +236,7 @@ const Contact = () => {
               </div>
 
               {/* CTA Box */}
-              <Card className="bg-gradient-primary text-white border-0">
+              <Card className="bg-gradient-hero text-white border-0 border border-white/20 shadow-glow">
                 <CardHeader>
                   <CardTitle className="text-white">Ready to Start?</CardTitle>
                   <CardDescription className="text-white/80">
