@@ -90,7 +90,7 @@ const Contact = () => {
       "@type": "Organization",
       "name": "Studios by Dave",
       "telephone": "+1-704-473-8188",
-      "email": "dx1creations25@gmail.com",
+      "email": "david.richardson@studiosbydave.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "125 S. Toney Street",
@@ -112,7 +112,7 @@ const Contact = () => {
       if (error) {
         const errorMessage = error.message?.includes("Too many requests") || error.message?.includes("429")
           ? "You've submitted too many requests. Please try again in an hour."
-          : "Failed to send message. Please try again or contact us directly at dx1creations25@gmail.com";
+          : "Failed to send message. Please try again or contact us directly at david.richardson@studiosbydave.com";
         
         throw new Error(errorMessage);
       }
@@ -131,7 +131,7 @@ const Contact = () => {
       console.error("Error sending message");
       toast({
         title: "Error",
-        description: error.message || "Failed to send message. Please try again or contact us directly at dx1creations25@gmail.com",
+        description: error.message || "Failed to send message. Please try again or contact us directly at david.richardson@studiosbydave.com",
         variant: "destructive",
         duration: 7000,
       });
@@ -179,44 +179,59 @@ const Contact = () => {
                 </p>
               </div>
 
-              <div className="space-y-6">
-                {[
-                  {
-                    icon: Phone,
-                    title: "Phone",
-                    description: "(704) 473-8188",
-                    subtitle: "Mon-Fri 9AM-6PM EST"
-                  },
-                  {
-                    icon: Mail,
-                    title: "Email",
-                    description: "dx1creations25@gmail.com",
-                    subtitle: "We reply within 24 hours"
-                  },
-                  {
-                    icon: MapPin,
-                    title: "Service Area",
-                    description: "Shelby, NC Surrounding Area",
-                    subtitle: "Serving contractors nationwide"
-                  },
-                  {
-                    icon: Clock,
-                    title: "Response Time",
-                    description: "Same Day Response",
-                    subtitle: "Quick turnaround on all inquiries"
-                  }
-                ].map((contact, index) => (
-                  <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-card">
-                    <div className="w-12 h-12 bg-gradient-primary-gold rounded-lg flex items-center justify-center flex-shrink-0">
-                      <contact.icon size={24} className="text-white" />
+              {/* Contact Card - Phone & Email */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                {/* Phone Card */}
+                <div className="bg-gradient-hero rounded-xl border border-white/20 p-8 shadow-glow">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Phone size={32} className="text-accent" />
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">{contact.title}</h3>
-                      <p className="text-primary font-medium">{contact.description}</p>
-                      <p className="text-sm text-muted-foreground">{contact.subtitle}</p>
-                    </div>
+                    <p className="text-white/80 text-lg font-medium mb-2">Call Us — TEXT US!</p>
+                    <a href="tel:+17044738188" className="text-4xl lg:text-5xl font-bold text-amber-200 hover:text-amber-100 transition-colors">
+                      (704) 473-8188
+                    </a>
+                    <p className="text-white/60 text-sm mt-3">Mon-Fri 9AM-6PM EST</p>
                   </div>
-                ))}
+                </div>
+
+                {/* Email Card */}
+                <div className="bg-gradient-hero rounded-xl border border-white/20 p-8 shadow-glow">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Mail size={32} className="text-accent" />
+                    </div>
+                    <p className="text-white/80 text-lg font-medium mb-2">Email Us</p>
+                    <a href="mailto:david.richardson@studiosbydave.com" className="text-2xl lg:text-3xl font-bold text-amber-200 hover:text-amber-100 transition-colors break-all">
+                      david.richardson@studiosbydave.com
+                    </a>
+                    <p className="text-white/60 text-sm mt-3">We reply within 24 hours</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Additional Info Cards */}
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-card">
+                  <div className="w-12 h-12 bg-gradient-primary-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin size={24} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Service Area</h3>
+                    <p className="text-primary font-medium">Shelby, NC Surrounding Area</p>
+                    <p className="text-sm text-muted-foreground">Serving contractors nationwide</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-card">
+                  <div className="w-12 h-12 bg-gradient-primary-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock size={24} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Response Time</h3>
+                    <p className="text-primary font-medium">Same Day Response</p>
+                    <p className="text-sm text-muted-foreground">Quick turnaround on all inquiries</p>
+                  </div>
+                </div>
               </div>
 
               {/* CTA Box */}
