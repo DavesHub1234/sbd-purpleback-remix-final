@@ -1,7 +1,13 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+
+// Initialize Supabase client with service role key for database operations
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -124,10 +130,31 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
+    // Save submission to database
+    const { data: savedSubmission, error: dbError } = await supabase
+      .from('contact_submissions')
+      .insert({
+        first_name: firstName.trim(),
+        last_name: lastName.trim(),
+        email: email.trim(),
+        phone: phone.trim(),
+        business: business?.trim() || null,
+        message: message.trim(),
+      })
+      .select()
+      .single();
+
+    if (dbError) {
+      console.error("Error saving to database:", dbError);
+      // Continue with email sending even if DB fails
+    } else {
+      console.log("Submission saved to database:", savedSubmission?.id);
+    }
+
     // Send notification email to business owner (with XSS protection)
     const notificationEmail = await resend.emails.send({
       from: "Studios by Dave Contact Form <onboarding@resend.dev>",
-      to: ["dx1creations25@gmail.com"],
+      to: ["david.richardson@studiosbydave.com"],
       subject: `New Contact Form Submission from ${escapeHtml(firstName)} ${escapeHtml(lastName)}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -137,6 +164,7 @@ const handler = async (req: Request): Promise<Response> => {
         ${business ? `<p><strong>Business Type:</strong> ${escapeHtml(business)}</p>` : ''}
         <p><strong>Message:</strong></p>
         <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
+        ${savedSubmission ? `<p><em>Submission ID: ${savedSubmission.id}</em></p>` : ''}
       `,
     });
 
