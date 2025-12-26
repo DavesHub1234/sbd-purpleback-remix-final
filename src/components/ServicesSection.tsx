@@ -84,8 +84,10 @@ const ServicesSection = () => {
                   }}
                 />
                 <CardHeader className="pb-4 relative z-10">
-                  <div className={`w-14 h-14 rounded-lg bg-gradient-to-r ${service.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                    <IconComponent size={28} className="text-white" />
+                  <div className="relative w-14 h-14 rounded-lg bg-gradient-primary-gold flex items-center justify-center mb-4 group-hover:scale-110 transition-transform overflow-hidden">
+                    {/* Shimmer reflection effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out skew-x-12" />
+                    <IconComponent size={28} className="text-white drop-shadow-md relative z-10" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                     {service.title}
