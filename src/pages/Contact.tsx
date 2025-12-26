@@ -191,7 +191,8 @@ const Contact = () => {
                     <a href="tel:+17044738188" className="text-4xl lg:text-5xl font-bold text-amber-200 hover:text-amber-100 transition-colors">
                       (704) 473-8188
                     </a>
-                    <p className="text-white/60 text-sm mt-3">Mon-Fri 9AM-6PM EST</p>
+                    <p className="text-trophy-gold font-bold text-lg mt-3">Always Open. Always Ready. 24/7.</p>
+                    <p className="text-white/60 text-sm mt-1">We respond within 12-24 hours, guaranteed.</p>
                   </div>
                 </div>
 
