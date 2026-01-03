@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
-import { trackFormSubmission } from "@/components/GoogleAnalytics";
+
 import SEO from "@/components/SEO";
 import { breadcrumbSchema } from "@/data/structuredData";
 import { useForm } from "react-hook-form";
@@ -117,9 +117,6 @@ const Contact = () => {
         throw new Error(errorMessage);
       }
 
-      // Track successful form submission
-      trackFormSubmission('contact_form');
-      
       toast({
         title: "Message Sent!",
         description: "We'll get back to you within 24 hours.",
