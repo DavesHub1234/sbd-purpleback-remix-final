@@ -41,6 +41,10 @@ const Navigation = () => {
     name: "Promos",
     path: "/studiosweb/promos",
     description: "Current promotions & offers"
+  }, {
+    name: "Portfolio",
+    path: "/studiosweb/portfolio",
+    description: "View our work"
   }];
   const isActive = (path: string) => location.pathname === path;
   const isStudiosWebActive = () => location.pathname.startsWith('/studiosweb');
@@ -114,8 +118,8 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
-            <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)} className="text-foreground hover:text-foreground/80">
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)} className="text-foreground hover:text-foreground/80 p-2">
+              {isOpen ? <X size={32} strokeWidth={2.5} /> : <Menu size={32} strokeWidth={2.5} />}
             </Button>
           </div>
         </div>
