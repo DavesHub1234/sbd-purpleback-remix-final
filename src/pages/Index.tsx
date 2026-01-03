@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
+import PortfolioSection from "@/components/PortfolioSection";
 import NonExclusiveSection from "@/components/NonExclusiveSection";
 import PromotionMarquee from "@/components/PromotionMarquee";
 import Footer from "@/components/Footer";
@@ -24,6 +25,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <ServicesSection />
+        <PortfolioSection />
         <NonExclusiveSection />
       </main>
       <InternalLinksFooter />
