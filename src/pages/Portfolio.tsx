@@ -138,17 +138,17 @@ const Portfolio = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 md:py-28 bg-gradient-hero overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
+        <section className="relative py-20 md:py-28 bg-secondary overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center max-w-3xl mx-auto">
-              <span className="inline-block text-primary font-medium text-sm tracking-wide uppercase mb-4">
+              <span className="inline-block text-accent font-medium text-sm tracking-wide uppercase mb-4">
                 Our Work
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 Portfolio
               </h1>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/90">
                 Explore our collection of websites and web applications. Each project is crafted with attention to detail, performance, and user experience.
               </p>
             </div>
@@ -196,12 +196,12 @@ const Portfolio = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-gradient-hero">
+        <section className="py-16 md:py-24 bg-secondary">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Build Something Great?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-white/90 mb-8">
               Let's discuss your project and create something that stands out.
             </p>
             <Link to="/contact">

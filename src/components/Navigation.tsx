@@ -75,7 +75,7 @@ const Navigation = () => {
               {/* Fan-out dropdown underneath */}
               <div className={`absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-border/50 z-50 overflow-hidden transition-all duration-300 ${studiosWebOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                 <div className="p-2 flex flex-col">
-                  {studiosWebServices.map((service, index) => <Link key={service.name} to={service.path} onClick={() => setStudiosWebOpen(false)} className={`text-sm font-medium whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-muted hover:text-primary ${isActive(service.path) ? "text-primary bg-muted/50" : "text-foreground/80"} ${studiosWebOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} style={{
+                  {studiosWebServices.map((service, index) => <Link key={service.name} to={service.path} onClick={() => setStudiosWebOpen(false)} className={`text-sm whitespace-nowrap px-4 py-2 rounded-md transition-all duration-300 hover:bg-muted hover:text-primary ${service.name === 'Portfolio' ? 'font-bold' : 'font-medium'} ${isActive(service.path) ? "text-primary bg-muted/50" : "text-foreground/80"} ${studiosWebOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} style={{
                   transitionDelay: studiosWebOpen ? `${index * 60}ms` : '0ms'
                 }}>
                       {service.name}
@@ -136,7 +136,7 @@ const Navigation = () => {
                 Studios Web
               </Link>
               <div className="ml-4 space-y-2">
-                {studiosWebServices.map(service => <Link key={service.name} to={service.path} onClick={() => setIsOpen(false)} className={`block text-sm text-muted-foreground hover:text-primary transition-colors ${isActive(service.path) ? "text-primary" : ""}`}>
+                {studiosWebServices.map(service => <Link key={service.name} to={service.path} onClick={() => setIsOpen(false)} className={`block text-sm hover:text-primary transition-colors ${service.name === 'Portfolio' ? 'font-bold text-foreground' : 'text-muted-foreground'} ${isActive(service.path) ? "text-primary" : ""}`}>
                     {service.name}
                   </Link>)}
               </div>
