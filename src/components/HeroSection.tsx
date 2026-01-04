@@ -40,7 +40,7 @@ const HeroSection = () => {
           </div>
         </div>
         {/* Mascot pointing to phone number */}
-        <img src={mascotPointing} alt="Studios by Dave mascot pointing to phone number" loading="lazy" decoding="async" className="absolute -bottom-20 -left-16 w-24 h-24 drop-shadow-lg object-fill border-4 opacity-60 border-solid" />
+        <img src={mascotPointing} alt="Studios by Dave mascot pointing to phone number" loading="lazy" decoding="async" width="96" height="96" className="absolute -bottom-20 -left-16 w-24 h-24 drop-shadow-lg object-fill border-4 opacity-60 border-solid" />
       </div>
       
       {/* Content */}
@@ -124,13 +124,13 @@ const HeroSection = () => {
             <div className="relative">
               {/* Hero Image */}
               <div className="aspect-[4/3] sm:aspect-[4/3] md:aspect-square lg:aspect-[4/3] xl:aspect-square rounded-2xl overflow-hidden shadow-glow border border-white/20 relative w-full max-w-full">
-              <img src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" alt="Professional contractor website design showcase featuring responsive mobile-first websites for roofing, landscaping, and solar panel businesses with lead generation systems" className="w-full h-full object-cover object-center animate-gentle-sway" fetchPriority="high" decoding="sync" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 550px" />
+              <img src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" alt="Professional contractor website design showcase featuring responsive mobile-first websites for roofing, landscaping, and solar panel businesses with lead generation systems" className="w-full h-full object-cover object-center animate-gentle-sway" fetchPriority="high" decoding="sync" loading="eager" width="550" height="550" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 550px" />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
                 
                 {/* Company Mascot in corner */}
                 <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-20 h-20 sm:w-28 sm:h-28 animate-bounce z-20">
-                  <img src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830-optimized.jpg" alt="Studios by Dave AI-powered mascot delivering innovative web design, SEO, and digital marketing solutions for contractors" className="w-full h-full object-contain drop-shadow-lg" loading="lazy" decoding="async" />
+                  <img src="/lovable-uploads/8f46217d-91db-4458-96ee-0d61e8302830-optimized.jpg" alt="Studios by Dave AI-powered mascot delivering innovative web design, SEO, and digital marketing solutions for contractors" className="w-full h-full object-contain drop-shadow-lg" loading="lazy" decoding="async" width="112" height="112" />
                 </div>
               </div>
 

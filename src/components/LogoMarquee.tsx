@@ -31,6 +31,9 @@ const LogoMarquee = () => {
                   alt={logo.alt}
                   className="max-h-36 max-w-44 w-auto h-auto object-contain"
                   loading="lazy"
+                  decoding="async"
+                  width="176"
+                  height="144"
                 />
               </div>
             ))}
@@ -47,6 +50,9 @@ const LogoMarquee = () => {
                   alt={logo.alt}
                   className="max-h-36 max-w-44 w-auto h-auto object-contain"
                   loading="lazy"
+                  decoding="async"
+                  width="176"
+                  height="144"
                 />
               </div>
             ))}
@@ -63,6 +69,9 @@ const LogoMarquee = () => {
                   alt={logo.alt}
                   className="max-h-36 max-w-44 w-auto h-auto object-contain"
                   loading="lazy"
+                  decoding="async"
+                  width="176"
+                  height="144"
                 />
               </div>
             ))}

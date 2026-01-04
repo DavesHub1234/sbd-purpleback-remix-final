@@ -179,7 +179,7 @@ const About = () => {
                 loading="lazy"
                 decoding="async"
                 width="256"
-                height="auto"
+                height="320"
               />
               <p className="text-2xl font-semibold text-foreground mb-6">"Dave" David Richardson</p>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
@@ -201,6 +201,8 @@ const About = () => {
                 className="w-full max-w-lg mx-auto rounded-2xl shadow-lg"
                 loading="lazy"
                 decoding="async"
+                width="512"
+                height="384"
               />
             </div>
             <div className="order-1 lg:order-2">
@@ -249,6 +251,8 @@ const About = () => {
                   className="w-full rounded-lg shadow-lg"
                   loading="lazy"
                   decoding="async"
+                  width="600"
+                  height="400"
                 />
                 <p className="text-center text-sm text-muted-foreground mt-3 italic">
                   Dave has taken an actual love for landscaping itself!
