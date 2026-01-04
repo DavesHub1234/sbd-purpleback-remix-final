@@ -106,7 +106,7 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    console.log("Contact form submission received from:", email);
+    console.log("Contact form submission received");
 
     // Server-side validation
     if (!firstName?.trim() || !lastName?.trim() || !email?.trim() || !phone?.trim() || !message?.trim()) {
