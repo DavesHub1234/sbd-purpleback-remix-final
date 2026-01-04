@@ -16,6 +16,7 @@ import moleDetectiveImg from "@/assets/portfolio/mole-detective.png";
 import melodyLockImg from "@/assets/portfolio/melody-lock.png";
 import rifeWaveImg from "@/assets/portfolio/rife-wave.png";
 import waveSpyImg from "@/assets/portfolio/wave-spy.png";
+import leadFerretImg from "@/assets/portfolio/lead-ferret.png";
 
 interface PortfolioProject {
   title: string;
@@ -31,6 +32,13 @@ const webProjects: PortfolioProject[] = [
     description: "Our flagship website showcasing professional web development and digital marketing services for local businesses.",
     image: studiosbydaveImg,
     url: "https://www.studiosbydave.com",
+    category: "website",
+  },
+  {
+    title: "Lead Ferret",
+    description: "AI-powered lead generation platform delivering verified, targeted leads in seconds with intelligent outreach templates.",
+    image: leadFerretImg,
+    url: "https://www.lead-ferret.com",
     category: "website",
   },
   {
@@ -145,8 +153,10 @@ const Portfolio = () => {
               <span className="inline-block text-accent font-medium text-sm tracking-wide uppercase mb-4">
                 Our Work
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Portfolio
+              <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+                <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+                  Portfolio
+                </span>
               </h1>
               <p className="text-lg text-white/90">
                 Explore our collection of websites and web applications. Each project is crafted with attention to detail, performance, and user experience.
@@ -198,8 +208,11 @@ const Portfolio = () => {
         {/* CTA Section */}
         <section className="py-16 md:py-24 bg-secondary">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Build Something Great?
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Build Something{" "}
+              <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+                Great?
+              </span>
             </h2>
             <p className="text-lg text-white/90 mb-8">
               Let's discuss your project and create something that stands out.
