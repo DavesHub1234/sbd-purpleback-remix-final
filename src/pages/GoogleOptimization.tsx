@@ -102,6 +102,8 @@ const GoogleOptimization = () => {
               className="w-full h-auto rounded-2xl shadow-elegant"
               loading="lazy"
               decoding="async"
+              width="672"
+              height="448"
             />
           </div>
         </div>
@@ -118,6 +120,8 @@ const GoogleOptimization = () => {
                 className="w-full h-auto rounded-2xl shadow-elegant"
                 loading="lazy"
                 decoding="async"
+                width="600"
+                height="400"
               />
             </div>
             

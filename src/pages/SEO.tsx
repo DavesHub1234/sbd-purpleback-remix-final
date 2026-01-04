@@ -80,6 +80,10 @@ const SEOPage = () => {
                 src="/lovable-uploads/9df74cdb-0377-4984-bf94-7c061782a05a.png" 
                 alt="SEO components diagram showing on-page SEO, local SEO, technical SEO, image SEO, video SEO, and off-page SEO interconnected" 
                 className="w-full h-auto rounded-2xl shadow-elegant"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="400"
               />
             </div>
             

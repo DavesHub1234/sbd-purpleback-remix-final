@@ -33,6 +33,9 @@ const SacredArsenal = () => {
                       className="w-full max-w-md h-auto rounded-lg shadow-lg"
                       width="400"
                       height="600"
+                      loading="eager"
+                      decoding="async"
+                      fetchPriority="high"
                     />
                   </div>
                 </div>

@@ -112,7 +112,7 @@ const StudiosWeb = () => {
           {/* Construction Worker Image */}
           <div className="absolute bottom-0 right-0 hidden lg:block pointer-events-none">
             <div className="relative">
-              <img src={constructionWorker} alt="Professional construction worker" className="w-64 h-auto animate-fade-in" style={{
+              <img src={constructionWorker} alt="Professional construction worker" className="w-64 h-auto animate-fade-in" loading="lazy" decoding="async" width="256" height="384" style={{
               maskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%), linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%)',
               WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%), linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%)',
               maskComposite: 'intersect',

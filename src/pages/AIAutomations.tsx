@@ -139,6 +139,8 @@ const AIAutomations = () => {
                 className="w-full h-auto rounded-2xl shadow-elegant mb-8"
                 loading="lazy"
                 decoding="async"
+                width="600"
+                height="400"
               />
               
               {/* Additional contractor images */}
@@ -150,6 +152,8 @@ const AIAutomations = () => {
                     className="w-full h-auto rounded-2xl shadow-elegant"
                     loading="lazy"
                     decoding="async"
+                    width="400"
+                    height="300"
                   />
                   {/* Arrow pointing to fingers */}
                   <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 text-center">
@@ -168,6 +172,8 @@ const AIAutomations = () => {
                   className="w-full h-auto rounded-2xl shadow-elegant"
                   loading="lazy"
                   decoding="async"
+                  width="400"
+                  height="300"
                 />
               </div>
             </div>

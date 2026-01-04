@@ -314,6 +314,8 @@ const Branding = () => {
               className="w-full h-auto rounded-2xl shadow-elegant"
               loading="lazy"
               decoding="async"
+              width="600"
+              height="400"
             />
           </div>
           </div>
