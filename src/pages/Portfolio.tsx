@@ -149,40 +149,18 @@ const Portfolio = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 md:py-28 bg-gradient-hero overflow-hidden">
+        <section className="relative py-20 md:py-28 bg-secondary overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center max-w-3xl mx-auto">
-              <div className="relative inline-block">
-                {/* Pixie Dust Effect */}
-                <div className="absolute -top-8 -left-4 w-40 h-40 pointer-events-none">
-                  {[...Array(18)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute w-1.5 h-1.5 rounded-full animate-dust-float"
-                      style={{
-                        left: `${Math.random() * 100}%`,
-                        top: `${Math.random() * 100}%`,
-                        background: i % 4 === 0 
-                          ? 'hsl(var(--trophy-gold))' 
-                          : i % 4 === 1 
-                          ? 'hsl(var(--accent) / 0.6)'
-                          : 'hsl(0, 0%, 30%)',
-                        animationDelay: `${i * 0.15}s`,
-                        animationDuration: `${2 + Math.random() * 2}s`,
-                        filter: 'blur(0.5px)',
-                        boxShadow: i % 4 === 0 ? '0 0 5px hsl(var(--trophy-gold))' : 'none'
-                      }}
-                    />
-                  ))}
-                </div>
-                <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-                  Our{" "}
-                  <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-                    Portfolio
-                  </span>
-                </h1>
-              </div>
+              <span className="inline-block text-accent font-medium text-sm tracking-wide uppercase mb-4">
+                Our Work
+              </span>
+              <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+                <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+                  Portfolio
+                </span>
+              </h1>
               <p className="text-lg text-white/90">
                 Explore our collection of websites and web applications. Each project is crafted with attention to detail, performance, and user experience.
               </p>
