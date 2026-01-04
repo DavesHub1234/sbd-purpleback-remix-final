@@ -119,12 +119,12 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Column - Hero Image */}
-          <div className="relative lg:pl-8">
+          {/* Right Column - Hero Image (Extended & Full-bleed) */}
+          <div className="relative lg:pl-0 lg:-mr-8 xl:-mr-16">
             <div className="relative">
-              {/* Hero Image */}
-              <div className="aspect-[4/3] sm:aspect-[4/3] md:aspect-square lg:aspect-[4/3] xl:aspect-square rounded-2xl overflow-hidden shadow-glow border border-white/20 relative w-full max-w-full">
-              <img src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" alt="Professional contractor website design showcase featuring responsive mobile-first websites for roofing, landscaping, and solar panel businesses with lead generation systems" className="w-full h-full object-cover object-center animate-gentle-sway" fetchPriority="high" decoding="sync" loading="eager" width="550" height="550" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 550px" />
+              {/* Hero Image - Wider container */}
+              <div className="aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] xl:aspect-[16/10] rounded-2xl overflow-hidden shadow-glow border border-white/20 relative w-full lg:w-[110%] xl:w-[120%]">
+              <img src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" alt="Professional contractor website design showcase featuring responsive mobile-first websites for roofing, landscaping, and solar panel businesses with lead generation systems" className="w-full h-full object-cover object-center animate-gentle-sway" fetchPriority="high" decoding="sync" loading="eager" width="700" height="438" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 700px" />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10" />
                 
