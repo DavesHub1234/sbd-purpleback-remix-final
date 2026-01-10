@@ -16,7 +16,13 @@ const clientLogos = [
 
 const LogoMarquee = () => {
   return (
-    <section className="py-10 bg-gradient-to-r from-muted/30 via-background to-muted/30 overflow-hidden">
+    <section className="py-8 bg-gradient-to-r from-muted/30 via-background to-muted/30 overflow-hidden">
+      {/* Section Header */}
+      <div className="text-center mb-6">
+        <p className="text-sm text-muted-foreground/70 uppercase tracking-widest font-medium">
+          Trusted by Industry Leaders
+        </p>
+      </div>
       <div className="relative">
         <div className="flex animate-[logo-scroll_12s_linear_infinite]">
           {/* First set */}
