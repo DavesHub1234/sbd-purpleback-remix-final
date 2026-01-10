@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 import robotBg from "@/assets/robot-construction-bg.jpg";
 import mascotPointing from "@/assets/mascot-pointing.png";
+import leadFerritIcon from "@/assets/lead-ferrit-icon.jpeg";
+import hubspotIcon from "@/assets/hubspot-icon.png";
 const HeroSection = () => {
   return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Embossed Robot Background */}
@@ -122,6 +124,33 @@ const HeroSection = () => {
           {/* Right Column - Hero Image (Extended & Full-bleed) */}
           <div className="relative lg:pl-0 lg:-mr-8 xl:-mr-16">
             <div className="relative">
+              {/* Lead-Ferrit Announcement Banner */}
+              <div className="mb-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 px-4 py-3 shadow-glow">
+                <div className="flex items-center justify-center gap-3 flex-wrap">
+                  <img 
+                    src={leadFerritIcon} 
+                    alt="Lead-Ferrit mascot" 
+                    className="w-10 h-10 rounded-lg object-cover"
+                  />
+                  <div className="text-center">
+                    <p className="text-white text-sm font-semibold">🎉 Now Launched: Lead-Ferrit with HubSpot Integration!</p>
+                    <a 
+                      href="https://www.lead-ferrit.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-400 underline text-sm hover:text-blue-300 transition-colors"
+                    >
+                      www.lead-ferrit.com
+                    </a>
+                  </div>
+                  <img 
+                    src={hubspotIcon} 
+                    alt="HubSpot integration" 
+                    className="w-10 h-10 rounded-lg object-contain"
+                  />
+                </div>
+              </div>
+
               {/* Hero Image - Wider container */}
               <div className="aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] xl:aspect-[16/10] rounded-2xl overflow-hidden shadow-glow border border-white/20 relative w-full lg:w-[110%] xl:w-[120%]">
               <img src="/lovable-uploads/88912462-92f4-48cf-8aaf-c9507974f8ea-optimized.jpg" alt="Professional contractor website design showcase featuring responsive mobile-first websites for roofing, landscaping, and solar panel businesses with lead generation systems" className="w-full h-full object-cover object-center animate-gentle-sway" fetchPriority="high" decoding="sync" loading="eager" width="700" height="438" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 700px" />
