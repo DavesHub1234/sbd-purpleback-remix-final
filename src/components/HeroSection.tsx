@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 import robotBg from "@/assets/robot-construction-bg.jpg";
 import mascotPointing from "@/assets/mascot-pointing.png";
-import LeadFerretBanner from "./LeadFerretBanner";
-
 const HeroSection = () => {
   return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Embossed Robot Background */}
@@ -121,11 +119,6 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Lead-Ferret Banner above hero image */}
-          <div className="mb-6">
-            <LeadFerretBanner />
-          </div>
-          
           {/* Right Column - Hero Image (Extended & Full-bleed) */}
           <div className="relative lg:pl-0 lg:-mr-8 xl:-mr-16">
             <div className="relative">
