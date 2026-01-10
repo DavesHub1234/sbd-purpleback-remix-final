@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import InternalLinksFooter from "@/components/InternalLinks";
+import PixieDust from "@/components/PixieDust";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Globe, Smartphone, Zap, Search } from "lucide-react";
@@ -47,12 +48,15 @@ const WebDesign = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero py-24" itemScope itemType="https://schema.org/WebPageElement">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6" itemProp="headline">
-            Professional Web Design{" "}
-            <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-              with You in Mind
-            </span>
-          </h1>
+          <div className="relative inline-block">
+            <PixieDust />
+            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6" itemProp="headline">
+              Professional Web Design{" "}
+              <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+                with You in Mind
+              </span>
+            </h1>
+          </div>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8" itemProp="description">
             Custom websites that turn visitors into paying customers—designed specifically 
             for local small businesses.
