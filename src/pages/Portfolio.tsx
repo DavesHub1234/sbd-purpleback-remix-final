@@ -1,9 +1,11 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import InternalLinksFooter from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Portfolio screenshots
@@ -21,8 +23,7 @@ import leadFerretImg from "@/assets/portfolio/lead-ferret.png";
 interface PortfolioProject {
   title: string;
   description: string;
-  image: string;
-  url: string;
+  images: string[]; // Changed to array for multiple screenshots
   category: "website" | "webapp";
 }
 
@@ -30,43 +31,37 @@ const webProjects: PortfolioProject[] = [
   {
     title: "Studios by Dave",
     description: "Our flagship website showcasing professional web development and digital marketing services for local businesses.",
-    image: studiosbydaveImg,
-    url: "https://www.studiosbydave.com",
+    images: [studiosbydaveImg],
     category: "website",
   },
   {
     title: "Lead Ferret",
     description: "AI-powered lead generation platform delivering verified, targeted leads in seconds with intelligent outreach templates.",
-    image: leadFerretImg,
-    url: "https://www.lead-ferret.com",
+    images: [leadFerretImg],
     category: "website",
   },
   {
     title: "Padgsteen Guitars",
     description: "Handcrafted guitars & soulful Southern music from the heart of Appalachia. A beautiful showcase for a master luthier and musician.",
-    image: padgsteenguitarsImg,
-    url: "https://www.padgsteenguitars.com",
+    images: [padgsteenguitarsImg],
     category: "website",
   },
   {
     title: "Shades of Gray Painters",
     description: "Professional painting company website featuring interior, exterior, and specialty finishes with a texture gallery showcase.",
-    image: shadesColorCraftImg,
-    url: "https://shades-color-craft.lovable.app",
+    images: [shadesColorCraftImg],
     category: "website",
   },
   {
     title: "Lee Construction",
     description: "Shelby's trusted general contractor since 1982. Commercial developments to custom homes with quality craftsmanship.",
-    image: leeBuildsShelbyImg,
-    url: "https://lee-builds-shelby.lovable.app",
+    images: [leeBuildsShelbyImg],
     category: "website",
   },
   {
     title: "Odyssey Custom Renovations",
     description: "Home renovation specialists transforming kitchens, bathrooms, and complete home makeovers with expert craftsmanship.",
-    image: odysseyHomeVisionsImg,
-    url: "https://odyssey-home-visions.lovable.app",
+    images: [odysseyHomeVisionsImg],
     category: "website",
   },
 ];
@@ -75,43 +70,42 @@ const appProjects: PortfolioProject[] = [
   {
     title: "Mole Locator",
     description: "Subterranean detection system using seismic frequency analysis with real-time scanning capabilities.",
-    image: moleDetectiveImg,
-    url: "https://mole-detective-app.lovable.app",
+    images: [moleDetectiveImg],
     category: "webapp",
   },
   {
     title: "Musical Lock",
     description: "Revolutionary authentication system replacing passwords with memorable melodies for secure access.",
-    image: melodyLockImg,
-    url: "https://melody-lock-studio.lovable.app",
+    images: [melodyLockImg],
     category: "webapp",
   },
   {
     title: "RIFE Frequency Generator",
     description: "Professional 20 MHz sweep/function generator with audio samples and frequency generation capabilities.",
-    image: rifeWaveImg,
-    url: "https://rife-wave-studio.lovable.app",
+    images: [rifeWaveImg],
     category: "webapp",
   },
   {
     title: "5G Spectrum Analyzer",
     description: "Professional RF spectrum analysis system for passive monitoring across multiple frequency bands.",
-    image: waveSpyImg,
-    url: "https://wave-spy-nexus.lovable.app",
+    images: [waveSpyImg],
     category: "webapp",
   },
 ];
 
-const ProjectCard = ({ project }: { project: PortfolioProject }) => (
-  <a
-    href={project.url}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group block overflow-hidden rounded-xl border border-border/50 bg-card shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-1"
+interface ProjectCardProps {
+  project: PortfolioProject;
+  onClick: () => void;
+}
+
+const ProjectCard = ({ project, onClick }: ProjectCardProps) => (
+  <button
+    onClick={onClick}
+    className="group block w-full text-left overflow-hidden rounded-xl border border-border/50 bg-card shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-1"
   >
     <div className="relative aspect-video overflow-hidden">
       <img
-        src={project.image}
+        src={project.images[0]}
         alt={`${project.title} - ${project.category === 'website' ? 'Website' : 'Web Application'} preview`}
         className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
@@ -122,7 +116,7 @@ const ProjectCard = ({ project }: { project: PortfolioProject }) => (
       <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <span className="inline-flex items-center gap-1 bg-primary text-primary-foreground px-3 py-1.5 rounded-full text-sm font-medium">
-          View Live <ExternalLink className="w-3.5 h-3.5" />
+          View Gallery
         </span>
       </div>
     </div>
@@ -134,10 +128,119 @@ const ProjectCard = ({ project }: { project: PortfolioProject }) => (
         {project.description}
       </p>
     </div>
-  </a>
+  </button>
 );
 
+interface ProjectGalleryModalProps {
+  project: PortfolioProject | null;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const ProjectGalleryModal = ({ project, isOpen, onClose }: ProjectGalleryModalProps) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  if (!project) return null;
+
+  const hasMultipleImages = project.images.length > 1;
+
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev === 0 ? project.images.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev === project.images.length - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-5xl w-[95vw] max-h-[90vh] overflow-hidden p-0 bg-background border-border">
+        <DialogHeader className="p-6 pb-0">
+          <DialogTitle className="text-2xl font-bold text-foreground">
+            {project.title}
+          </DialogTitle>
+          <p className="text-muted-foreground mt-2">{project.description}</p>
+        </DialogHeader>
+        
+        <div className="relative p-6 pt-4">
+          {/* Main Image */}
+          <div className="relative aspect-video rounded-lg overflow-hidden bg-muted">
+            <img
+              src={project.images[currentIndex]}
+              alt={`${project.title} screenshot ${currentIndex + 1}`}
+              className="w-full h-full object-contain"
+            />
+            
+            {/* Navigation Arrows */}
+            {hasMultipleImages && (
+              <>
+                <button
+                  onClick={goToPrevious}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 hover:bg-background text-foreground transition-colors"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={goToNext}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 hover:bg-background text-foreground transition-colors"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              </>
+            )}
+          </div>
+
+          {/* Thumbnail Strip */}
+          {hasMultipleImages && (
+            <div className="flex gap-2 mt-4 overflow-x-auto pb-2">
+              {project.images.map((img, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`flex-shrink-0 w-20 h-14 rounded-md overflow-hidden border-2 transition-all ${
+                    index === currentIndex
+                      ? "border-primary ring-2 ring-primary/30"
+                      : "border-transparent hover:border-muted-foreground/50"
+                  }`}
+                >
+                  <img
+                    src={img}
+                    alt={`${project.title} thumbnail ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Image Counter */}
+          {hasMultipleImages && (
+            <div className="text-center text-sm text-muted-foreground mt-2">
+              {currentIndex + 1} of {project.images.length}
+            </div>
+          )}
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
 const Portfolio = () => {
+  const [selectedProject, setSelectedProject] = useState<PortfolioProject | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openProjectGallery = (project: PortfolioProject) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
+
   return (
     <div className="min-h-screen">
       <SEO
@@ -182,7 +285,11 @@ const Portfolio = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {webProjects.map((project) => (
-                <ProjectCard key={project.title} project={project} />
+                <ProjectCard 
+                  key={project.title} 
+                  project={project} 
+                  onClick={() => openProjectGallery(project)}
+                />
               ))}
             </div>
           </div>
@@ -202,7 +309,11 @@ const Portfolio = () => {
             
             <div className="grid md:grid-cols-2 gap-6">
               {appProjects.map((project) => (
-                <ProjectCard key={project.title} project={project} />
+                <ProjectCard 
+                  key={project.title} 
+                  project={project} 
+                  onClick={() => openProjectGallery(project)}
+                />
               ))}
             </div>
           </div>
@@ -228,6 +339,13 @@ const Portfolio = () => {
           </div>
         </section>
       </main>
+
+      {/* Project Gallery Modal */}
+      <ProjectGalleryModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
 
       <InternalLinksFooter />
       <Footer />
