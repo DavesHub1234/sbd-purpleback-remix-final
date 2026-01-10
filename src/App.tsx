@@ -25,6 +25,7 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import Watermark from "./components/Watermark";
+import ElfsightChatbot from "./components/ElfsightChatbot";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +60,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
           </Routes>
+          <ElfsightChatbot />
         </BrowserRouter>
       </TooltipProvider>
     </HelmetProvider>
