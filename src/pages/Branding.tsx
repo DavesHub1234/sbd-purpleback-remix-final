@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import InternalLinksFooter from "@/components/InternalLinks";
 import LogoMarquee from "@/components/LogoMarquee";
+import PixieDust from "@/components/PixieDust";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Palette, Users, Target, Award } from "lucide-react";
@@ -9,6 +10,7 @@ import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { breadcrumbSchema } from "@/data/structuredData";
 import brandKitShowcase from "@/assets/brand-kit-showcase.png";
+
 const Branding = () => {
   const breadcrumbs = breadcrumbSchema([
     { name: "Home", url: "https://studiosbydave.com" },
@@ -44,12 +46,15 @@ const Branding = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-            Logo Design &{" "}
-            <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-              Branding Solutions
-            </span>
-          </h1>
+          <div className="relative inline-block">
+            <PixieDust />
+            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+              Logo Design &{" "}
+              <span className="gradient-text bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+                Branding Solutions
+              </span>
+            </h1>
+          </div>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
             Professional branding that makes your business stand out. From logos to complete 
             brand identity packages, we create memorable brands for contractors and local businesses.
