@@ -4,19 +4,8 @@ import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 import robotBg from "@/assets/robot-construction-bg.jpg";
 import mascotPointing from "@/assets/mascot-pointing.png";
-import LogoMarquee from "./LogoMarquee";
-import LeadFerretBanner from "./LeadFerretBanner";
-
 const HeroSection = () => {
-  return (
-    <>
-      {/* Logo Marquee - Trusted by Industry Leaders */}
-      <LogoMarquee />
-      
-      {/* Lead-Ferret Announcement Banner */}
-      <LeadFerretBanner />
-      
-      <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
+  return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Embossed Robot Background */}
       <div className="absolute inset-0 opacity-[0.08] mix-blend-overlay" style={{
       backgroundImage: `url(${robotBg})`,
@@ -152,9 +141,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      </section>
-    </>
-  );
+    </section>;
 };
-
 export default HeroSection;
