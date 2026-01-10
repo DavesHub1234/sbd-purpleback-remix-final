@@ -128,6 +128,122 @@ const WebDesign = () => {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-24 bg-background" itemScope itemType="https://schema.org/ItemList">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-foreground mb-4" itemProp="name">
+            Web Design Packages
+          </h2>
+          <p className="text-xl text-muted-foreground text-center max-w-2xl mx-auto mb-16">
+            Choose the perfect package for your business needs
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Standard Package */}
+            <Card className="border-2 border-border hover:border-primary/50 transition-colors">
+              <CardHeader className="text-center pb-4">
+                <CardTitle className="text-2xl font-bold">Standard Package</CardTitle>
+                <CardDescription className="text-lg font-medium text-primary">1-5 Page Website</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-3">
+                  {[
+                    "Up to 5 custom-designed pages",
+                    "Mobile-responsive design",
+                    "Basic SEO setup",
+                    "Contact form integration",
+                    "Social media links",
+                    "1 round of revisions",
+                    "2-week delivery"
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contact" className="block mt-6">
+                  <Button variant="outline" className="w-full" size="lg">
+                    Contact for Quote
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Professional Package */}
+            <Card className="border-2 border-primary relative shadow-elegant">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
+                  Most Popular
+                </span>
+              </div>
+              <CardHeader className="text-center pb-4 pt-8">
+                <CardTitle className="text-2xl font-bold">Professional Package</CardTitle>
+                <CardDescription className="text-lg font-medium text-primary">6-10 Page Website</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-3">
+                  {[
+                    "Up to 10 custom-designed pages",
+                    "Mobile-responsive design",
+                    "Advanced SEO optimization",
+                    "Blog/News section",
+                    "Google Analytics integration",
+                    "Lead capture forms",
+                    "Photo gallery",
+                    "3 rounds of revisions",
+                    "3-week delivery"
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contact" className="block mt-6">
+                  <Button variant="primary" className="w-full" size="lg">
+                    Contact for Quote
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Enterprise Package */}
+            <Card className="border-2 border-border hover:border-primary/50 transition-colors">
+              <CardHeader className="text-center pb-4">
+                <CardTitle className="text-2xl font-bold">Enterprise Package</CardTitle>
+                <CardDescription className="text-lg font-medium text-primary">15+ Page Website</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-3">
+                  {[
+                    "Unlimited pages",
+                    "E-commerce or booking system",
+                    "Comprehensive SEO strategy",
+                    "CMS for easy content updates",
+                    "Email marketing integration",
+                    "Custom functionality",
+                    "Priority support",
+                    "Unlimited revisions",
+                    "4-6 week delivery"
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contact" className="block mt-6">
+                  <Button variant="outline" className="w-full" size="lg">
+                    Contact for Quote
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <InternalLinksFooter />
       <Footer />
     </div>
