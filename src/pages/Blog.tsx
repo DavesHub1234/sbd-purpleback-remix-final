@@ -1,91 +1,95 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { BookOpen, Bell, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+
+const blogArticles = [
+  {
+    id: 1,
+    slug: "why-choose-studios-by-dave",
+    title: "Why Choose Studios by Dave Over the Local Competition?",
+    subtitle: "A Local Partner for Professional Web Design, Branding, and SEO in Shelby, NC",
+    date: "January 2025",
+    volume: "Vol. 1, No. 1",
+    excerpt: "In today's digital-first world, your website and online presence are often the first impression customers have of your business. For local businesses in Shelby, North Carolina and the surrounding areas, choosing the right digital partner can make the difference between being found — or being overlooked.",
+  },
+];
 
 const Blog = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#f5f5f0]">
       <SEO
         title="Blog | Studios by Dave"
-        description="Coming soon! Stay tuned for expert insights, tips, and industry news from Studios by Dave. Web design, branding, SEO, and digital marketing content for contractors."
-        keywords="contractor blog, web design tips, SEO insights, digital marketing news, branding advice"
+        description="Expert insights, tips, and industry news from Studios by Dave. Web design, branding, SEO, and digital marketing content for contractors and local businesses in Shelby, NC."
+        keywords="contractor blog, web design tips, SEO insights, digital marketing news, branding advice, Shelby NC"
         canonical="https://studiosbydave.com/blog"
       />
       <Navigation />
       
-      <main className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        {/* Background with gradient and pattern */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-purple-500/5" />
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
-          }} />
-        </div>
-        
-        {/* Floating decorative elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-2xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '0.5s' }} />
-        
-        <div className="container mx-auto px-4 text-center relative z-10">
-          {/* Icon */}
-          <div className="inline-flex items-center justify-center w-24 h-24 bg-primary/10 rounded-full mb-8 animate-bounce" style={{ animationDuration: '3s' }}>
-            <BookOpen className="w-12 h-12 text-primary" />
-          </div>
-          
-          {/* Main heading */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-foreground">Studios </span>
-            <span className="bg-gradient-to-r from-primary via-purple-500 to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-shimmer">
-              Blog
-            </span>
-          </h1>
-          
-          {/* Coming Soon badge */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-6">
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
-            </span>
-            <span className="text-primary font-semibold">Coming Soon</span>
-          </div>
-          
-          {/* Description */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            We're crafting something special. Expert insights, industry tips, and valuable content for contractors — launching soon.
-          </p>
-          
-          {/* Features preview */}
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
-            {['Web Design Tips', 'SEO Strategies', 'Branding Insights', 'Marketing News'].map((topic, index) => (
-              <span 
-                key={topic}
-                className="px-4 py-2 bg-card border border-border rounded-full text-sm text-muted-foreground"
-                style={{ animationDelay: `${index * 0.1}s` }}
+      <main className="py-12 md:py-20">
+        <div className="container mx-auto px-4 max-w-5xl">
+          {/* Newspaper Masthead */}
+          <header className="text-center mb-12 border-b-4 border-double border-neutral-900 pb-8">
+            <p className="text-xs tracking-[0.3em] uppercase text-neutral-500 font-serif mb-2">
+              Est. 2024
+            </p>
+            <h1 className="text-5xl md:text-7xl font-bold text-neutral-900 font-serif tracking-tight">
+              The Studios Chronicle
+            </h1>
+            <p className="text-lg text-neutral-600 font-serif italic mt-4">
+              Insights, Tips & Stories for Local Business Success
+            </p>
+            <div className="flex items-center justify-center gap-4 text-xs text-neutral-500 mt-4 font-serif">
+              <span>Shelby, North Carolina</span>
+              <span className="w-1 h-1 bg-neutral-400 rounded-full" />
+              <span>Digital Edition</span>
+            </div>
+          </header>
+
+          {/* Articles Grid */}
+          <div className="space-y-8">
+            {blogArticles.map((article) => (
+              <Link
+                key={article.id}
+                to={`/blog/${article.slug}`}
+                className="block group"
               >
-                {topic}
-              </span>
+                <article className="bg-white border-2 border-neutral-900 p-6 md:p-8 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] transition-all duration-300">
+                  {/* Article Header */}
+                  <div className="flex items-center justify-between text-xs text-neutral-500 font-serif mb-4 border-b border-neutral-200 pb-4">
+                    <span>{article.volume}</span>
+                    <span>{article.date}</span>
+                  </div>
+                  
+                  {/* Article Title */}
+                  <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 font-serif mb-2 group-hover:underline decoration-2 underline-offset-4">
+                    {article.title}
+                  </h2>
+                  <p className="text-lg text-neutral-600 font-serif italic mb-4">
+                    {article.subtitle}
+                  </p>
+                  
+                  {/* Excerpt */}
+                  <p className="text-neutral-700 font-serif leading-relaxed mb-6">
+                    {article.excerpt}
+                  </p>
+                  
+                  {/* Read More */}
+                  <div className="flex items-center gap-2 text-neutral-900 font-semibold font-serif group-hover:gap-3 transition-all">
+                    <span>Continue Reading</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                </article>
+              </Link>
             ))}
           </div>
-          
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/contact">
-              <Button size="lg" className="group">
-                <Bell className="w-5 h-5 mr-2" />
-                Get Notified
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
-            <Link to="/">
-              <Button variant="outline" size="lg">
-                Back to Home
-              </Button>
-            </Link>
+
+          {/* More Articles Coming Soon */}
+          <div className="mt-12 text-center border-t-2 border-neutral-300 pt-8">
+            <p className="text-neutral-500 font-serif italic">
+              More articles coming soon...
+            </p>
           </div>
         </div>
       </main>
