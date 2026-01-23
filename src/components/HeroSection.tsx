@@ -49,7 +49,7 @@ const HeroSection = () => {
           {/* Left Column - Content */}
           <div className="space-y-8">
             {/* Trust Badge */}
-            <div className="flex items-center space-x-2 text-white/90">
+            <div className="flex items-center space-x-2 text-white/90 opacity-30">
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-accent text-accent" />)}
               </div>
