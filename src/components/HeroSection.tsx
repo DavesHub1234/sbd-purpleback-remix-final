@@ -78,7 +78,7 @@ const HeroSection = () => {
               </div>
               
               <p className="text-xl text-white/90 max-w-2xl leading-relaxed">
-                <span className="font-bold text-white block mb-2">We build opportunity!</span>
+                <span className="font-bold block mb-2 text-muted-foreground">We build opportunity!</span>
                 Specialized web development and digital marketing for YOUR local business. At Studios by Dave we want to see YOU succeed!
               </p>
             </div>
