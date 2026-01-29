@@ -28,6 +28,7 @@ import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import Watermark from "./components/Watermark";
 import ElfsightChatbot from "./components/ElfsightChatbot";
+import ElfsightPopup from "./components/ElfsightPopup";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +66,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
           </Routes>
           <ElfsightChatbot />
+          <ElfsightPopup />
         </BrowserRouter>
       </TooltipProvider>
     </HelmetProvider>
