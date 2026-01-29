@@ -87,7 +87,7 @@ export const StartProjectSection = () => {
           <div className="mt-10 p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 max-w-2xl mx-auto">
             <p className="text-xs text-white/70 leading-relaxed">
               <strong className="text-white/90">Down Payment Terms:</strong> The $199 is a down payment applied toward your total project cost, not a separate fee. 
-              For example, if your project total is $1,498, the $199 down payment gets your project started immediately with the remaining balance due according to your project agreement terms. 
+              For example, if your project total is $998, the $199 down payment gets your project started immediately with the remaining balance due according to your project agreement terms. 
               Final pricing varies based on project scope and requirements.
             </p>
           </div>
