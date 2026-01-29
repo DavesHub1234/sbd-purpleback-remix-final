@@ -6,6 +6,15 @@ import { ArrowRight } from "lucide-react";
 
 const blogArticles = [
   {
+    id: 3,
+    slug: "website-mistakes-costing-customers",
+    title: "5 Common Website Mistakes Costing Local Businesses Customers",
+    subtitle: "And How to Fix Them Before It's Too Late",
+    date: "January 2026",
+    volume: "Vol. 1, No. 3",
+    excerpt: "Your website is often the first impression a potential customer has of your business. But what happens when that first impression is a bad one? Every day, local businesses lose customers—not because of poor service—but because of easily fixable website mistakes.",
+  },
+  {
     id: 2,
     slug: "does-your-business-need-a-website-2026",
     title: "Does Your Business Really Need a Website in 2026?",
