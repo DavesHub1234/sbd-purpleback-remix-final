@@ -200,7 +200,10 @@ const Contact = () => {
                       <Mail size={32} className="text-accent" />
                     </div>
                     <p className="text-white/80 text-lg font-medium mb-2">Email Us</p>
-                    <a href="mailto:dx1creations25@gmail.com" className="text-2xl lg:text-3xl font-bold text-amber-200 hover:text-amber-100 transition-colors break-all">
+                    <a href="mailto:david.richardson@studiosbydave.com" className="text-xl lg:text-2xl font-bold text-amber-200 hover:text-amber-100 transition-colors break-all block">
+                      david.richardson@studiosbydave.com
+                    </a>
+                    <a href="mailto:dx1creations25@gmail.com" className="text-lg lg:text-xl font-medium text-amber-200/80 hover:text-amber-100 transition-colors break-all block mt-2">
                       dx1creations25@gmail.com
                     </a>
                     <p className="text-white/60 text-sm mt-3">We reply within 24 hours</p>
