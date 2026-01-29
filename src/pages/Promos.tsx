@@ -155,9 +155,9 @@ const Promos = () => {
                   </div>
                   <div>
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      Unlimited $100 Referral Bonus
+                      $200 First Referral + $100 Unlimited
                     </h2>
-                    <p className="text-white/90">No Limits. No Caps. Truly Unlimited.</p>
+                    <p className="text-white/90">Double Bonus on Your First Referral!</p>
                   </div>
                 </div>
               </div>
@@ -166,14 +166,18 @@ const Promos = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-4">How It Works</h3>
                     <p className="text-muted-foreground mb-6">
-                      Earn $100 for every successful referral—with absolutely no limits on how many 
-                      referrals you can make. Whether you refer one client or one hundred, you'll receive 
-                      $100 for each qualifying referral.
+                      Earn <strong className="text-foreground">$200 for your first successful referral</strong>—double the standard bonus! 
+                      After that, continue earning $100 for every additional referral with absolutely no limits on how many 
+                      referrals you can make.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
                         <CheckCircle className="h-5 w-5 text-accent mt-0.5" />
-                        <span className="text-foreground">$100 per successful referral</span>
+                        <span className="text-foreground"><strong>$200</strong> for your first referral</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-accent mt-0.5" />
+                        <span className="text-foreground"><strong>$100</strong> for every referral after that</span>
                       </div>
                       <div className="flex items-start gap-3">
                         <CheckCircle className="h-5 w-5 text-accent mt-0.5" />
@@ -211,12 +215,12 @@ const Promos = () => {
                   </div>
                 </div>
 
-                {/* Unlimited Emphasis */}
+                {/* Bonus Structure Emphasis */}
                 <div className="mt-8 p-6 bg-accent/10 rounded-lg border border-accent/20 text-center">
-                  <h4 className="text-2xl font-bold text-accent mb-2">Truly Unlimited Earning Potential</h4>
+                  <h4 className="text-2xl font-bold text-accent mb-2">$200 First + Unlimited $100 After</h4>
                   <p className="text-muted-foreground">
-                    There is no ceiling on your referral earnings. Refer as many clients as you wish—each 
-                    qualifying referral earns you a $100 bonus. Your network is your earning potential.
+                    Start strong with a <strong>$200 bonus</strong> on your first referral, then keep earning <strong>$100</strong> for every 
+                    additional qualifying referral. There is no ceiling on your referral earnings—your network is your earning potential.
                   </p>
                 </div>
               </CardContent>
