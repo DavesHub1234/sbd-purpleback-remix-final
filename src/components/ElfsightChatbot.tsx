@@ -3,12 +3,12 @@ import { useEffect } from "react";
 const ElfsightChatbot = () => {
   useEffect(() => {
     // Check if script already exists to avoid duplicates
-    if (document.querySelector('script[src="https://static.elfsight.com/platform/platform.js"]')) {
+    if (document.querySelector('script[src="https://elfsightcdn.com/platform.js"]')) {
       return;
     }
 
     const script = document.createElement("script");
-    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.src = "https://elfsightcdn.com/platform.js";
     script.async = true;
     document.body.appendChild(script);
 
