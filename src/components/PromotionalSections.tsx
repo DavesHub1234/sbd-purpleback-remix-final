@@ -37,7 +37,12 @@ const ShimmerOverlay = ({ delay = "0s" }: { delay?: string }) => (
 // Section 1: $199 to Start Your Project
 export const StartProjectSection = () => {
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-br from-primary via-primary/90 to-accent relative overflow-hidden">
+    <section 
+      className="py-16 md:py-20 relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(135deg, hsl(218 49% 18%) 0%, hsl(218 55% 22%) 25%, hsl(220 50% 25%) 50%, hsl(218 45% 20%) 75%, hsl(218 49% 15%) 100%)'
+      }}
+    >
       <ShimmerOverlay />
       <PixieDust count={16} />
       
@@ -100,7 +105,12 @@ export const StartProjectSection = () => {
 // Section 2: $200 First Referral + $100 Unlimited
 export const ReferralBonusSection = () => {
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-br from-accent via-accent/90 to-primary relative overflow-hidden">
+    <section 
+      className="py-16 md:py-20 relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(135deg, hsl(218 55% 22%) 0%, hsl(220 50% 28%) 30%, hsl(218 45% 24%) 60%, hsl(218 49% 18%) 100%)'
+      }}
+    >
       <ShimmerOverlay delay="1.5s" />
       <PixieDust count={16} />
       
