@@ -10,7 +10,7 @@ const PromotionMarquee = () => {
               <img src={studiosByDaveLogo} alt="Studios by Dave" className="h-8 w-8 object-contain" />
               <span className="text-2xl md:text-3xl font-bold text-foreground/90">Free Logo Design with any Web Service!</span>
               <img src={leadFerretMascot} alt="Lead Ferret" className="h-8 w-8 object-contain rounded-full" />
-              <span className="text-2xl md:text-3xl font-bold text-foreground/90">Unlimited $100 Referral Bonus!</span>
+              <span className="text-2xl md:text-3xl font-bold text-foreground/90">$200 First Referral Bonus!</span>
             </div>)}
         </div>
       </div>
