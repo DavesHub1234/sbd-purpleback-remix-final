@@ -11,6 +11,7 @@ import StudiosGear from "./pages/StudiosGear";
 import SacredArsenal from "./pages/SacredArsenal";
 import Blog from "./pages/Blog";
 import BlogArticle1 from "./pages/BlogArticle1";
+import BlogArticle2 from "./pages/BlogArticle2";
 
 import WebDesign from "./pages/WebDesign";
 import Branding from "./pages/Branding";
@@ -53,6 +54,7 @@ const App = () => (
           <Route path="/studiosgear" element={<StudiosGear />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/why-choose-studios-by-dave" element={<BlogArticle1 />} />
+          <Route path="/blog/does-your-business-need-a-website-2026" element={<BlogArticle2 />} />
           
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

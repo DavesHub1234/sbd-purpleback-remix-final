@@ -6,6 +6,15 @@ import { ArrowRight } from "lucide-react";
 
 const blogArticles = [
   {
+    id: 2,
+    slug: "does-your-business-need-a-website-2026",
+    title: "Does Your Business Really Need a Website in 2026?",
+    subtitle: "And What Happens If You Don't",
+    date: "January 2026",
+    volume: "Vol. 1, No. 2",
+    excerpt: "For many years, 'You need a website' was treated as unquestionable business advice. But it's 2026 now. Social media platforms have become storefronts. AI assistants answer questions instantly. So does your business really need a website anymore?",
+  },
+  {
     id: 1,
     slug: "why-choose-studios-by-dave",
     title: "Why Choose Studios by Dave Over the Local Competition?",
